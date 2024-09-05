@@ -25,6 +25,18 @@ footer h4{
     padding-top: 15px;
     padding-bottom: 20px;
 }
-.qLinks{
+.column{
+    margin-top: 10px;
     
+}
+.column ul li{
+    list-style: none;
+    margin-top: 10px;  
+}
+.column ul li a{
+    text-decoration: none;
+    
+}
+.fa{
+    margin-left: 10px;
 }
