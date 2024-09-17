@@ -1,0 +1,100 @@
+body
+{
+    margin-top: 6%;
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    background-color: #f0f8ff;
+    font-family: poppins;
+    /*background-image: url('../images/back.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*
+form{
+    width:30%;
+    margin: auto;
+    background-image: url('../images/form_n.jpg');
+    background-size: cover;
+    border-radius: 6px;
+}*/
+
+.formContain
+{ 
+    padding: 30px;
+    border: none;
+}
+
+.loginBtn
+{
+    padding: 8px;
+    border-radius: 10px;
+    width: 100px;
+    background-color:#00aaff;
+    color: aliceblue;
+    border: transparent;
+}
+
+.loginBtn:hover
+{
+    background-color: #0069b4;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.clickReg
+{
+    text-align: center;
+}
+
+#log
+{
+    font-family: poppins;
+    text-align: center;
+    color: rgb(0, 33, 91);
+}
+
+.formOut
+{
+    border-radius: 6px;
+    width: 30%;
+    padding: 30px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    /*background-image: url('../images/form_n.jpg');
+    background-size: cover;*/
+    border-radius: 20px;
+}
+
+#username
+{
+    width: 100%;
+}
+
+#password
+{
+    width: 100%;
+}
+
+fieldset
+{
+    border: none;
+}
+
+input
+{
+    padding: 10px 5px;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus
+{
+    outline-color: #000a0f;
+}
+
+#regLink:hover
+{
+    cursor: pointer;
+}
