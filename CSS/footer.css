@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Spartan', sans-serif;
+    font-family: 'poppins';
 }
 footer{
+    background-color: #f0f8ff;
+    color: rgb(0, 33, 91);
+}
+.container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -25,6 +29,75 @@ footer h4{
     padding-top: 15px;
     padding-bottom: 20px;
 }
-.qLinks{
+.column{
+    margin-top: 10px;
     
+}
+.column ul li{
+    list-style: none;
+    margin-top: 10px;  
+  
+}
+.column ul li a{
+    text-decoration: none;
+}
+.fa{
+    margin-left: 10px;
+}
+.sec_aboutus img{
+    height: 40px;
+}
+.sec_quicklink1 ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+.sec_quicklink1 ul li a{
+    text-decoration: none;
+}
+
+.sec_quicklink2 ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+.sec_quicklink2 ul li a{
+    text-decoration: none;
+}
+.sec_contact li {
+    margin-top: 15px;
+    list-style: none;
+}
+.sec_contact li i{
+    margin-right: 10px;
+}
+.media-icons{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.media-icons a i{
+    height: 60px;
+    width: 60px;
+    background: red;
+    margin: 18px 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    padding-top: 10px;
+}
+#facebook{
+    background-color: #4267b2;
+}
+#tweeter{
+    background-color: #1da1f2;
+}
+#instagram{
+    background-color: #e1306c;
+}
+#linkdin{
+    background-color: #0077b5;
+}
+#youtube{
+    background-color: #ff0000;
 }

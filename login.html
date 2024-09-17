@@ -15,6 +15,40 @@
     <title>Sign In</title>
 </head>
 <body>
+    <div class="formOut">
+        <form action="#" method="post">
+        <fieldset>
+            <div class="formContain"></div>
+                <h1 id="log">Login</h1>
+                <br><br>
+                <input type="text" id="username" placeholder="Username" required><br><br>
+                <input type="password" id="password" placeholder="Password" required><br><br>
+                <input type="checkbox" id="showPw" onclick="togglePassword()">Show Password
+                <br><br><br>
+                <center><input type="submit" class="loginBtn" value="Log in"></center>
+            </div>
+            <div class="clickReg">
+                <p>Do not have an account? <a id="regLink" href="#">Register Now</a></p>
+            </div>
+        </fieldset>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword()
+        {
+            var passwordField = document.getElementById("password");
+            var showPasswordCheckbox = document.getElementById("showPw");
+            if(showPasswordCheckbox.checked)
+            {
+                passwordField.type = "text";
+            }
+            else
+            {
+                passwordField.type = "password";
+            }
+        }
+    </script>
     
 </body>
 </html>
