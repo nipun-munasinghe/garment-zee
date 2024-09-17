@@ -1,0 +1,104 @@
+body {
+    background-color: #f0f8ff;
+    font-family: poppins;
+    }
+    
+.container {
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: url('./Images/home-bck.jpg');
+    background-size: cover;
+    /*background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px; */
+}
+
+h1 {
+    color: #00aaff;
+}
+
+.getStart {
+    color: white;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    background-color: #00aaff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    
+}
+
+.getStart:hover {
+    color: white;
+    border-color: #0069b4;
+    background-color: #0069b4;
+    }
+
+.newArrivals {
+    padding: 40px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.product-container {
+    display: flex;
+}
+
+.product1 {
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items:self-start;
+    margin: 5px;
+
+}
+.product1 img {
+    width: 30%;
+}
+
+.product1 img:hover{
+    width: 40%;
+    cursor: pointer;
+}
+
+.product2 {
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items:self-start;
+    margin: 5px;
+}
+
+.product2 img {
+    width: 30%;
+}
+
+.product2 img:hover{
+    width: 40%;
+    cursor: pointer;
+}
+
+.product3 {
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items:self-start;
+    margin: 5px;
+}
+
+.product3 img {
+    width: 30%;
+}
+
+.product3 img:hover{
+    width: 40%;
+    cursor: pointer;
+}
+
