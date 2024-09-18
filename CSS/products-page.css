@@ -1,0 +1,40 @@
+body {
+    background-color: #f0f8ff;
+    font-family: poppins;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    align-items: center;
+    text-align: center;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.product h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    background-color: #00aaff;
+    border-radius: 0 0 7px 7px;
+}
+
+.product h3:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.product img{
+    height: 29vw;
+}
+
+.product img:hover {
+    height: 30vw;
+}
+

@@ -36,7 +36,6 @@ h1 {
 }
 
 .getStart:hover {
-    color: white;
     border-color: #0069b4;
     background-color: #0069b4;
     }
@@ -70,6 +69,11 @@ h1 {
     cursor: pointer;
 }
 
+.product1 p:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .product2 {
     border: 2px solid black;
     border-radius: 5px;
@@ -86,6 +90,11 @@ h1 {
     cursor: pointer;
 }
 
+.product2 p:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .product3 {
     border: 2px solid black;
     border-radius: 5px;
@@ -99,6 +108,11 @@ h1 {
 
 .product3 img:hover{
     width: 40%;
+    cursor: pointer;
+}
+
+.product3 p:hover{
+    font-weight: bold;
     cursor: pointer;
 }
 

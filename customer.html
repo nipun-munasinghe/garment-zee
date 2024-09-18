@@ -18,6 +18,38 @@
     <!-- include the header file -->
     <?php include('header.php'); ?>
     
+    <h1>Hello username !</h1>
+
+    <div class="banner">
+        <img src="./Images/customer-banner.png" alt="products banner">
+        <button>Buy Products</button>
+    </div> <hr>
+
+    <div class="settings">
+        <h2>Password Settings</h2>
+        <div class="form-grp">
+            <div class="texts">
+                <label for="current-pwd"> Enter current password:</label>
+                <br>
+                <label for="new-pwd"> Enter new Password:</label>
+                <br>
+                <label for="confirm-pwd"> Confirm new Password:</label>
+            </div>
+            
+            <div class="inputs">
+                <input type="password" id="current-pwd" name="current-pwd">
+                <br>
+                <input type="password" id="new-pwd" name="new-pwd">
+                <br>
+                <input type="password" id="confirm-pwd" name="confirm-pwd">
+            </div>
+            
+            <div class="btns">
+                <button id="delete-btn">Delete Account</button>
+                <button id="change-btn">Change Password</button>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
