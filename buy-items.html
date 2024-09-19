@@ -12,9 +12,60 @@
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/buy-items.css">
 
-    <title>Place order page</title>
+    <title>Place an order</title>
 </head>
 <body>
+    <div class="container">
+        <!-- contact details -->
+        <div class="contact">
+            <h2>Place your order</h2>
+            <h3>Call</h3>
+            <p>+94 11 454 6464</p>
+            <h3>Email</h3>
+            <p>garmentzee@gmail.com</p>
+            <h3>Address</h3>
+            <p>Garment Zee, Kaduwela, Malabe</p>
+        </div>
+    
+        <!-- place order details input form -->
+        <div class="details">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" id="customer-name" placeholder="Your name" required>
+            <br>
+            <div class="left-right">
+                <div class="form-left">
+                    <label for="tel">Phone number</label>
+                    <br>
+                    <input type="tel" id="tel" placeholder="Your phone number" required>
+                    <br>
+                    <label for="quantity">Quantity</label>
+                    <br>
+                    <input type="number" id="qty" name="quantity" min="1" required>
+                </div>
+
+                <div class="form-right">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="mail" placeholder="Your email">
+                    <br>
+                    <label for="price">Price (Rs. )</label>
+                    <br>
+                    <output type="number" id="price" name="price"></output>
+                </div>
+            </div>
+
+            <label for="address">Address</label>
+            <br>
+            <textarea name="address" id="address" required></textarea>
+            <br>
+            <label for="myfile">Upload your payment recipt</label>
+            <br>
+            <input type="file" id="myfile" name="myfile">
+            <br>
+            <button id="place-btn">Place order</button>
+        </div>
+    </div>
     
 </body>
 </html>

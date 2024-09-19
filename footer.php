@@ -51,7 +51,7 @@
 
                 <ul>
                     <li>
-                        <p><i class="fa-solid fa-location-dot"></i>Malabe, kaduwela</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Kaduwela, Malabe</p>
                     </li>
 
                     <li>

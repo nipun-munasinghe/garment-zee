@@ -1,0 +1,57 @@
+body {
+    background-color: #f0f8ff;
+    font-family: poppins;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5vw 15vw;
+}
+
+.contact h3 {
+    color: #0069b4;
+}
+
+.contact p {
+    color: #00aaff;
+}
+
+#customer-name {
+    width: 100%;
+}
+
+.left-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    border: 1px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: #0069b4;
+}
+
+input {
+    border-radius: 5px;
+}
+
+button {
+    font-size: 18px;
+    color: white;
+    background-color: #00aaff;
+    border: 2px solid #00aaff;
+    border-radius: 6px;
+    height: 35px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #0069b4;
+    border-color: #0069b4;
+}
