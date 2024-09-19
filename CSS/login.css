@@ -64,6 +64,7 @@ form{
     /*background-image: url('../images/form_n.jpg');
     background-size: cover;*/
     border-radius: 20px;
+    box-shadow: 0px 0px 8px;
 }
 
 #username
