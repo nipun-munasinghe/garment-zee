@@ -7,7 +7,6 @@ body
     background-color: #f0f8ff;
     font-family: poppins;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .formContain
@@ -22,14 +21,13 @@ body
     border-radius: 10px;
     width: 100px;
     background-color:#00aaff;
-    color: aliceblue;
+    color: white;
     border: transparent;
 }
 
 .loginBtn:hover
 {
     background-color: #0069b4;
-    color: aliceblue;
     cursor: pointer;
 }
 
@@ -51,9 +49,9 @@ body
     width: 30%;
     padding: 30px;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: #f0f8ff;
     border-radius: 20px;
-    box-shadow: 0px 0px 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 #username

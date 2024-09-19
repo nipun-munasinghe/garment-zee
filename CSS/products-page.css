@@ -31,10 +31,10 @@ body {
 }
 
 .product img{
-    height: 29vw;
+    height: 22vw;
 }
 
 .product img:hover {
-    height: 30vw;
+    height: 23vw;
 }
 
