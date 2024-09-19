@@ -31,12 +31,22 @@ footer h4{
 }
 .column{
     margin-top: 10px;
-    
+}
+.sec_quicklink1{
+    margin-top: 20px;
+}
+.sec_quicklink2{
+    margin-top: 20px;
+}
+.sec_contact{
+    margin-top: 20px;
+}
+.copyright{
+    margin: 20px 20px;
 }
 .column ul li{
     list-style: none;
-    margin-top: 10px;  
-  
+    margin-top: 10px;
 }
 .column ul li a{
     text-decoration: none;
@@ -44,8 +54,11 @@ footer h4{
 .fa{
     margin-left: 10px;
 }
+.sec_aboutus p {
+    color: #0069b4;
+}
 .sec_aboutus img{
-    height: 40px;
+    height: 35px;
 }
 .sec_quicklink1 ul li {
     list-style: none;
@@ -53,25 +66,33 @@ footer h4{
 }
 .sec_quicklink1 ul li a{
     text-decoration: none;
+    color: #0069b4;
 }
-
+.sec_quicklink1 ul li a:hover {
+    color: #00aaff;
+}
 .sec_quicklink2 ul li {
     list-style: none;
     margin-top: 10px;
 }
 .sec_quicklink2 ul li a{
     text-decoration: none;
+    color: #0069b4;
+}
+.sec_quicklink2 ul li a:hover {
+    color: #00aaff;
 }
 .sec_contact li {
     margin-top: 15px;
     list-style: none;
+    color: #0069b4;
 }
 .sec_contact li i{
     margin-right: 10px;
 }
 .media-icons{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .media-icons a i{
     height: 60px;
@@ -89,7 +110,7 @@ footer h4{
 #facebook{
     background-color: #4267b2;
 }
-#tweeter{
+#twitter{
     background-color: #1da1f2;
 }
 #instagram{
