@@ -12,49 +12,53 @@
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/faq.css">
 
-    <title>FAQ Page</title>
+    <title>FAQ</title>
 </head>
 <body>
     <hr>
     <center>
 	   <h1>Frequently Asked Questions</h1><br>
 	   
-	   <p>Welcome to Frequently Asked Questions section.</p>
-	   <p>Here we are mentioned some common questions asked by customers frequently.
-	   Also, we provide answers with them.</p> 
-	   <p>So, you can reffer them and slove your questions.</p><br><br>
+        <p>Welcome to Frequently Asked Questions section!
+        <br> <br>
+        Here we are mentioned some common questions asked by customers frequently.
+        Also, we provide answers with them. So, you can reffer them and slove your questions.
+        <br>
+        Have any additional questions? <a href="#">Click here to contact us.</a>
+        </p> <br>
 	</center>
 	
 	 <div class="faq-section">
         <div class="faq-item">
-            <button class="faq-question">How do I place an order?<span class="icon">v</span></button>
+            <button class="faq-question">How do I place an order?<span class="icon">▼</span></button>
             <div class="faq-answer">
                 <p>You can place an order by logging into your account, browsing the catalog, selecting the desired items, and proceeding through the checkout process.</p>
             </div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">Can I customize the products?<span class="icon">v</span></button>
+            <button class="faq-question">Can I customize the products?<span class="icon">▼</span></button>
             <div class="faq-answer">
                 <p>Yes, you can customize garments by specifying your preferred design, material, and size during the order process.</P>
             </div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">How do I register to the website?<span class="icon">v</span></button>
+            <button class="faq-question">How do I register to the website?<span class="icon">▼</span></button>
             <div class="faq-answer">
                 <p>You should go to Register page. Then fill the details and tick on the accept Terms and Conditions. After click on Register button.</p>
             </div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">How do I contact customer support?<span class="icon">v</span></button>
+            <button class="faq-question">How do I contact customer support?<span class="icon"></span></button>
             <div class="faq-answer">
                 <p>You can contact customer support via email, phone, or through the message feature available on our website.</p>
             </div>
         </div>
     </div>
 	
+    <!-- java script part for drop down -->
 	<script>
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {

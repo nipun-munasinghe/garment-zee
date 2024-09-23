@@ -1,17 +1,18 @@
 body {
     font-family: poppins;
 	color : #00aaff;
-	background-image: 
     background-size: cover;
     background-repeat: no-repeat;
 	background-color :#f0f8ff;
-	
+}
+
+h1 {
+    color: #0069b4;
 }
 
 .faq-section {
     max-width: 600px;
     margin: 20px auto;
-	
 }
 
 .faq-item {
@@ -19,6 +20,10 @@ body {
     border: 2px solid #000;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.faq-item:hover {
+    border-color: #00aaff;
 }
 
 .faq-question {
@@ -48,7 +53,7 @@ body {
 
 .faq-answer {
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: white;
     display: none;
     border-top: 1px solid #ddd;
     font-size: 16px;
