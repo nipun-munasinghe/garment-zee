@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: poppins;
+	color : #00aaff;
+	background-color :#f0f8ff;
+	
+}
+
+.topic {
+	color : #00aaff;
+	font-size : 60px;
+	text-align : top;
+}
+
+.p1 {
+	font-size : 30px;
+}
+
+.p2 {
+	font-size : 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    width: 60%;
+}
+
+.about {
+    width: 60%;
+    position: relative;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    max-width: 800px; 
+}
+
