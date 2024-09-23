@@ -56,6 +56,7 @@ h1 {
     align-items: center;
     margin-bottom: 15px;
     color: #00aaff;
+    line-height: 40px;
 }
 
 .form-grp input {
