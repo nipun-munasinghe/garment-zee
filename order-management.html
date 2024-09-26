@@ -11,10 +11,36 @@
 
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/order-management.css">
-
+   
     <title>Order Management Page</title>
 </head>
 <body>
+
+    <?php include('header.php'); ?>
+    
+    <hr>
+    <h1 id="h1Welcome">Welcome to Order Management Page</h1>
+    <div class="updateForm">
+        <form action="#" method="post">
+            <fieldset>
+                <div class="formContain">
+                    <h2>Update Order Details</h2>
+                    <input type="text" id="orderID" placeholder="Order ID" required><br><br>
+                    <input type="text" id="cName" placeholder="Customer Name" required><br><br>
+                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" required><br><br>
+                    <input type="text" id="status" placeholder="Order Status" required><br><br><br>
+                    <center><input type="submit" class="addBtn" value="ADD"></center>
+                </div>
+                
+            </fieldset>    
+        </form>
+    </div>
+    <br>
+    <hr>
+    <br><br><br>
+
+
+    <?php include('footer.php'); ?>
     
 </body>
 </html>
