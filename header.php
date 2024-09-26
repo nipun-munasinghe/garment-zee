@@ -15,7 +15,6 @@
      
 </head>
 <body>
-    <? php 'header.php' ?>
     <!-- Header -->
     <header class="container">
         <a href="#"><img class="logo" src="./Images/logo.png" alt="logo"></a>
