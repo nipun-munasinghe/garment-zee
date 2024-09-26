@@ -13,6 +13,9 @@
     <script src="https://kit.fontawesome.com/884e0d8538.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Include the header file -->
+    <?php include('header.php'); ?>
+
     <div class="background-overlay"></div>
     <section class="contactus">
         
@@ -57,5 +60,7 @@
         </div>
     
     </section>
+    <!-- Include the footer -->
+    <?php include('footer.php'); ?>
 </body>
 </html>

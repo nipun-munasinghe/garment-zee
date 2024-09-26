@@ -16,23 +16,23 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="container">
+    <header class="header-container">
         <a href="#"><img class="logo" src="./Images/logo.png" alt="logo"></a>
         
         <!-- navigation bar -->
          <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./products-page.php">Products</a></li>
+                <li><a href="./contact-us.php">Contact</a></li>
+                <li><a href="./about-us.php">About</a></li>
             </ul>
         </nav>
 
         <!-- Sign up and Sign in buttons -->
         <div class="signupNsignin">
-            <button class="signup-btn">Sign Up</button>
-            <button class="signin-btn">Sign In</button>
+            <button class="signup-btn" onclick='window.location.href="./register.php"'>Sign Up</button>
+            <button class="signin-btn" onclick='window.location.href="./login.php"'>Sign In</button>
         </div>
     </header>
     

@@ -76,6 +76,10 @@ h1 {
     margin-left: 50px;
 }
 
+.btns {
+    display: flex;
+}
+
 #delete-btn {
     font-size: 15px;
     width: 50%;

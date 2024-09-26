@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,30 +17,50 @@
 <body>
     <!-- Include the header file -->
     <?php include('header.php'); ?>
+    <div class="background"></div>
 
     <div class="container">
         <h1>The Future of Textile & Garment Management System<br>is here...</h1>
         <p class="p1">Effortlessly manage your textile and garment operations<br>with cutting-edge solutions.<br>From inventory to orders,<br>streamline every step of your business<br>for increased efficiency and growth.</p>
-        <button class="getStart">Get Started</button>
-        
+        <button class="getStart" onclick='window.location.href="./register.php"'>Get Started</button>
     </div>
 
     <div class="newArrivals">
         <h1>New Arrivals</h1>
         <div class="product-container">
-            <div class="product1">
+            <div class="product">
                 <h3>T-shirt</h3>
                 <img src="./Images/t-shirt.png" alt="product t-shirt">
                 <p>This t-shirt is the latest one designed by Garment Zee</p>
             </div>
 
-            <div class="product2">
+            <div class="product">
                 <h3>T-shirt</h3>
                 <img src="./Images/t-shirt.png" alt="product t-shirt">
                 <p>This t-shirt is the latest one designed by Garment Zee</p>
             </div>
 
-            <div class="product3">
+            <div class="product">
+                <h3>T-shirt</h3>
+                <img src="./Images/t-shirt.png" alt="product t-shirt">
+                <p>This t-shirt is the latest one designed by Garment Zee</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="product">
+                <h3>T-shirt</h3>
+                <img src="./Images/t-shirt.png" alt="product t-shirt">
+                <p>This t-shirt is the latest one designed by Garment Zee</p>
+            </div>
+
+            <div class="product">
+                <h3>T-shirt</h3>
+                <img src="./Images/t-shirt.png" alt="product t-shirt">
+                <p>This t-shirt is the latest one designed by Garment Zee</p>
+            </div>
+
+            <div class="product">
                 <h3>T-shirt</h3>
                 <img src="./Images/t-shirt.png" alt="product t-shirt">
                 <p>This t-shirt is the latest one designed by Garment Zee</p>
@@ -51,6 +71,6 @@
     <hr>
 
     <!-- Include the footer file -->
-    <?php include('footer.php'); ?>
+ 
 </body>
 </html>
