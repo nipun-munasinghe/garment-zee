@@ -12,6 +12,9 @@
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/login.css">
 
+    <!-- link the java script file -->
+    <script src="JS/login.js"> </script>
+
     <title>Sign In</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
         <fieldset>
             <div class="formContain">
                 <h1 id="log">Login</h1>
-                <br><br>
+                <br>
                 <input type="text" id="username" placeholder="Username" required><br><br>
                 <input type="password" id="password" placeholder="Password" required><br><br>
                 <input type="checkbox" id="showPw" onclick="togglePassword()">Show Password
@@ -33,22 +36,6 @@
         </fieldset>
         </form>
     </div>
-<!--function for show password option -->
-    <script>
-        function togglePassword()
-        {
-            var passwordField = document.getElementById("password");
-            var showPasswordCheckbox = document.getElementById("showPw");
-            if(showPasswordCheckbox.checked)
-            {
-                passwordField.type = "text";
-            }
-            else
-            {
-                passwordField.type = "password";
-            }
-        }
-    </script>
-    
+
 </body>
 </html>

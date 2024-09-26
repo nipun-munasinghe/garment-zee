@@ -13,11 +13,13 @@ body
 
 .updateForm
 {
-    width: 25%;
+    display: flex;
+    width: 400px;
+    height: 450px;
     color: rgb(0, 33, 91);
     margin: auto;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 5px;
     box-shadow: 0px 0px 5px;
 }
 
@@ -43,22 +45,25 @@ body
 
 input
 {
-    padding: 5px 5px;
+    padding: 7px 5px;
     border: 1px solid;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: 15px;
     cursor: pointer;
 }
 
 .formContain
 {
-    padding: 30px;
+    padding: 45px;
 }
 
 h2
 {
     text-align: center;
     font-size: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+
 }
 
 fieldset
@@ -72,6 +77,7 @@ fieldset
     border-color: #00aaff;
     color: white;
     width: 100px;
+    border-radius: 4px;
 }
 
 .addBtn:hover
