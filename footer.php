@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Insert font family from google fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <link rel="stylesheet" href="CSS/footer.css">
     <title>Footer</title>
 </head>
+
 <body>
     <footer>
         <div class="container">
@@ -25,9 +27,9 @@
                     supply chain management for businesses. With years of experience<br>
                     in the textile industry, we help businesses efficiently manage their<br>
                     production cycles, reduce waste, and optimize their operations.</p>
-                
+
             </div>
-            
+
             <div class="sec_quicklink1">
                 <h2>Quick Links</h2>
                 <ul>
@@ -60,32 +62,33 @@
 
                     <li>
                         <p><i class="fa-solid fa-envelope"></i>garmentzee@gmail.com</p>
-                    </li>             
+                    </li>
                 </ul>
             </div>
         </div>
-    <hr>
+        <hr>
 
-    <center>
-        <div class="media-icons">
-            <a href="https://www.facebook.com"><i class="fab fa-facebook-f" id="facebook"></i></a>
-            <a href="https://x.com"><i class="fab fa-twitter" id="twitter"></i></a>
-            <a href="https://instagram.com"><i class="fab fa-instagram" id="instagram"></i></a>
-            <a href="https://linkedin.com"><i class="fab fa-linkedin-in" id="linkdin"></i></a>
-            <a href="https://youtube.com"><i class="fab fa-youtube" id="youtube"></i></a>
-        </div>
-    </center>
+        <center>
+            <div class="media-icons">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f" id="facebook"></i></a>
+                <a href="https://x.com"><i class="fab fa-twitter" id="twitter"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram" id="instagram"></i></a>
+                <a href="https://linkedin.com"><i class="fab fa-linkedin-in" id="linkdin"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube" id="youtube"></i></a>
+            </div>
+        </center>
 
-    <hr>
+        <hr>
 
-    <center>
-        <div class="copyright">
-            Copyright © 2024 Garment Zee. All rights reserved.
-        </div>
-        
-    </center>
+        <center>
+            <div class="copyright">
+                Copyright © 2024 Garment Zee. All rights reserved.
+            </div>
 
-    <hr>
+        </center>
+
+        <hr>
     </footer>
 </body>
+
 </html>
