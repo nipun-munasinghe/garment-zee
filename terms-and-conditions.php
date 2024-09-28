@@ -18,6 +18,7 @@
     <!-- link the header -->
     <?php include_once'header.php'; ?>
 
+    <br>
     <hr>
     <div class="img">
     </div>
@@ -30,8 +31,8 @@
     <div class="lowerContainer">
         <ol>
             <li>
-                <h2>Definitions</h2>
-                <ul>
+                <h2 class="tcH">Definitions</h2>
+                <ul class="tcUl">
                     <li>This system can be use for manage the internal or external parties of the garment.</li>
                     <li>User means users of this system such as Managers, Admins, Employee and Customers.</li>
                     <li>Customer means the person who buys the products through the system.</li>
@@ -40,16 +41,16 @@
             </li>
 
             <li>
-                <h2>Security and Privacy</h2>
-                <ul>
+                <h2 class="tcH">Security and Privacy</h2>
+                <ul class="tcUl">
                     <li>We take industry standard measures to protect your personal data from unauthorized access or disclosure. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</li>
                     <li>We recommend the use of strong and unique passwords. If you suspect any unauthorized login or activity in your account, please inform us immediately.<a href="contact-us.php">[Click Here]</a></li>
                 </ul>
             </li>
 
             <li>
-                <h2>Payment and Purchases</h2>
-                <ul>
+                <h2 class="tcH">Payment and Purchases</h2>
+                <ul class="tcUl">
                     <li>All the registered customers and employees can buy the products through the system. Unregistered customers need to register before the buy product.</li>
                     <li>If you buy the any product, you need to fill the form with correct details for place your order. All the product prices are displayed on the system. The value of the product you purchase should be deposited into our bank account and you must upload the receipt at the time of ordering.</li>
                     <li>Refunds : If you need refund your order, you can contact us.<a href="contact-us.php">[Contact-Us]</a></li>
@@ -57,23 +58,22 @@
             </li>
 
             <li>
-                <h2>System Availability and Maintenance</h2>
-                <ul>
+                <h2 class="tcH">System Availability and Maintenance</h2>
+                <ul class="tcUl">
                     <li>We take all reasonable steps to ensure continuous access to the System but will not be liable for any temporary or indirect inability to access the System. The System may occasionally be unavailable due to scheduled maintenance, updates, or unforeseen issues.</li>
                     <li>We reserve the right to modify or discontinue the System, or any part of it, at any time, with or without cause, and with or without notice.</li>
                 </ul>
             </li>
 
             <li>
-                <h2>Contact information</h2>
-                <ul>
+                <h2 class="tcH">Contact information</h2>
+                <ul class="tcUl">
                     <li>If you have any queries regarding these terms and conditions, you can contact with us using the below link.<a href="contact-us.php">[Contact-Us]</a></li>
                 </ul>
             </li>
         </ol>
     </div>
     <hr>
-        
 
     <!-- link the footer -->
     <?php include_once'footer.php'; ?>

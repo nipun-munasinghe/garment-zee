@@ -14,7 +14,7 @@ body
 .updateForm
 {
     width: 400px;
-    height: 450px;
+    height: 400px;
     color: rgb(0, 33, 91);
     margin: auto;
     background-color: white;
@@ -56,7 +56,7 @@ input
     padding: 45px;
 }
 
-h2
+.omH
 {
     text-align: center;
     font-size: 25px;
