@@ -13,7 +13,6 @@ body
 
 .updateForm
 {
-    display: flex;
     width: 400px;
     height: 450px;
     color: rgb(0, 33, 91);
