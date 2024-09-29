@@ -14,7 +14,7 @@ body
 .updateForm
 {
     width: 400px;
-    height: 430px;
+    height: 400px;
     color: rgb(0, 33, 91);
     margin: auto;
     background-color: white;
@@ -85,8 +85,4 @@ fieldset
     color: white;
     border-color: #0069b4;
     cursor: pointer;
-}
-
-.omH{
-    text-align: center;
 }

@@ -25,6 +25,7 @@
             <fieldset>
                 <div class="formContain">
                     <h2 class="omH">Update Order Details</h2><br>
+                    <input type="text" id="orderID" placeholder="Order ID" readonly><br><br>
                     <input type="text" id="orderID" placeholder="Order ID" required><br><br>
                     <input type="text" id="cName" placeholder="Customer Name" required><br><br>
                     <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" required><br><br>
