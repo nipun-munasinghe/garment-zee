@@ -8,7 +8,7 @@ $pname = $row['pname'];
 $pqty = $row['pqty'];
 $pprice = $row['pprice'];
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit'])) {
     $pname=$_POST['pname'];
     $pqty=$_POST['pqty'];
     $pprice = $_POST['pprice'];
@@ -17,12 +17,12 @@ if(isset($_POST['submit'])){
     pqty=$pqty, pprice=$pprice
     WHERE id=$pid";
     $result=mysqli_query($con,$sql);
-    if($result){
+    if($result) {
         echo "Update sussefull";
-    }else{
+    }
+    else {
         die(mysqli_error($con));
     }
-    
 }
 
 ?>
