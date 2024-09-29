@@ -38,7 +38,44 @@
     <br>
     <hr>
     <br><br><br>
-    
+    <div id="prdc-display">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $sql="SELECT * From `product-mamagment`;";
+                    $result=mysqli_query($con, $sql);
+                    if($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $pid = $row['id'];
+                            $pname = $row['pname'];
+                            $pqty = $row['pqty'];
+                            $pprice = $row['pprice'];
+
+                            echo '<tr>
+                            <th scope="row">'. $pid . '</th>
+                            <td>' . $pname . '</td>
+                            <td>' . $pqty . '</td>
+                            <td>' . $pprice . '</td>
+                            <td>
+                                <a href="prdc-mng-update.php?updateid='.$pid.'" style="background-color: blue color: black; border: 1px solid black;">Update</a>
+                                <a href="prdc-mng-delete.php?deleteid='.$pid.'">Delete</a>"
+                            </td>
+                            </tr>';
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
 
     <hr>
     <!-- link the footer -->
