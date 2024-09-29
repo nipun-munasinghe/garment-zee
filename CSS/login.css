@@ -5,7 +5,7 @@ body
     margin-bottom: 0;
     margin-right: 20px;
     font-family: poppins;
-    background-image: url(/images/login_back.jpg);
+    background-image: url(../images/login_back.jpg);
     background-size: cover;
     display: flex;
 }

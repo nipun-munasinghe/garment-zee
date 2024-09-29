@@ -24,13 +24,9 @@
         <form action="#" method="post">
             <fieldset>
                 <div class="formContain">
-<<<<<<<< HEAD:order-mng.html
                     <h2>Update Order Details</h2>
                     <input type="text" id="orderID" placeholder="Order ID" readonly><br><br>
-========
-                    <h2 class="omH">Update Order Details</h2><br>
                     <input type="text" id="orderID" placeholder="Order ID" required><br><br>
->>>>>>>> dee808c9e9c80c7cad562f79feaf0d4030b6a5ea:order-management.php
                     <input type="text" id="cName" placeholder="Customer Name" required><br><br>
                     <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" required><br><br>
                     <input type="text" id="status" placeholder="Order Status" required><br><br><br>

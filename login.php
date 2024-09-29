@@ -31,7 +31,7 @@
                 <center><input type="submit" class="loginBtn" value="Log in"></center>
             </div>
             <div class="clickReg">
-                <p>Don't have an account? <a id="regLink" href="#">Register Now</a></p>
+                <p>Don't have an account? <a id="regLink" href="register.php">Register Now</a></p>
             </div>
         </fieldset>
         </form>
