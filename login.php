@@ -1,3 +1,45 @@
+<?php
+
+    session_start();
+
+    require_once 'config.php';
+
+    if(isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $sql = "SELECT * FROM user_info WHERE username = '$username' AND password = '$password' Limit 1";
+        $result = mysqli_query($connection, $sql);
+
+        if(mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_assoc($result);
+
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['first_name'] = $row['first_name'];
+            $_SESSION['user_type'] = $row['user_type'];
+
+            if($row['acc_status'] == 'active') {
+                if ( $_SESSION['user_type'] == 'user'){
+                    header('Location: customer.php');
+                }
+
+                else if ( $_SESSION['user_type'] == 'admin'){
+                    header('Location: admin-panel.php');
+                }
+
+                else if ( $_SESSION['user_type'] == 'manager'){
+                    header('Location: managerdash.php');
+                }
+
+                else {
+                    header('Location: employee.php');
+                }
+            }
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +66,11 @@
             <div class="formContain">
                 <h1 id="log">Login</h1>
                 <br>
-                <input type="text" id="username" placeholder="Username" required><br><br>
-                <input type="password" id="password" placeholder="Password" required><br><br>
+                <input type="text" name="username" id="username" placeholder="Username" required><br><br>
+                <input type="password" name="password" id="password" placeholder="Password" required><br><br>
                 <input type="checkbox" id="showPw" onclick="togglePassword()">Show Password
                 <br><br><br>
-                <center><input type="submit" class="loginBtn" value="Log in"></center>
+                <center><input type="submit" name="submit" class="loginBtn" value="Log in"></center>
             </div>
             <div class="clickReg">
                 <p>Don't have an account? <a id="regLink" href="register.php">Register Now</a></p>

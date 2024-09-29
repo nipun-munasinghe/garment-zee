@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +25,7 @@
     <!-- include the header file -->
     <?php include('header.php'); ?>
     
-    <h1>Hello username !</h1>
+    <h1>Hello <?php echo $_SESSION['first_name']; ?> !</h1>
 
     <div class="banner">
         <img src="./Images/customer-banner.png" alt="products banner">
@@ -54,5 +58,7 @@
         </div>
     </div>
     
+    <!-- include the footer file -->
+    <?php include('footer.php'); ?>
 </body>
 </html>
