@@ -20,7 +20,15 @@
     <?php
     include("header.php");
     ?>
+    <div class="inven-container">
+        <h1>Welcome to Inventory Management Page</h1>
 
+        <div class="inven-form">
+            <form action="">
+                
+            </form>
+        </div>
+    </div>
 
     <?php
     include("footer.php");

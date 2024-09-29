@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,40 +15,42 @@
 
     <title>Admin Profile</title>
 </head>
+
 <body>
     <?php
-        include("header.php");
+    include("header.php");
     ?>
     <center>
         <h3 id="Welcome">Welcome to Admin Panel!</h3>
     </center>
     <div class="container">
         <div class="inven_manage">
-            <a href="inventory-management.php">
+            <a href="inventory-mng.php">
                 <i class="fa-solid fa-warehouse" style="font-size: 75px;"></i>
                 <h1>Inventory <br>
                     Management</h1>
-            <div class="image1">
-            </div>
+                <div class="image1">
+                </div>
             </a>
         </div>
         <div class="prod_manage">
-            <a href="product-management.php">
+            <a href="product-mng.php">
                 <i class="fa-brands fa-product-hunt" style="font-size: 75px;"></i>
                 <h1>Product <br>
                     Management</h1>
-            <div class="image2">
-            </div>
+                <div class="image2">
+                </div>
             </a>
         </div>
         <div class="order_manage">
-            <a href="#"><i class="fa-solid fa-boxes-stacked" style="font-size: 75px;"></i>
+            <a href="order-management.php"><i class="fa-solid fa-boxes-stacked" style="font-size: 75px;"></i>
                 <h1>Order <br>
                     Management</h1>
-            <div class="image3">
-            </div>
-        </a>
+                <div class="image3">
+                </div>
+            </a>
         </div>
     </div>
 </body>
+
 </html>

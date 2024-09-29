@@ -1,32 +1,31 @@
 <?php
 include 'config.php';
+$id = $_GET['updateid'];
+$sql="SELECT * from `product-mamagment` WHERE id=$id";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_assoc($result);
+$pname = $row['pname'];
+$pqty = $row['pqty'];
+$pprice = $row['pprice'];
 
+if(isset($_POST['submit'])){
+    $pname=$_POST['pname'];
+    $pqty=$_POST['pqty'];
+    $pprice = $_POST['pprice'];
 
-if (isset($_POST['add'])) {
-    $id = $_POST['id'];
-    $name = $_POST['pname'];
-    $price = $_POST['price'];
-    $qty = $_POST['qty'];
-
-    $sql = "INSERT into `product-mamagment`(id, pname, pqty, pprice)
-        values('$id', '$name', '$price', '$qty');";
-    $result = mysqli_query($con, $sql);
-    if ($result) {
-        header('Location:product-mng.php');
-    } else {
+    $sql="UPDATE `product-mamagment` set id=$pid,pname='$pname
+    pqty=$pqty, pprice=$pprice
+    WHERE id=$pid";
+    $result=mysqli_query($con,$sql);
+    if($result){
+        echo "Update sussefull";
+    }else{
         die(mysqli_error($con));
     }
+    
 }
 
 ?>
-
-<?php
-    include 'config.php';
-
-    $id = $_GET['updateid'];
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,23 +58,27 @@ if (isset($_POST['add'])) {
                 <table>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Product Id" name="id"><br>
+                            <input type="text" placeholder="Product Id" name="id"
+                            value=<?php echo $id ?>><br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Product Name" name="pname"><br>
+                            <input type="text" placeholder="Product Name" name="pname"
+                            value=<?php echo $pname ?>><br>
                         </td>
                     </tr>
                     <tr>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Price" name="price"><br>
+                            <input type="text" placeholder="Price" name="price"
+                            value=<?php echo $pprice ?>><br>
                         </td>
                     </tr>
                     </tr>
                     <td>
-                        <input type="text" placeholder="Quantity" name="qty"><br>
+                        <input type="text" placeholder="Quantity" name="qty"
+                        value=<?php echo $pqty ?>><br>
                     </td>
                     </tr>
                     </tr>
@@ -86,10 +89,6 @@ if (isset($_POST['add'])) {
                 </table>
             </form>
         </div>
-        <?php
-         include 'prdc-mng-display.php';
-
-        ?>
     </div>
    
 

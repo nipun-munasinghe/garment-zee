@@ -37,8 +37,8 @@
                             <td>' . $pqty . '</td>
                             <td>' . $pprice . '</td>
                             <td>
-                                <a href="" style="background-color: blue color: black; border: 1px solid black;">Update</a>
-                                <a href="">Delete</a>"
+                                <a href="prdc-mng-update.php?updateid='.$pid.'" style="background-color: blue color: black; border: 1px solid black;">Update</a>
+                                <a href="prdc-mng-delete.php?deleteid='.$pid.'">Delete</a>"
                             </td>
                             </tr>';
                         }
