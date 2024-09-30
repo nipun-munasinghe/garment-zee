@@ -27,24 +27,23 @@
                     supply chain management for businesses. With years of experience<br>
                     in the textile industry, we help businesses efficiently manage their<br>
                     production cycles, reduce waste, and optimize their operations.</p>
-
             </div>
 
             <div class="sec_quicklink1">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="#">Sign in</a></li>
-                    <li><a href="#">Sign up</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="./login.php">Sign in</a></li>
+                    <li><a href="./register.php">Sign up</a></li>
+                    <li><a href="./products-page.php">Products</a></li>
                 </ul>
             </div>
 
             <div class="sec_quicklink2">
                 <h2>Support</h2>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Tearms & Conditions</a></li>
+                    <li><a href="./faq.php">FAQ</a></li>
+                    <li><a href="./contact-us.php">Contact Us</a></li>
+                    <li><a href="./terms-and-conditions.php">Tearms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -84,7 +83,6 @@
             <div class="copyright">
                 Copyright © 2024 Garment Zee. All rights reserved.
             </div>
-
         </center>
 
         <hr>
