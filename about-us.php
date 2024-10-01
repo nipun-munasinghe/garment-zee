@@ -13,7 +13,9 @@
     <title>About Us</title>
 </head>
 <body>
-    <hr>
+    
+	<?php include("header.php");
+	?>
 
 	<div class = "content">
 		<div class = "text">
@@ -36,6 +38,9 @@
     </div>
 
 	<hr>
+	
+	<?php include ("footer.php");
+	?>
 </body>
 </html>
 
