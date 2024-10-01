@@ -4,9 +4,7 @@
     require_once 'config.php';
 
     if(isset($_POST['changeBtn'])) {
-
         $sql = "SELECT password FROM user_info WHERE username = '" . $_SESSION['username'] . "' ";
-
         $result = mysqli_query($connection, $sql);
 
         if($result) {
@@ -21,7 +19,9 @@
                 $result = mysqli_query($connection, $sql);
 
                 if($result) {
-                    echo "password changed!";
+                    echo "<script>
+                          alert('Your password is changed successfully!');
+                          </script>";
                 }
             }
         }

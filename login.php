@@ -16,6 +16,7 @@
 
             $_SESSION['username'] = $row['username'];
             $_SESSION['first_name'] = $row['first_name'];
+            $_SESSION['last_name'] = $row['last_name'];
             $_SESSION['user_type'] = $row['user_type'];
 
             if($row['acc_status'] == 'active') {

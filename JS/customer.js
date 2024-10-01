@@ -4,5 +4,4 @@ function del() {
 
 function change() {
     confirm("Are you want to change your password ?");
-    alert("Your password is changed successfully!");
 }
