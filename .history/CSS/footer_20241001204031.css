@@ -10,14 +10,18 @@ footer{
     color: rgb(0, 33, 91);
 }
 
-.footer-container{
+.containerfooter{
+=======
+
+.footer-container {
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 80px;
 }
 
-footer.col{
+footer .col{
     display: flex;
     flex-direction: column;
     align-items: flex-start;

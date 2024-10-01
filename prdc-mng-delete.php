@@ -14,11 +14,7 @@
         }
     
     }
-
-<<<<<<< HEAD
-
     
-=======
     if($result) {
         header('Location:poduct-mng.php');
     }

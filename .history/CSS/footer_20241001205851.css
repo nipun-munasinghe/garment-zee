@@ -17,12 +17,8 @@ footer{
     padding: 40px 80px;
 }
 
-footer.col{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
+
+
 
 .icon ul li{
     display: inline;

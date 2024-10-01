@@ -7,9 +7,6 @@ $row = mysqli_fetch_assoc($result);
 $pname = $row['pname'];
 $pqty = $row['pqty'];
 $pprice = $row['pprice'];
-
-<<<<<<< HEAD
-=======
 if(isset($_POST['submit'])) {
     $pname=$_POST['pname'];
     $pqty=$_POST['pqty'];

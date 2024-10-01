@@ -20,6 +20,8 @@ if (isset($_POST['add'])) {
 
 ?>
 
+<<<<<<< HEAD
+=======
 <?php
     include 'config.php';
 
