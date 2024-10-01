@@ -32,11 +32,19 @@
             </ul>
         </nav>
 
-        <!-- Sign up and Sign in buttons -->
-        <div class="signupNsignin">
-            <button class="signup-btn" onclick='window.location.href="./register.php"'>Sign Up</button>
-            <button class="signin-btn" onclick='window.location.href="./login.php"'>Sign In</button>
-        </div>
+        <?php 
+            if(isset($_SESSION['username'])) {
+                echo "<a href='./signout.php'  class='signout-btn' ><u>Sign Out</u></a>";
+            }
+            else {
+                echo "<div class='signupNsignin'>
+                      <button class='signup-btn' onclick='window.location.href='./register.php''>Sign Up</button>
+                      <button class='signin-btn' onclick='window.location.href='./login.php''>Sign In</button>
+                      </div>";
+            }
+        ?> 
+
+        
     </header>
     
 </body>

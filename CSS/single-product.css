@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins;
+    background-color : #f0f8ff;
+	color : #00aaff;
+}
+
+.i1 {
+	width : 500px;
+	height : 500px;
+	padding : 60px;
+}
+
+.product-details {
+    max-width: 500px;
+	box-shadow:0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+	background-color: white;
+}
+
+.product-details .description {
+    margin: 20px 0;
+}
+
+#buy-now-btn {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buy-now-btn:hover {
+    background-color: #005f73;
+}
+
+h3 {
+	color: #0069b4;
+}

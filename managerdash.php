@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +16,14 @@
     <title>Managerdashbord</title>
 </head>
 <body>
-    <div class="background-overlaya"></div>
-    <div class="background-overlayb"></div>
-    <div class="background-overlayc"></div>
-<div class="container">
+    <!-- include the header file -->
+    <?php include('header.php'); ?>
+
     <div class="hello">
-        
-            <h1>Hello Username !</h1>
-        
+            <h1>Hello <?php echo $_SESSION['first_name']; ?> !</h1>
         </div>
             </div>
-<br>
+    <br>
  <!-- Add Or Remove Part -->
             <div class="addremove">
                 <div class="removeborder">
@@ -43,22 +44,24 @@
                     <button class="remove">Remove</button>
                 </div>
             </div>
-<br>
-<br>
+    <br>
+    <br>
  <!-- New Add Part -->
             <div class="addpart">
                 <div class="form">
                     <h2>Add Admin</h2>
                     <p>Name :</p>
                     <input type="text"   placeholder="Your name" required>
-                    <p>Admin Id :</p>
+                    <p>Admin username :</p>
                     <input type="text"   placeholder="Admin Id" required>
                     <p>E mail :</p>
                     <input type="email"  placeholder="example@gmail.com" required>
                     <p>Phone Number 1 :</p>
                     <input type="number" placeholder="0xxxxxxxx" required>
                     <p>Phone Number 2 :</p>
-                    <input type="number" placeholder="0xxxxxxxx" required>
+                    <input type="number" placeholder="0xxxxxxxx">
+                    <p>Address :</p>
+                    <input type="text"  placeholder="Address of the admin" required>
                     <br>
                     <br>
                     <input type="submit" class="sbutton" placeholder="Add Admin">
@@ -69,40 +72,49 @@
                     <h2>Add Employee</h2>
                     <p>Name :</p>
                     <input type="text"   placeholder="Your name" required>
-                    <p>Admin Id :</p>
+                    <p>Employee username :</p>
                     <input type="text"   placeholder="Admin Id" required>
                     <p>E mail :</p>
                     <input type="email"  placeholder="example@gmail.com" required>
                     <p>Phone Number :</p>
                     <input type="number" placeholder="0xxxxxxxx" required>
                     <p>Phone Number 2 :</p>
-                    <input type="number" placeholder="0xxxxxxxx" required>
+                    <input type="number" placeholder="0xxxxxxxx">
+                    <p>Address :</p>
+                    <input type="text"  placeholder="Address of the employee" required>
                     <br>
                     <br>
                     <input type="submit" class="sbutton" placeholder="Add Admin">
                     <input type="reset"  class="rbutton"placeholder="Reset">
                 </div>
             </div>
-<br>
+    <br>
             <div class="salarycal">
-                <div class="salform">
                     <h2>Employee Salary Calculation </h2>
-                    <p>Employee Id :</p>
-                    <input type="text"   placeholder="Employee Id" required>
-                    <p>Working Days :</p>
-                    <input type="number"   placeholder="Days" required>
-                    <p>Working Hours :</p>
-                    <input type="number" class="hoursa"   placeholder="Hours" required>
-                    <br>
-                    <br>
-                    <button class="scalculate">Calculate</button>
-                </div>
-
-
+                    <div class="separate-display">
+                        <div class="salform">
+                            <p>Employee username :</p>
+                            <input type="text"   placeholder="Employee username" required>
+                            <p>Working Days :</p>
+                            <input type="number"   placeholder="Days" required>
+                            <p>Working Hours :</p>
+                            <input type="number" class="hoursa"   placeholder="Hours" required>
+                            <p>Hour Rate :</p>
+                            <input type="number" class="hoursa"   placeholder="Hour Rate" required>
+                            <br>
+                            <br>
+                            <button class="scalculate">Calculate</button>
+                        </div>
+                        <div class="sal-display">
+                            <h3>Salary:</h3>
+                            <h2>Rs.50 000</h2>
+                            <button class="addbase">Add Data Base</button>
+                        </div>
+                    </div>
             </div>
-             
+            
 
-    
-        
+    <!-- include the footer file -->
+    <?php include('footer.php'); ?>
 </body>
 </html>

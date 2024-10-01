@@ -1,7 +1,6 @@
 <?php
 include 'config.php';
 
-
 if (isset($_POST['add'])) {
     $id = $_POST['id'];
     $name = $_POST['pname'];
@@ -21,6 +20,16 @@ if (isset($_POST['add'])) {
 
 ?>
 
+<<<<<<< HEAD
+=======
+<?php
+    include 'config.php';
+
+    $id = $_GET['updateno'];
+
+?>
+
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
 
 <!DOCTYPE html>
 <html lang="en">

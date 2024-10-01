@@ -4,15 +4,19 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 	background-color :#f0f8ff;
+	
 }
 
 h1 {
     color: #0069b4;
+	padding-top: 80px;
 }
 
 .faq-section {
     max-width: 600px;
     margin: 20px auto;
+	padding-top: 30px;
+	
 }
 
 .faq-item {
@@ -67,3 +71,10 @@ h1 {
 .faq-item.active .faq-answer {
     display: block;
 }
+.text {
+	text-align:center;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 60px;
+}
+

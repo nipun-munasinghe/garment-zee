@@ -3,7 +3,7 @@ body {
     font-family: poppins;
 }
 
-.container {
+.row {
     display: flex;
     justify-content: space-between;
 }
@@ -27,7 +27,7 @@ body {
 
 .product h3:hover {
     color: black;
-    cursor: pointer;
+    cursor:default;
 }
 
 .product img{
@@ -36,5 +36,6 @@ body {
 
 .product img:hover {
     height: 23vw;
+    transition: 0.3s;
 }
 

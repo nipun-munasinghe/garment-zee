@@ -68,7 +68,9 @@
             <br> <br> <br>
             
             <!-- place order button -->
-            <button id="place-btn" onclick="place()">Place order</button>
+             <center>
+                <button id="place-btn" onclick="place()">Place order</button>
+            </center>
         </div>
     </div>
     

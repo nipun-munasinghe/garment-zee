@@ -1,9 +1,16 @@
 <?php
-    $con = new mysqli('localhost', 'root', '', 'iwt-main');
 
-    if(!$con){
-        die(mysqli_error($con));
-    }else{
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "textile_&_garment_management_system";
+
+    //connection with database
+    $connection = mysqli_connect($server, $username, $password, $database);
+
+    //check connection
+    if(!$connection) {
+        die("Connection failed: ". mysqli_connect_error());
     }
 
 ?>

@@ -8,6 +8,13 @@ $pname = $row['pname'];
 $pqty = $row['pqty'];
 $pprice = $row['pprice'];
 
+<<<<<<< HEAD
+=======
+if(isset($_POST['submit'])) {
+    $pname=$_POST['pname'];
+    $pqty=$_POST['pqty'];
+    $pprice = $_POST['pprice'];
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
 
 if (isset($_POST['add'])) {
     $pname = $_POST['pname'];
@@ -16,11 +23,20 @@ if (isset($_POST['add'])) {
 
     $sql = "UPDATE `product-mamagment` set id=$id,pname='$pname',
     pqty=$pqty, pprice=$pprice
+<<<<<<< HEAD
     WHERE id=$id";
     $result = mysqli_query($con, $sql);
     if ($result) {
         header('prdc-mng-display.php');
     } else {
+=======
+    WHERE id=$pid";
+    $result=mysqli_query($con,$sql);
+    if($result) {
+        echo "Update sussefull";
+    }
+    else {
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
         die(mysqli_error($con));
     }
 }
