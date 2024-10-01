@@ -1,5 +1,31 @@
 <?php 
     session_start();
+
+    require_once 'config.php';
+
+    if(isset($_POST['changeBtn'])) {
+
+        $sql = "SELECT password FROM user_info WHERE username = '" . $_SESSION['username'] . "' ";
+
+        $result = mysqli_query($connection, $sql);
+
+        if($result) {
+            $row = mysqli_fetch_assoc($result);
+
+            $password = $row['password'];
+
+            if($password == $_POST['current-pwd']) {
+                $newPassword = $_POST['new-pwd'];
+
+                $sql = "UPDATE user_info SET password ='$newPassword' WHERE username = '" . $_SESSION['username']. "' ";
+                $result = mysqli_query($connection, $sql);
+
+                if($result) {
+                    echo "password changed!";
+                }
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,31 +58,34 @@
         <button>Buy Products</button>
     </div> <hr>
 
-    <div class="settings">
-        <h2>Password Settings</h2>
-        <div class="form-grp">
-            <div class="texts">
-                <label for="current-pwd"> Enter current password:</label>
-                <br>
-                <label for="new-pwd"> Enter new Password:</label>
-                <br>
-                <label for="confirm-pwd"> Confirm new Password:</label>
-            </div>
+    <form action="customer.php" method="POST">
+        <div class="settings">
+            <h2>Password Settings</h2>
             
-            <div class="inputs">
-                <input type="password" id="current-pwd" name="current-pwd">
-                <br>
-                <input type="password" id="new-pwd" name="new-pwd">
-                <br>
-                <input type="password" id="confirm-pwd" name="confirm-pwd">
+            <div class="form-grp">
+                <div class="texts">
+                    <label for="current-pwd"> Enter current password:</label>
+                    <br>
+                    <label for="new-pwd"> Enter new Password:</label>
+                    <br>
+                    <label for="confirm-pwd"> Confirm new Password:</label>
+                </div>
+                
+                <div class="inputs">
+                    <input type="password" id="current-pwd" name="current-pwd">
+                    <br>
+                    <input type="password" id="new-pwd" name="new-pwd">
+                    <br>
+                    <input type="password" id="confirm-pwd" name="confirm-pwd">
+                </div>
+            </div>
+
+            <div class="btns">
+                <button id="delete-btn" name="delBtn" type="submit" onclick="del()">Delete Account</button>
+                <button id="change-btn" name="changeBtn" type="submit" onclick="change()">Change Password</button>
             </div>
         </div>
-
-        <div class="btns">
-            <button id="delete-btn" onclick="del()">Delete Account</button>
-            <button id="change-btn" onclick="change()">Change Password</button>
-        </div>
-    </div>
+</form>
     
     <!-- include the footer file -->
     <?php include('footer.php'); ?>
