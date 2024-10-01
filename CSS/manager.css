@@ -7,14 +7,14 @@ body {
     padding: 50px;
     margin: 10px;  
     position: relative;
-    background-image: url(/Images/managerdash.jpg);
+    background-image: url(../Images/managerdash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
     min-height: 100vh;
 }
 
-.container {
+.containerMng {
     text-align: center;
     width: 100%;
     margin: 20px auto;

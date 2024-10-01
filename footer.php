@@ -18,7 +18,7 @@
 
 <body>
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <div class="sec_aboutus">
                 <img src="Images/logo.png" alt="logo">
                 <h2>About us</h2>
