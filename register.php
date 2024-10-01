@@ -26,7 +26,7 @@
                             Fisrts Name
                         </td>
                         <td>
-                            <input type="text"><br>
+                            <input type="text" placeholder="Your first name"><br>
                         </td>
                     </tr>
                     <tr>
@@ -34,7 +34,7 @@
                             Last Name
                         </td>
                         <td>
-                            <input type="text"><br>
+                            <input type="text" placeholder="Your last name"><br>
                         </td>
                     </tr>
                     <tr>
@@ -47,10 +47,10 @@
                     </tr>
                     <tr>
                         <td>
-                            Phone
+                            Phone Number
                         </td>
                         <td>
-                            <input type="text" placeholder="+94........" id="phone">
+                            <input type="text" placeholder="+94xxxxxxxxx" id="phone">
                         </td>
 
                     </tr>
@@ -65,10 +65,10 @@
                     </tr>
                     <tr>
                         <td>
-                            Conferm Password
+                            Re-enter Password
                         </td>
                         <td>
-                            <input type="text" placeholder="Conferm">
+                            <input type="text" placeholder="Confirm Password">
                         </td>
                     </tr>
                 </table>

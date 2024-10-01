@@ -14,13 +14,12 @@
 </head>
 <body>
     
-	<?php include("header.php");
-	?>
+	<?php include("header.php");?>
 
 	<div class = "content">
 		<div class = "text">
             <center>
-	            <h1 class = "topic">About Us</h1>
+	            <h1 class = "topic">About Us</h1> <br>
                 <p class = "p1">Welcome to Garment ZEE!</p>
             </center>
             
@@ -28,7 +27,7 @@
 		     With 10 years of experience, we stand out in the textile and garment management field and hope to meet your needs.
 		     We are committed to customizing any textile items as per your requirement while our experienced staff work in our company.
 		     Join us and renew your style.</p>
-		
+            <br>
 	        
         </div>
 
@@ -39,8 +38,8 @@
 
 	<hr>
 	
-	<?php include ("footer.php");
-	?>
+    <!-- include the footer -->
+	<?php include ("footer.php");?>
 </body>
 </html>
 
