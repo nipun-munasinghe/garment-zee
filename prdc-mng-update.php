@@ -1,26 +1,42 @@
 <?php
 include 'config.php';
 $id = $_GET['updateid'];
-$sql="SELECT * from `product-mamagment` WHERE id=$id";
-$result=mysqli_query($con,$sql);
-$row=mysqli_fetch_assoc($result);
+$sql = "SELECT * from `product-mamagment` WHERE id=$id";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
 $pname = $row['pname'];
 $pqty = $row['pqty'];
 $pprice = $row['pprice'];
 
+<<<<<<< HEAD
+=======
 if(isset($_POST['submit'])) {
     $pname=$_POST['pname'];
     $pqty=$_POST['pqty'];
     $pprice = $_POST['pprice'];
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
 
-    $sql="UPDATE `product-mamagment` set id=$pid,pname='$pname
+if (isset($_POST['add'])) {
+    $pname = $_POST['pname'];
+    $pqty = $_POST['qty'];
+    $pprice = $_POST['price'];
+
+    $sql = "UPDATE `product-mamagment` set id=$id,pname='$pname',
     pqty=$pqty, pprice=$pprice
+<<<<<<< HEAD
+    WHERE id=$id";
+    $result = mysqli_query($con, $sql);
+    if ($result) {
+        header('prdc-mng-display.php');
+    } else {
+=======
     WHERE id=$pid";
     $result=mysqli_query($con,$sql);
     if($result) {
         echo "Update sussefull";
     }
     else {
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
         die(mysqli_error($con));
     }
 }
@@ -53,44 +69,48 @@ if(isset($_POST['submit'])) {
     <div class="pcontainer">
         <h1>Welcome To Product Managemnet Page!</h1>
         <div class="form">
-            <h2>Add Product</h2>
+            <h2>Updade Product</h2>
             <form action="" method="post">
                 <table>
                     <tr>
                         <td>
+                            <label for="ID">Product ID</label><br>
                             <input type="text" placeholder="Product Id" name="id"
-                            value=<?php echo $id ?>><br>
+                                value=<?php echo $id ?>><br>
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <label for="Name">Product Name</label><br>
                             <input type="text" placeholder="Product Name" name="pname"
-                            value=<?php echo $pname ?>><br>
+                                value=<?php echo $pname ?>><br>
                         </td>
                     </tr>
                     <tr>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Price" name="price"
-                            value=<?php echo $pprice ?>><br>
+                            <label for="price">Product Price</label><br>
+                            <input type="text" placeholder="Quantity" name="qty"
+                                value=<?php echo $pprice ?>><br>
                         </td>
                     </tr>
                     </tr>
                     <td>
-                        <input type="text" placeholder="Quantity" name="qty"
-                        value=<?php echo $pqty ?>><br>
+                        <label for="qty">Quantity</label><br>
+                        <input type="text" placeholder="Price" name="price"
+                            value=<?php echo $pqty ?>><br>
                     </td>
                     </tr>
                     </tr>
                     <td>
-                        <button type="submit" class="btn" name="add">Add</button>
+                        <button type="submit" class="btn" name="add">Update</button>
                     </td>
                     </tr>
                 </table>
             </form>
         </div>
     </div>
-   
+
 
 </body>
 

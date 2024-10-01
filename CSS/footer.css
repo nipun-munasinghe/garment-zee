@@ -9,8 +9,12 @@ footer{
     background-color: #f0f8ff;
     color: rgb(0, 33, 91);
 }
+<<<<<<< HEAD
+.containerfooter{
+=======
 
 .footer-container {
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

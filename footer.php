@@ -18,7 +18,11 @@
 
 <body>
     <footer>
+<<<<<<< HEAD
+        <div class="containerfooter">
+=======
         <div class="footer-container">
+>>>>>>> 90efec45cba5dcb14437fb9ff177079ae45bcf23
             <div class="sec_aboutus">
                 <img src="Images/logo.png" alt="logo">
                 <h2>About us</h2>
