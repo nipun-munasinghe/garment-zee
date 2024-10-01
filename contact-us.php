@@ -17,7 +17,7 @@
     <?php include('header.php'); ?>
 
     <div class="background-overlay"></div>
-    <section class="contactus">
+    
         
         <div class="content">
             <h2>Contact Us</h2>
@@ -50,6 +50,7 @@
             </div>
         </div>
     </div>
+    <hr>
         <div class="contactform">
             <div class="form">
                 <input type="text" id="name" placeholder="Your Name" required><br>
@@ -60,6 +61,8 @@
         </div>
     
     </section>
+
+    
     <!-- Include the footer -->
     <?php include('footer.php'); ?>
 </body>
