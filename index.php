@@ -70,7 +70,8 @@
 
     <hr>
 
-    <!-- Include the footer file -->
+    <!-- Include the footer -->
+    <?php include('footer.php'); ?>
  
 </body>
 </html>

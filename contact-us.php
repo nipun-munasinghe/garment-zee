@@ -27,7 +27,7 @@
                 Thank you for choosing Garment Zee. We look forward to connecting with you!
             </p>
         </div>
-    <div class="container">
+    <div class="containerContact">
         <div class="box">
             <div class="icon"><i class="fa-solid fa-phone fa-2x"></i></div>
             <div class="text">

@@ -19,17 +19,11 @@
     <!-- include the header file -->
     <?php include('header.php'); ?>
 
-    <div class="background-overlaya"></div>
-    <div class="background-overlayb"></div>
-    <div class="background-overlayc"></div>
-<div class="container">
     <div class="hello">
-        
             <h1>Hello <?php echo $_SESSION['first_name']; ?> !</h1>
-        
         </div>
             </div>
-<br>
+    <br>
  <!-- Add Or Remove Part -->
             <div class="addremove">
                 <div class="removeborder">
@@ -50,8 +44,8 @@
                     <button class="remove">Remove</button>
                 </div>
             </div>
-<br>
-<br>
+    <br>
+    <br>
  <!-- New Add Part -->
             <div class="addpart">
                 <div class="form">
@@ -94,7 +88,7 @@
                     <input type="reset"  class="rbutton"placeholder="Reset">
                 </div>
             </div>
-<br>
+    <br>
             <div class="salarycal">
                     <h2>Employee Salary Calculation </h2>
                     <div class="separate-display">
@@ -111,12 +105,14 @@
                             <br>
                             <button class="scalculate">Calculate</button>
                         </div>
-
                         <div class="sal-display">
-                            Salary:
+                            <h3>Salary:</h3>
+                            <h2>Rs.50 000</h2>
+                            <button class="addbase">Add Data Base</button>
                         </div>
                     </div>
             </div>
+            
 
     <!-- include the footer file -->
     <?php include('footer.php'); ?>

@@ -13,7 +13,9 @@
     <title>About Us</title>
 </head>
 <body>
-    <hr>
+    
+	<?php include("header.php");
+	?>
 
 	<div class = "content">
 		<div class = "text">
@@ -27,18 +29,18 @@
 		     We are committed to customizing any textile items as per your requirement while our experienced staff work in our company.
 		     Join us and renew your style.</p>
 		
-	        <center>	
-		        <p class = "p1">Pull nicely!</p>
-                <p class = "p1">Be beautiful!</p>
-		    </center>
+	        
         </div>
 
         <div class = "about">    
-             <img class = "right" src="Images/About us.png" alt="About Us Image">
+             <img class = "right" src="Images/about_us.png" alt="About Us Image">
         </div>
     </div>
 
 	<hr>
+	
+	<?php include ("footer.php");
+	?>
 </body>
 </html>
 
