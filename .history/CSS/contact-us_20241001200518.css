@@ -39,9 +39,8 @@ body {
     border-radius: 10px;
     justify-content: space-between;
     padding: 30px;
-    height: 370px;
+    height: 350px;
     margin: 30px;
-    margin-bottom: 80px;
 }
 
 .box{
@@ -75,9 +74,9 @@ body {
     display: flex;
     justify-content: flex-end;
     align-self: flex-start; 
-    margin-top:-430px;
-    padding-right: 70px;
-    padding-bottom: 70px;
+    margin-top:-200px;
+    padding-right: 30px;
+    
     }
 
 .form{
@@ -129,5 +128,5 @@ textarea{
 .content
 {
     padding-top: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
 }

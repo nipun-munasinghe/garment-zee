@@ -76,8 +76,8 @@ body {
     justify-content: flex-end;
     align-self: flex-start; 
     margin-top:-430px;
-    padding-right: 70px;
-    padding-bottom: 70px;
+    padding-right: 80px;
+    padding-bottom: 50px;
     }
 
 .form{
@@ -129,5 +129,5 @@ textarea{
 .content
 {
     padding-top: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
