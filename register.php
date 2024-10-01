@@ -18,8 +18,10 @@
 
 <body>
     <div id="registe-container">
+        
         <fieldset>
             <form action="">
+            <center><h1>Create your account</h1></center>
                 <table>
                     <tr>
                         <td>
@@ -72,9 +74,13 @@
                         </td>
                     </tr>
                 </table>
+                <center>
+                    <button id="registerBtn">Register Now</button>
+                </center>
             </form>
         </fieldset>
     </div>
+    <br><br>
 </body>
 
 </html>

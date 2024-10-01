@@ -19,6 +19,7 @@
     <?php include('header.php'); ?>
 
     <div class="container">
+        <h1 class="topicP">Our Products</h1>
         <div class="row">
             <div class="product">
                 <a href="#"><img src="./Images/t-shirt.png" alt="product"></a>
