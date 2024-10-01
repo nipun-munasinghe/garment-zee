@@ -10,13 +10,11 @@ body {
 	color : #00aaff;
 }
 
-
 .i1 {
 	width : 500px;
 	height : 500px;
 	padding : 60px;
 }
-
 
 .product-details {
     max-width: 500px;
@@ -25,19 +23,16 @@ body {
 	background-color: white;
 }
 
-
-
 .product-details .description {
     margin: 20px 0;
-	
 }
-
 
 #buy-now-btn {
     padding: 10px 20px;
     background-color: #008CBA;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 

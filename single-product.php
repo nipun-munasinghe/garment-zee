@@ -15,18 +15,17 @@
     <title>Single Product Page</title>
 </head>
 <body>
-     <center>   
-         	<div class="product-details">	
-                <img class = "i1" src="Images/singleProduct.png" alt="Product Image" width = "500px" height = "500px">
+    <center>   
+        <div class="product-details">	
+            <img class = "i1" src="Images/singleProduct.png" alt="Product Image" width = "500px" height = "500px">
            
-            
-                <h3>Price: Rs.<span id="product-price">1500</span></h3>
-                <p class="description">"Look sharp and stay comfy in this classic T-shirt! Perfect for any occasion, whether you're lounging around or heading out.
+            <h3>Price: Rs.<span id="product-price">1500</span></h3>
+            <p class="description">"Look sharp and stay comfy in this classic T-shirt! Perfect for any occasion, whether you're lounging around or heading out.
 				Made from soft, breathable fabric that feels as good as it looks.
 				Available in a range of cool colors to match your vibe. 
 				Grab yours now and rock that casual look!" 😎👕</p>
-                <button id="buy-now-btn">Buy Now</button><br><br>
-            </div>
-        </center>
+            <button id="buy-now-btn">Buy Now</button><br><br>
+        </div>
+    </center>
 </body>
 </html>

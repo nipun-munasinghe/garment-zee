@@ -37,7 +37,6 @@
             }
         }
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -78,6 +77,5 @@
         </fieldset>
         </form>
     </div>
-
 </body>
 </html>
