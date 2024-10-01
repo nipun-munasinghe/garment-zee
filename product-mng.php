@@ -5,25 +5,19 @@ include 'config.php';
 if (isset($_POST['add'])) {
     $id = $_POST['id'];
     $name = $_POST['pname'];
-    $price = $_POST['price'];
     $qty = $_POST['qty'];
+    $price = $_POST['price'];
 
     $sql = "INSERT into `product-mamagment`(id, pname, pqty, pprice)
-        values('$id', '$name', '$price', '$qty');";
+        values('$id', '$name', '$qty', '$price');";
     $result = mysqli_query($con, $sql);
     if ($result) {
         header('Location:product-mng.php');
+        exit;
     } else {
-        die(mysqli_error($con));
+        die("Error: " . mysqli_error($con));
     }
 }
-
-?>
-
-<?php
-    include 'config.php';
-
-    $id = $_GET['updateid'];
 
 ?>
 
@@ -44,6 +38,33 @@ if (isset($_POST['add'])) {
     <link rel="stylesheet" href="CSS/product-management.css">
 
     <title>Product Management Page</title>
+
+    <script>
+        function validForm() {
+            let id = document.forms["addinven"]["id"].value;
+            let pname = document.forms["addinven"]["pname"].value;
+            let qty = document.forms["addinven"]["qty"].value;
+            let price = document.forms["addinven"]["price"].value;
+
+            if (id == "") {
+                alert("Product ID Must be filled out.");
+                return false;
+            }
+            if (pname == "") {
+                alert("Product name must be filled out.");
+                return false;
+            }
+            if (qty == "" || isNaN(qty)) {
+                alert("Please enter a vaid quantity");
+                return false;
+            }
+            if (price == "" || isNaN(price)) {
+                alert("Please enter a valid price");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body>
@@ -55,43 +76,54 @@ if (isset($_POST['add'])) {
         <h1>Welcome To Product Managemnet Page!</h1>
         <div class="form">
             <h2>Add Product</h2>
-            <form action="" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="addinven" onsubmit="return validForm()">
                 <table>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Product Id" name="id"><br>
+                            <label for="ID">Item No</label><br>
+                            <input type="text" placeholder="Item number" name="No" readonly><br>
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <label for="ID">Product ID</label><br>
+                            <input type="text" placeholder="Product Id" name="id" ><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Name">Product Name</label><br>
                             <input type="text" placeholder="Product Name" name="pname"><br>
                         </td>
                     </tr>
                     <tr>
                     <tr>
                         <td>
-                            <input type="text" placeholder="Price" name="price"><br>
+                            <label for="ID">Quentity</label><br>
+                            <input type="text" placeholder="Quantity" name="qty"><br>
                         </td>
+
                     </tr>
                     </tr>
                     <td>
-                        <input type="text" placeholder="Quantity" name="qty"><br>
+                        <label for="price">Price</label><br>
+                        <input type="text" placeholder="Price" name="price"><br>
                     </td>
                     </tr>
                     </tr>
                     <td>
-                        <button type="submit" class="btn" name="add">Add</button>
+                        <button type="submit" value="submit" class="btn" name="add">Add</button>
                     </td>
                     </tr>
                 </table>
             </form>
         </div>
         <?php
-         include 'prdc-mng-display.php';
+        include 'prdc-mng-display.php';
 
         ?>
     </div>
-   
+
 
 </body>
 

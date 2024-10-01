@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    font-size: 35px;
+    font-family: poppi;
+}
+
+#registe-container form{
+    width: 50%;
+    background-color:#00aaff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    padding: 25px 15px;
+    border-radius: 25px;
+}
+form table{
+    margin-left: auto;
+    margin-right: auto;
+}
+form table tr td{
+    padding: 15px;
+}
+form table tr td input{
+    padding: 10px;
+    width: 350px;
+    font-size: 25px;
+}

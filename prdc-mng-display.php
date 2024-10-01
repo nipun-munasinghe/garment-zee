@@ -1,3 +1,7 @@
+<?php
+    include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +19,8 @@
                 <tr>
                     <th>Product ID</th>
                     <th>Product Name</th>
-                    <th>Price</th>
                     <th>Quantity</th>
+                    <th>Price</th>
                     <th>Operation</th>
                 </tr>
             </thead>

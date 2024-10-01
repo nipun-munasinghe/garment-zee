@@ -8,7 +8,7 @@ footer{
     background-color: #f0f8ff;
     color: rgb(0, 33, 91);
 }
-.container{
+.containerfooter{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
