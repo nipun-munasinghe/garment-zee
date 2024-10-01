@@ -15,6 +15,9 @@
     <title>FAQ</title>
 </head>
 <body>
+    <!-- include the header file -->
+    <?php include('header.php'); ?>
+
     <hr>
     <center>
 	   <h1>Frequently Asked Questions</h1><br>
@@ -51,7 +54,7 @@
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">How do I contact customer support?<span class="icon"></span></button>
+            <button class="faq-question">How do I contact customer support?<span class="icon">▼</span></button>
             <div class="faq-answer">
                 <p>You can contact customer support via email, phone, or through the message feature available on our website.</p>
             </div>
@@ -70,5 +73,7 @@
 	
 	<hr>
 
+    <!-- include the footer file -->
+    <?php include('footer.php'); ?>
 </body>
 </html>
