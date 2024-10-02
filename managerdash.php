@@ -51,7 +51,7 @@
                 <div class="form">
                     <h2>Add Admin</h2>
                     <p>Name :</p>
-                    <input type="text"   placeholder="Your name" required>
+                    <input type="text"   placeholder="Admij name" required>
                     <p>Admin username :</p>
                     <input type="text"   placeholder="Admin Id" required>
                     <p>E mail :</p>
@@ -71,12 +71,12 @@
                 <div class="form">
                     <h2>Add Employee</h2>
                     <p>Name :</p>
-                    <input type="text"   placeholder="Your name" required>
+                    <input type="text"   placeholder="Employee name" required>
                     <p>Employee username :</p>
-                    <input type="text"   placeholder="Admin Id" required>
+                    <input type="text"   placeholder="Employee Id" required>
                     <p>E mail :</p>
                     <input type="email"  placeholder="example@gmail.com" required>
-                    <p>Phone Number :</p>
+                    <p>Phone Number 1 :</p>
                     <input type="number" placeholder="0xxxxxxxx" required>
                     <p>Phone Number 2 :</p>
                     <input type="number" placeholder="0xxxxxxxx">
@@ -108,7 +108,7 @@
                         <div class="sal-display">
                             <h3>Salary:</h3>
                             <h2>Rs.50 000</h2>
-                            <button class="addbase">Add Data Base</button>
+                            <button class="addbase">Add to Data Base</button>
                         </div>
                     </div>
             </div>
