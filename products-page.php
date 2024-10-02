@@ -19,69 +19,70 @@
     <?php include('header.php'); ?>
 
     <div class="container">
-        <h1 class="topicP">Our Products</h1>
+        <div class="background"></div>
+        <h1 class="topicP">OUR PRODUCTS</h1>
         <div class="row">
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 7.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 2.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 3.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 4.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 5.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 6.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 1.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 8.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 9.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 10.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 11.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
 
             <div class="product">
-                <a href="./single-product.php"><img src="./Images/t-shirt.png" alt="product"></a>
+                <a href="./single-product.php"><img src="./Images/t shirt 12.jpg" alt="product"></a>
                 <h3>T-shirt</h3>
             </div>
         </div>
