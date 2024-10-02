@@ -117,3 +117,15 @@ textarea{
     background-color: #0069b4;
     cursor: pointer; 
 }
+
+#name {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#email {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#message {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}

@@ -94,7 +94,7 @@
                 <button id="change-btn" name="changeBtn" type="submit" onclick="change(event)">Change Password</button>
             </div>
         </div>
-</form>
+    </form>
     
     <!-- include the footer file -->
     <?php include('footer.php'); ?>

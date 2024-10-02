@@ -26,6 +26,15 @@
             }
         }
     }
+
+    if(isset($_POST['delete'])) {
+        $sql = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
+        $result = mysqli_query($connection, $sql);
+
+        if($result) {
+            header('Location: signout.php');
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +84,7 @@
                 
                 <center>
                     <button type="submit" name="change" class="btn-change">Change Password</button><br><br>
-                    <button type="button" name="delete" class="btn-delete">Delete Account</button>
+                    <button type="submit" name="delete" class="btn-delete">Delete Account</button>
                 </center>
             </form>
         </div>

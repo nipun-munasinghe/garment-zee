@@ -55,7 +55,9 @@
                 <input type="text" id="name" placeholder="Your Name" required><br>
                 <input type="email" id="email" placeholder="Your E-mail" required><br>
                 <textarea type="text" id="message" placeholder="Your Message"></textarea><br>
-                <input type="submit" id="submit"placeholder="Submit">
+                <center>
+                    <input type="submit" id="submit"placeholder="Submit">
+                </center>
             </div>
         </div>
     

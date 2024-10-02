@@ -24,7 +24,7 @@
 				Made from soft, breathable fabric that feels as good as it looks.
 				Available in a range of cool colors to match your vibe. 
 				Grab yours now and rock that casual look!" 😎👕</p>
-            <button id="buy-now-btn">Buy Now</button><br><br>
+            <button onclick="window.location.href='./place-order.php'" id="buy-now-btn">Buy Now</button><br><br>
         </div>
     </center>
 </body>
