@@ -14,5 +14,12 @@
         }
     
     }
+    
+    if($result) {
+        header('Location:poduct-mng.php');
+    }
+    else {
+        die(mysqli_error($connection));
+    }
 
 ?>

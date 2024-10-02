@@ -2,7 +2,7 @@
     include 'config.php';
 
     if(isset($_GET['deleteid'])) {
-        $no = mysqli_real_escape_string($connection, $_GET['deleteid']);
+        $no=$_GET['deleteid'];
 
         $sql="delete from `product` where Item_No=$no";
         $result=mysqli_query($connection,$sql);
@@ -13,6 +13,13 @@
             die(mysqli_error($connection));
         }
     
+    }
+    
+    if($result) {
+        header('Location:poduct-mng.php');
+    }
+    else {
+        die(mysqli_error($connection));
     }
 
 ?>
