@@ -35,7 +35,6 @@ body {
 .container{
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255,.8);
     border-radius: 10px;
     justify-content: space-between;
     padding: 30px;
@@ -45,6 +44,7 @@ body {
     display: flex;
     justify-items: left;
     padding-bottom: 30px;
+    padding-left: 50px;
  }
 
 .icon{
@@ -64,7 +64,7 @@ body {
     font-size: large;
     display: flex;
     padding-top: 1px;
-    color: #00aaff;
+    color: #000000;
  }
 
  .contactform{
@@ -72,7 +72,7 @@ body {
     justify-content: flex-end;
     align-self: flex-start; 
     margin-top:-320px;
-    padding-right: 30px
+    padding-right: 70px
     }
 
 .form{
@@ -86,7 +86,7 @@ input{
     width: 400px;
     padding:10px 10px 10px 10px;
     gap: 20px;
-    border: 1px solid rgb(0, 58, 92);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 20px;
     text-align: left;
@@ -98,7 +98,7 @@ textarea{
     width: 400px;
     padding:10px 10px 10px 10px;
     gap: 20px;
-    border: 1px solid rgb(0, 58, 92);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 20px;
     text-align: left;
