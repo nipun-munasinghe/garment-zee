@@ -1,0 +1,30 @@
+.inven-container .form-section{
+    background-color:#2fb8fd;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 50px;
+}
+
+
+.form-section {
+    align-items: center;
+}
+
+.form-section table tr td{
+    padding-top: 20px;
+    font-size: 18px;
+    padding-left: 60px;
+}
+.form-section table tr td input{
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
