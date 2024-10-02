@@ -77,6 +77,10 @@
                 <center>
                     <button id="registerBtn">Register Now</button>
                 </center>
+
+                <div class="clickLogin">
+                    <p>Do you have an account? <a id="clickLogin" href="login.php">Sign In</a></p>
+                </div>
             </form>
         </fieldset>
     </div>

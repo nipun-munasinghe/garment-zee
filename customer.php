@@ -55,7 +55,7 @@
 
     <div class="banner">
         <img src="./Images/customer-banner.png" alt="products banner">
-        <button>Buy Products</button>
+        <button onclick="window.location.href='./products-page.php'">Buy Products</button>
     </div> <hr>
 
     <form action="customer.php" method="POST">
