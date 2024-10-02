@@ -30,40 +30,40 @@
         <div class="product-container">
             <div class="product">
                 <h3>T-shirt</h3>
-                <img src="./Images/t-shirt.png" alt="product t-shirt">
-                <p>This t-shirt is the latest one designed by Garment Zee</p>
+                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <img src="./Images/t-shirt.png" alt="product t-shirt">
-                <p>This t-shirt is the latest one designed by Garment Zee</p>
+                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <img src="./Images/t-shirt.png" alt="product t-shirt">
-                <p>This t-shirt is the latest one designed by Garment Zee</p>
+                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
         </div>
 
         <div class="product-container">
             <div class="product">
                 <h3>T-shirt</h3>
-                <img src="./Images/t-shirt.png" alt="product t-shirt">
-                <p>This t-shirt is the latest one designed by Garment Zee</p>
+                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <img src="./Images/t-shirt.png" alt="product t-shirt">
-                <p>This t-shirt is the latest one designed by Garment Zee</p>
+                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <img src="./Images/t-shirt.png" alt="product t-shirt">
-                <p>This t-shirt is the latest one designed by Garment Zee</p>
+                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
         </div>
     </div>

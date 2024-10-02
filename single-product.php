@@ -15,8 +15,8 @@
     <title>Single Product Page</title>
 </head>
 <body>
-    <center>   
-        <div class="product-details">	
+    <center>
+        <div class="product-details">
             <img class = "i1" src="Images/singleProduct.png" alt="Product Image" width = "500px" height = "500px">
            
             <h3>Price: Rs.<span id="product-price">1500</span></h3>
