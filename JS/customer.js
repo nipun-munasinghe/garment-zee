@@ -5,7 +5,15 @@ function del(event) {
 }
 
 function change(event) {
-    if (!confirm("Are you sure you want to change your password?")) {
+    const newPwd = document.getElementById('new-pwd').value;
+    const confirmPwd = document.getElementById('confirm-pwd').value;
+
+    if (newPwd !== confirmPwd) {
+        event.preventDefault();
+        alert("New password and confirmed password do not match!");
+    }
+
+    else if (!confirm("Are you sure you want to change your password?")) {
         event.preventDefault();
     }
 }
