@@ -5,7 +5,7 @@ body {
     margin: 10px;
 }
 .background-overlay {
-    background: url(/Images/contactus.jpg);
+    background: url(../Images/contactus.jpg);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
