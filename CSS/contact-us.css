@@ -44,14 +44,13 @@ body {
 .box{
     display: flex;
     justify-items: left;
-    padding-top: 10px;
+    padding-bottom: 30px;
  }
 
 .icon{
     display: flex;
     margin-top: 10px;
     padding-right: 50px;
-    padding-top: 25px;
     color: #0069b4;
  }
 
@@ -72,22 +71,19 @@ body {
     display: flex;
     justify-content: flex-end;
     align-self: flex-start; 
-    margin-top:-350px;
-    padding-right: 30px;
+    margin-top:-320px;
+    padding-right: 30px
     }
 
 .form{
-    background-color: rgb(255, 255, 255,.5);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0.7;
     border-radius: 10px;
-    padding: 20px;
+    padding: 5px;
     }
 
 input{
     padding-bottom:20px;
     margin-top: 10px;
-    width: 500px;
+    width: 400px;
     padding:10px 10px 10px 10px;
     gap: 20px;
     border: 1px solid rgb(0, 58, 92);
@@ -99,7 +95,7 @@ input{
 textarea{
     padding-bottom:20px;
     margin-top: 10px;
-    width: 500px;
+    width: 400px;
     padding:10px 10px 10px 10px;
     gap: 20px;
     border: 1px solid rgb(0, 58, 92);
