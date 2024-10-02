@@ -27,7 +27,11 @@
                 Thank you for choosing Garment Zee. We look forward to connecting with you!
             </p>
         </div>
+<<<<<<< Updated upstream
     <div class="containerContact">
+=======
+    <div class="containera">
+>>>>>>> Stashed changes
         <div class="box">
             <div class="icon"><i class="fa-solid fa-phone fa-2x"></i></div>
             <div class="text">
@@ -49,19 +53,31 @@
                 <p>Garment Zee, Kaduwela, Malabe</p>
             </div>
         </div>
+<<<<<<< Updated upstream
     </div>
     
+=======
+>>>>>>> Stashed changes
         <div class="contactform">
-            <div class="form">
+                <div class="form">
                 <input type="text" id="name" placeholder="Your Name" required><br>
                 <input type="email" id="email" placeholder="Your E-mail" required><br>
                 <textarea type="text" id="message" placeholder="Your Message"></textarea><br>
+<<<<<<< Updated upstream
                 <center>
                     <input type="submit" id="submit"placeholder="Submit">
                 </center>
             </div>
         </div>
     
+=======
+                <input type="submit" id="submit"placeholder="Submit">
+                </div>
+            </div>>
+
+    </div>
+           
+>>>>>>> Stashed changes
     </section>
 
     

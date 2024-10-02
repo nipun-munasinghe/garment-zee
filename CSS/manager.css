@@ -131,9 +131,14 @@ input{
     font-size: 20px;
     margin-top: -10px;
 }
+<<<<<<< Updated upstream
 
 p{
+=======
+.form p{
+>>>>>>> Stashed changes
     padding-top: 50px;
+    padding-bottom: 30px;
     font-size: 20px;
     text-align: left;
 }
@@ -146,7 +151,7 @@ p{
 
 .salarycal {
     text-align: center;
-    padding:10px 10px 10px 10px;
+    padding:50px 10px 50px 10px;
     margin-left:80px;
     margin-right: 80px;
     background-color: white;
@@ -155,7 +160,10 @@ p{
 }
 
 .salarycal p{
+    font-size: 20px;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .salform{
@@ -165,7 +173,7 @@ p{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .salarycal input{
@@ -183,6 +191,7 @@ p{
     font-size: 40px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 40px;
     color: rgb(0, 33, 91);
 }
 
@@ -205,7 +214,7 @@ p{
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-top: 150px;
+    margin-top: 180px;
     margin-left: 300px;
     margin-bottom: 300px;
     padding-left: 100px;

@@ -32,36 +32,51 @@ body {
     width: 100%;
 }
 
+<<<<<<< Updated upstream
 .containerContact{
+=======
+.containera{
+>>>>>>> Stashed changes
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255,.8);
     border-radius: 10px;
     justify-content: space-between;
+<<<<<<< Updated upstream
     padding: 30px;
     height: 370px;
     margin: 30px;
     margin-bottom: 80px;
+=======
+    padding: 50px;
+>>>>>>> Stashed changes
 }
 
-.box{
+.box {
     display: flex;
     justify-items: left;
-    padding-top: 10px;
+    padding-bottom: 30px;
  }
 
 .icon{
     display: flex;
+<<<<<<< Updated upstream
     margin-top: 5px;
     padding-right: 50px;
     padding-top: 12px;
+=======
+    justify-items: flex-start;
+    margin-top: 10px;
+    padding-right: 50px;
+    padding-top: 3px;
+>>>>>>> Stashed changes
     color: #0069b4;
  }
 
 .text h3{
     display: flex;
     color: #0069b4;
-    padding-top: -0px;
+    padding-top: 10px;
  }
 
 .text p{
@@ -74,18 +89,21 @@ body {
  .contactform{
     display: flex;
     justify-content: flex-end;
+<<<<<<< Updated upstream
     align-self: flex-start; 
     margin-top:-430px;
     padding-right: 70px;
     padding-bottom: 70px;
+=======
+    margin-top: -330px;
+    padding-right: 30px;
+>>>>>>> Stashed changes
     }
 
 .form{
-    background-color: rgb(255, 255, 255,.5);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0.7;
+   
     border-radius: 10px;
-    padding: 20px;
+    padding: 5px 10px 10px 10px;
     }
 
 input{
@@ -113,7 +131,8 @@ textarea{
 }
 
 #submit{
-    width: 130px;
+    width: 70px;
+    font-size: 15px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -122,7 +141,7 @@ textarea{
 }
 
 #submit:hover {
-    background-color: #0069b4;
+    background-color: #023051;
     cursor: pointer; 
 }
 
