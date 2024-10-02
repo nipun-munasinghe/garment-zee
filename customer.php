@@ -26,6 +26,15 @@
             }
         }
     }
+
+    if(isset($_POST['delBtn'])) {
+        $sql = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
+        $result = mysqli_query($connection, $sql);
+        
+        if($result) {
+            header('Location: signout.php');
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +63,7 @@
     <h1>Hello <?php echo $_SESSION['first_name']; ?> !</h1>
 
     <div class="banner">
-        <img src="./Images/customer-banner.png" alt="products banner">
+        <a href="./products-page.php"><img src="./Images/customer-banner.png" alt="products banner"></a>
         <button onclick="window.location.href='./products-page.php'">Buy Products</button>
     </div> <hr>
 
@@ -81,8 +90,8 @@
             </div>
 
             <div class="btns">
-                <button id="delete-btn" name="delBtn" type="submit" onclick="del()">Delete Account</button>
-                <button id="change-btn" name="changeBtn" type="submit" onclick="change()">Change Password</button>
+                <button id="delete-btn" name="delBtn" type="submit" onclick="del(event)">Delete Account</button>
+                <button id="change-btn" name="changeBtn" type="submit" onclick="change(event)">Change Password</button>
             </div>
         </div>
 </form>

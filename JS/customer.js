@@ -1,7 +1,11 @@
-function del() {
-    confirm("Are you want to delete this account permenantly ?");
+function del(event) {
+    if (!confirm("Are you sure you want to delete this account permanently?")) {
+        event.preventDefault();
+    }
 }
 
-function change() {
-    confirm("Are you want to change your password ?");
+function change(event) {
+    if (!confirm("Are you sure you want to change your password?")) {
+        event.preventDefault();
+    }
 }
