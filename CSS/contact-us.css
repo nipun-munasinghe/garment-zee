@@ -5,7 +5,7 @@ body {
     margin: 10px;
 }
 .background-overlay {
-    background: url(../Images/contactus.jpg);
+    background: url(/Images/contactus.jpg);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -32,51 +32,33 @@ body {
     width: 100%;
 }
 
-<<<<<<< Updated upstream
-.containerContact{
-=======
-.containera{
->>>>>>> Stashed changes
+.container{
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255,.8);
     border-radius: 10px;
     justify-content: space-between;
-<<<<<<< Updated upstream
     padding: 30px;
-    height: 370px;
-    margin: 30px;
-    margin-bottom: 80px;
-=======
-    padding: 50px;
->>>>>>> Stashed changes
 }
 
-.box {
+.box{
     display: flex;
     justify-items: left;
-    padding-bottom: 30px;
+    padding-top: 10px;
  }
 
 .icon{
     display: flex;
-<<<<<<< Updated upstream
-    margin-top: 5px;
-    padding-right: 50px;
-    padding-top: 12px;
-=======
-    justify-items: flex-start;
     margin-top: 10px;
     padding-right: 50px;
-    padding-top: 3px;
->>>>>>> Stashed changes
+    padding-top: 25px;
     color: #0069b4;
  }
 
 .text h3{
     display: flex;
     color: #0069b4;
-    padding-top: 10px;
+    padding-top: -0px;
  }
 
 .text p{
@@ -89,21 +71,17 @@ body {
  .contactform{
     display: flex;
     justify-content: flex-end;
-<<<<<<< Updated upstream
     align-self: flex-start; 
-    margin-top:-430px;
-    padding-right: 70px;
-    padding-bottom: 70px;
-=======
-    margin-top: -330px;
+    margin-top:-350px;
     padding-right: 30px;
->>>>>>> Stashed changes
     }
 
 .form{
-   
+    background-color: rgb(255, 255, 255,.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.7;
     border-radius: 10px;
-    padding: 5px 10px 10px 10px;
+    padding: 20px;
     }
 
 input{
@@ -131,8 +109,7 @@ textarea{
 }
 
 #submit{
-    width: 70px;
-    font-size: 15px;
+    width: 130px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -141,14 +118,6 @@ textarea{
 }
 
 #submit:hover {
-    background-color: #023051;
+    background-color: #0069b4;
     cursor: pointer; 
-}
-
-.content
-{
-    padding-top: 20px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
 }
