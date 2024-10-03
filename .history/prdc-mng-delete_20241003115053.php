@@ -14,3 +14,7 @@
         }
     
     }
+    // Reset auto-increment after deleting records
+mysqli_query($connection, "SET @num := 0;");
+mysqli_query($connection, "UPDATE your_table SET id = @num := (@num+1);");
+mysqli_query($connection, "ALTER TABLE your_table AUTO_INCREMENT = 1;");

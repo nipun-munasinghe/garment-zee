@@ -23,7 +23,7 @@
     margin-bottom: 15px;
 }
 .form{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -31,7 +31,7 @@ h1{
     text-align: center;
     font-size: 45px;
     color:rgb(0, 33, 91);
-    padding: -10px;
+    
 }
 h2{
     text-align: center;
@@ -63,7 +63,4 @@ input{
 /* table modify */
 .display-tbl{
     margin-top: 200px;
-}
-button{
-    
 }

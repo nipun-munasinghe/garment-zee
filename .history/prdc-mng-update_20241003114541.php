@@ -1,28 +1,44 @@
-<?php
-include 'config.php';
+<?php include 'config.php';
+
+$no = $_GET['updateid'];
+$sql = "SELECT * from `product` WHERE Item_No=$no";
+$result = mysqli_query($connection, $sql);
+$row = mysqli_fetch_assoc($result);
+$no = $row['Item_No'];
+$id = $row['Product_Id'];
+$pname = $row['Product_name'];
+$pprice = $row['Price'];
+$pdescription = $row['Product_description'];
+$pquentity = $row['Stock_quantity'];
+
 
 if (isset($_POST['add'])) {
+    //$no = $_POST['no'];
     $id = $_POST['id'];
-    $name = $_POST['pname'];
-    $price = $_POST['price'];
-    $discription = $_POST['discription'];
-    $qty = $_POST['qty'];
+    $pname = $_POST['pname'];
+    $pprice = $_POST['price'];
+    $pdescription = $_POST['Product_description'];
+    $pqty = $_POST['qty'];
 
-    $sql = "INSERT into `product`(Product_Id, Product_name, Price, Product_description, stock_quantity)
-        values('$id', '$name', '$price', '$discription','$qty');";
+    $sql = "UPDATE `product` SET 
+                Item_No=$no,
+                Product_Id='$id',
+                Product_name='$pname',
+                Price=$pprice,
+                Product_description='$pdescription',
+                stock_quantity=$pqty
+            WHERE Item_No=$no;";
+
     $result = mysqli_query($connection, $sql);
+
     if ($result) {
-        header('Location:product-mng.php');
-        exit;
+        header('Location: product-mng.php');
     } else {
-        die("Error: " . mysqli_error($con));
+        die(mysqli_error($connection));
     }
 }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,33 +56,6 @@ if (isset($_POST['add'])) {
     <link rel="stylesheet" href="CSS/product-management.css">
 
     <title>Product Management Page</title>
-
-    <script>
-        function validForm() {
-            let id = document.forms["addinven"]["id"].value;
-            let pname = document.forms["addinven"]["pname"].value;
-            let qty = document.forms["addinven"]["qty"].value;
-            let price = document.forms["addinven"]["price"].value;
-
-            if (id == "") {
-                alert("Product ID Must be filled out.");
-                return false;
-            }
-            if (pname == "") {
-                alert("Product name must be filled out.");
-                return false;
-            }
-            if (qty == "" || isNaN(qty)) {
-                alert("Please enter a vaid quantity");
-                return false;
-            }
-            if (price == "" || isNaN(price)) {
-                alert("Please enter a valid price");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </head>
 
 <body>
@@ -77,21 +66,24 @@ if (isset($_POST['add'])) {
     <div class="pcontainer">
         <h1>Welcome To Product Managemnet Page!</h1>
         <div class="form">
-            <h2>Add Product</h2>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="addinven" onsubmit="return validForm()">
+            <h2>Updade Product</h2>
+            <form action="" method="post">
                 <table>
                     <!-- <tr>
                         <td>
                             <label for="ItemNo">Item No</label><br>
-                            <input type="text" placeholder="Item number" name="No" readonly><br>
                         </td>
-                    </tr> -->
+                        <td>
+                            <input type="text" placeholder="Item number" name="no" readonly><br>
+                        </td> -->
+                    </tr>
                     <tr>
                         <td>
                             <label for="ID">Product ID</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Product Id" name="id"><br>
+                            <input type="text" placeholder="Product Id" name="id"
+                                value=<?php echo $id; ?>><br>
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +91,8 @@ if (isset($_POST['add'])) {
                             <label for="Name">Product Name</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Product Name" name="pname"><br>
+                            <input type="text" placeholder="Product Name" name="pname"
+                                value=<?php echo $pname; ?>><br>
                         </td>
                     </tr>
 
@@ -108,7 +101,8 @@ if (isset($_POST['add'])) {
                             <label for="price">Price</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Price" name="price"><br>
+                            <input type="text" placeholder="Price" name="price"
+                                value=<?php echo $pprice; ?>><br>
                         </td>
                     </tr>
                     <tr>
@@ -116,7 +110,9 @@ if (isset($_POST['add'])) {
                             <label for="dicription">Product Discription</label>
                         </td>
                         <td>
-                            <textarea name="discription" id="discription" rows="4" column="80" name="discription"></textarea>>
+                            <textarea name="Product_description" id="discription" rows="4" column="60">
+                            <?php echo $pdescription; ?>
+                            </textarea>
                         </td>
                     </tr>
                     <tr>
@@ -124,24 +120,19 @@ if (isset($_POST['add'])) {
                             <label for="quantity">Quentity</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Quantity" name="qty"><br>
+                            <input type="text" placeholder="Quantity" name="qty"
+                                value=<?php echo $pquentity; ?>><br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button type="submit" value="submit" class="btn" name="add">Add</button>
+                            <button type="submit" value="submit" class="btn" name="add">Update</button>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
-        <?php
-        include 'prdc-mng-display.php';
-
-        ?>
     </div>
-
-
 </body>
 
 </html>
