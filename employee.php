@@ -34,6 +34,10 @@
         if($result) {
             header('Location: signout.php');
         }
+        else
+        {
+            echo "Error: " . mysqli_error($connection);
+        }
     }
 ?>
 

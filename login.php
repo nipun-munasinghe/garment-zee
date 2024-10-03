@@ -61,7 +61,7 @@
 </head>
 <body>
     <div class="formOut">
-        <form action="#" method="post">
+        <form action="login.php" method="post">
         <fieldset>
             <div class="formContain">
                 <h1 id="log">Login</h1>

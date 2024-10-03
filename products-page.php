@@ -1,3 +1,8 @@
+<?php 
+    session_start();          
+    require_once 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,72 +26,32 @@
     <div class="container">
         <div class="background"></div>
         <h1 class="topicP">OUR PRODUCTS</h1>
-        <div class="row">
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 7.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 2.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 3.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 4.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-        </div>
 
         <div class="row">
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 5.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
 
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 6.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
+            <?php 
+                $sql = "SELECT * FROM products;";
+                $result = mysqli_query($connection, $sql);
 
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 1.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
+                while($row = $result -> fetch_assoc()){
+                    
+                    $img_url = $row['img_url'];
+                    $ID = $row['Product_ID'];
+                    echo "<div class='product'>
+                            <img src='./Images/products/$img_url' alt='product' id='prductImg'>
+                            <form method='POST' action='single-product.php'>
+                                <input type='hidden' value='$ID' name='productid' >
+                                <button type='submit' name='buynowbtn' >Buy Now</button>
+                            </form>
+                           </div>";
+                }
+            ?>
 
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 8.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 9.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 10.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 11.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
-
-            <div class="product">
-                <a href="./single-product.php"><img src="./Images/t shirt 12.jpg" alt="product"></a>
-                <h3>T-shirt</h3>
-            </div>
         </div>
     </div>
+
+    <!-- include the footer file -->
+    <?php include('footer.php'); ?>
     
 </body>
 </html>

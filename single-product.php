@@ -1,3 +1,24 @@
+<?php 
+    session_start();          
+    require_once 'config.php';
+
+    if(isset($_POST['buynowbtn'])){
+        $productid = $_POST['productid'];
+    }
+
+    $sql = "SELECT * FROM products WHERE Product_ID = '$productid' ;";
+    $result = mysqli_query($connection, $sql);
+
+    if(mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+
+        $name = $row['Product_name'];
+        $price = $row['Price'];
+        $description = $row['Product_description'];
+        $img_url = $row['img_url'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +38,17 @@
 <body>
     <center>
         <div class="product-details">
-            <img class = "i1" src="Images/singleProduct.png" alt="Product Image" width = "500px" height = "500px">
+            <img class = "i1" src="Images/products/<?php echo $img_url ?>" alt="Product Image" width = "500px" height = "500px">
            
-            <h3>Price: Rs.<span id="product-price">1500</span></h3>
-            <p class="description">"Look sharp and stay comfy in this classic T-shirt! Perfect for any occasion, whether you're lounging around or heading out.
-				Made from soft, breathable fabric that feels as good as it looks.
-				Available in a range of cool colors to match your vibe. 
-				Grab yours now and rock that casual look!" 😎👕</p>
-            <button onclick="window.location.href='./place-order.php'" id="buy-now-btn">Buy Now</button><br><br>
+            <h2 id="pName"><?php echo $name ?></h2>
+            <h3>Price: Rs.<span id="product-price"><?php echo $price ?></span></h3>
+            <p class="description">"<?php echo $description ?>"</p>
+            <form action="place-order.php" method="POST">
+                <input type="hidden" name="productID" value="<?php echo $productid ?>">
+                <input type="hidden" name="priCe" value="<?php echo $price ?>">
+                <button id="buy-now-btn" type="submit" name="ordernow" >Buy Now</button>
+            </form>
+            <br><br>
         </div>
     </center>
 </body>
