@@ -77,7 +77,7 @@
     
     <link rel="stylesheet" href="CSS/manager.css">
 
-    <script src="JS/manager.js"></script>
+    <script src="JS/login.js"> </script>
 
     <title>Managerdashbord</title>
 </head>
@@ -158,6 +158,7 @@
             <div class="salarycal">
                     <h2>Employee Salary Calculation </h2>
                     <div class="separate-display">
+                <form>
                         <div class="salform">
                             <p>Employee username :</p>
                             <input type="text"   placeholder="Employee username" required>
@@ -169,11 +170,12 @@
                             <input type="number" class="hoursa"  min="1" placeholder="Hour Rate" required>
                             <br>
                             <br>
-                            <button class="scalculate">Calculate</button>
+                            <button type="button"  class="scalculate" onclick="calculateSalary()">Calculate</button>
+                </form>
                         </div>
                         <div class="sal-display">
                             <h3>Salary:</h3>
-                            <h2>Rs.50 000</h2>
+                            <h2 id="salary">Rs.0.00</h2>
                             <button class="addbase">Add to Data Base</button>
                         </div>
                     </div>
