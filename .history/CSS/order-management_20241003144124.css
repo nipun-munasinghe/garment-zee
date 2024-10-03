@@ -14,7 +14,7 @@ body
 .updateForm
 {
     width: 420px;
-    height: 660px;
+    height: 700px;
     color: rgb(0, 33, 91);
     margin: auto;
     background-color: white;
@@ -50,7 +50,6 @@ body
 #Oaddress
 {
     width: 100%;
-    
 }
 
 #reciptUrl
@@ -110,6 +109,6 @@ fieldset
 
 label
 {
-    color: #0069b4;
+    color: #00aaff;
 }
 

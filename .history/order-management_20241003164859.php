@@ -7,13 +7,9 @@
         $oName = $_POST['fName'];
         $oAmount = $_POST['amount'];
         $oStatus = $_POST['fStatus'];
-        $oEmail = $_POST['fEmail'];
-        $oAddress = $_POST['fAddress'];
-        $ReciptUrl = $_POST['recipt'];
-        
 
-        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status, Order_email, Address, Receipt_url)
-        values('$oid', '$oName', '$oAmount', '$oStatus', '$oEmail', '$oAddress', '$ReciptUrl');";
+        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status)
+        values('$oid', '$oName', '$oAmount', '$oStatus');";
         $result = mysqli_query($connection, $sqlQuery);
         if($result)
         {
@@ -114,8 +110,8 @@
                             $oAmount = $row['Price'];
                             $oStatus = $row['Order_status'];
                             $oEmail = $row['Order_email'];
-                            $oAddress = $row['Address'];
-                            $ReciptUrl = $row['Receipt_url'];
+                            $oAddress = $row['Order_status'];
+                            $ReciptUrl = $row['Order_status'];
 
                             echo 
                             '<tr>
@@ -123,13 +119,7 @@
                             <td>' . $oName . '</td>
                             <td>' . $oAmount . '</td>
                             <td>' . $oStatus . '</td>
-                            <td>' . $oEmail . '</td>
-                            <td>' . $oAddress . '</td>
-                            <td>' . $ReciptUrl . '</td>
-                            <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'">DELETE</a>
-                            </td>
+                            
                             </tr>';
 
                         }

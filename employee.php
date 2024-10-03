@@ -28,16 +28,18 @@
     }
 
     if(isset($_POST['delete'])) {
-        $sql = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
-        $result = mysqli_query($connection, $sql);
 
-        if($result) {
-            header('Location: signout.php');
-        }
-        else
-        {
-            echo "Error: " . mysqli_error($connection);
-        }
+        mysqli_begin_transaction($connection);
+    
+        $sql1 = "DELETE FROM employee_salary WHERE username = '" . $_SESSION['username'] . "';";
+        $result1 = mysqli_query($connection, $sql1);
+    
+        $sql2 = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
+        $result2 = mysqli_query($connection, $sql2);
+    
+        mysqli_commit($connection);
+        header('Location: signout.php');
+        
     }
 ?>
 

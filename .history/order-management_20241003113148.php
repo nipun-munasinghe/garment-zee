@@ -11,6 +11,8 @@
 
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/order-management.css">
+
+    <script src="JS/order-management.js"> </script>
    
     <title>Order Management Page</title>
 </head>
@@ -21,20 +23,15 @@
     <hr>
     <h1 id="h1Welcome">Welcome to Order Management Page</h1>
     <div class="updateForm">
-        <form action="#" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
             <fieldset>
                 <div class="formContain">
-<<<<<<<< HEAD:order-mng.html
-                    <h2>Update Order Details</h2>
-                    <input type="text" id="orderID" placeholder="Order ID" readonly><br><br>
-========
                     <h2 class="omH">Update Order Details</h2><br>
-                    <input type="text" id="orderID" placeholder="Order ID" required><br><br>
->>>>>>>> dee808c9e9c80c7cad562f79feaf0d4030b6a5ea:order-management.php
-                    <input type="text" id="cName" placeholder="Customer Name" required><br><br>
-                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" required><br><br>
-                    <input type="text" id="status" placeholder="Order Status" required><br><br><br>
-                    <center><input type="submit" class="addBtn" value="ADD"></center>
+                    <input type="text" id="orderID" placeholder="Order ID" name="Id"><br><br>
+                    <input type="text" id="cName" placeholder="Customer Name" name="fName"><br><br>
+                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount"><br><br>
+                    <input type="text" id="status" placeholder="Order Status" name="fStatus"><br><br><br>
+                    <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
                 </div>
                 
             </fieldset>    
@@ -42,7 +39,19 @@
     </div>
     <br>
     <hr>
+    <div class="orderDisplay">
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Customer Name</th>
+                <th>Amount Of The Order</th>
+                <th>Order Status</th>
+            </tr>
+
+
+    <div>
     <br><br><br>
+    
 
     <hr>
     <!-- link the footer -->
