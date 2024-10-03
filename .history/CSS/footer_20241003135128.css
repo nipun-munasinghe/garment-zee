@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+footer{
+    background-color: #49bff9;
+    color: rgb(0, 33, 91);
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 80px;
+}
+
+footer.col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon ul li{
+    display: inline;
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer h4{
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.column{
+    margin-top: 10px;
+}
+
+.sec_quicklink1{
+    margin-top: 20px;
+}
+
+.sec_quicklink2{
+    margin-top: 20px;
+}
+
+.sec_contact{
+    margin-top: 20px;
+}
+
+.copyright{
+    margin: 20px 20px;
+}
+
+.column ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.column ul li a{
+    text-decoration: none;
+}
+
+.fa{
+    margin-left: 10px;
+}
+
+.sec_aboutus p {
+    color: #0069b4;
+}
+
+.sec_aboutus img{
+    height: 35px;
+}
+
+.sec_quicklink1 ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.sec_quicklink1 ul li a{
+    text-decoration: none;
+    color: #0069b4;
+}
+
+.sec_quicklink1 ul li a:hover {
+    color: #00aaff;
+}
+
+.sec_quicklink2 ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.sec_quicklink2 ul li a{
+    text-decoration: none;
+    color: #0069b4;
+}
+
+.sec_quicklink2 ul li a:hover {
+    color: #00aaff;
+}
+
+.sec_contact li {
+    margin-top: 15px;
+    list-style: none;
+    color: #0069b4;
+}
+
+.sec_contact li i{
+    margin-right: 10px;
+}
+
+.media-icons{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.media-icons a i{
+    height: 60px;
+    width: 60px;
+    background: red;
+    margin: 18px 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+#facebook{
+    background-color: #4267b2;
+}
+#twitter{
+    background-color: #1da1f2;
+}
+#instagram{
+    background-color: #e1306c;
+}
+#linkdin{
+    background-color: #0077b5;
+}
+#youtube{
+    background-color: #ff0000;
+}

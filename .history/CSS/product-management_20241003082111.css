@@ -1,0 +1,65 @@
+.pcontainer{
+    width: 100%;
+    height: 450PX;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c8e5ff;
+    border-radius: 10px;
+    padding-top: 0px;
+    margin-bottom: 50px;
+    overflow: visible;
+    background-image: ;
+
+}
+.form table{
+    background-color: #3fbffe;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 325px;
+   
+    margin-bottom: 15px;
+}
+.form{
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    color:;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+input{
+    height: 35px;
+    width: 250px;
+    border-radius: 5px;
+}
+.form table td button{
+    width: 100px;
+    height: 40px;
+    color: #00aaff;
+    font-weight: bold;
+    font-size: 15px;
+}
+.footer{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.display .prcd-table table{
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 250px;
+}
+
+
+/* table modify */
+.display-tbl{
+    margin-top: 200px;
+}

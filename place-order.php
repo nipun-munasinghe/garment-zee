@@ -1,7 +1,41 @@
 <?php
     session_start();
+    require_once 'config.php';
 
-    
+    if(isset($_POST['ordernow'])) {
+        $productid = $_POST['productID'];
+        $price = $_POST['priCe'];
+    }
+
+    if(isset($_POST['placeorder'])) {
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $phoneno = $_POST['mobileno'];
+        $email = $_POST['mail'];
+        $qty = $_POST['quantity'];
+        $price = $_POST['Totalprice'];
+        $total = $price*$qty;
+        $address = $_POST['address'];
+        $status = "Processing";
+        $recipt_name = $_FILES['myfile']['name'];
+
+        $destination = "./Images/recpits/".$recipt_name;
+
+        move_uploaded_file($_FILES['myfile']['tmp_name'], $destination);
+
+        $sql = "INSERT INTO orders (Customer_name, Price, Order_status, Order_email, Address, Receipt_url, Product_ID)
+                VALUES ('$name', '$total', '$status', '$email', '$address', '$recipt_name', ' $id');";
+
+        $result = mysqli_query($connection, $sql);
+
+        if($result) {
+            echo "<script>
+                  alert('Your order was placed successfully !');
+                  </script>";
+                  
+            header('Location: products-page.php');
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -37,46 +71,48 @@
         </div>
     
         <!-- place order details input form -->
-        <from action="#" method="post">
+        <form action="place-order.php" method="POST" enctype="multipart/form-data">
             <div class="details">
                 <label for="name">Name</label>
                 <br>
-                <input type="text" id="customer-name" placeholder="Your name" required>
+                <input type="text" id="customer-name" placeholder="Your name" name="name" >
                 <br>
                 <div class="left-right">
                     <div class="form-left">
                         <label for="tel">Phone number</label>
                         <br>
-                        <input type="tel" id="tel" placeholder="Your phone number" required>
+                        <input type="tel" id="tel" placeholder="Your phone number" name="mobileno">
                         <br>
                         <label for="quantity">Quantity</label>
                         <br>
-                        <input type="number" id="qty" name="quantity" min="1" required>
+                        <input type="number" id="qty" name="quantity" min="1">
                     </div>
 
                     <div class="form-right">
                         <label for="email">Email</label>
                         <br>
-                        <input type="email" id="mail" placeholder="Your email">
+                        <input type="email" id="mail" placeholder="Your email" name ="mail">
                         <br>
-                        <label for="price">Price (Rs. )</label>
+                        <label for="price">Unit Price (Rs. )</label>
                         <br>
-                        <input type="number" id="price" name="price" value='' disabled></input>
+                        <input type="number" id="price" name="price" value="<?php echo $price ?>" disabled>
+                        <input type="hidden" id="price" name="Totalprice" value="<?php echo $price ?>">
                     </div>
                 </div>
 
                 <label for="address">Address</label>
                 <br>
-                <textarea name="address" id="address" required></textarea>
+                <textarea name="address" id="address"></textarea>
                 <br>
                 <label for="myfile">Upload your payment recipt</label>
                 <br>
+                <input type="hidden" value="<?php echo $productid ?>" name="id">
                 <input type="file" id="myfile" name="myfile">
                 <br> <br> <br>
                 
                 <!-- place order button -->
                 <center>
-                    <button type='submit' name="placeorder" id="place-btn" onclick="place()">Place order</button>
+                    <button type="submit" name="placeorder" id="place-btn" >Place order</button>
                 </center>
             </div>
         </form>

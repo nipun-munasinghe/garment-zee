@@ -43,7 +43,12 @@
             <h2 id="pName"><?php echo $name ?></h2>
             <h3>Price: Rs.<span id="product-price"><?php echo $price ?></span></h3>
             <p class="description">"<?php echo $description ?>"</p>
-            <button onclick="window.location.href='./place-order.php'" id="buy-now-btn">Buy Now</button><br><br>
+            <form action="place-order.php" method="POST">
+                <input type="hidden" name="productID" value="<?php echo $productid ?>">
+                <input type="hidden" name="priCe" value="<?php echo $price ?>">
+                <button id="buy-now-btn" type="submit" name="ordernow" >Buy Now</button>
+            </form>
+            <br><br>
         </div>
     </center>
 </body>

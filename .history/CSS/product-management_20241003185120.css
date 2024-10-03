@@ -1,0 +1,69 @@
+.pcontainer{
+    width: 100%;
+    height: 450PX;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c8e5ff;
+    border-radius: 10px;
+    padding-top: 0px;
+    margin-bottom: 50px;
+    overflow: visible;
+    background-image: url(../Images/inventory.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form table{
+    background-color: #3fbffe;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 325px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+.form{
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    color:rgb(0, 33, 91);
+    padding: -10px;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    color:rgb(0, 33, 91);
+}
+input{
+    height: 35px;
+    width: 250px;
+    border-radius: 5px;
+}
+.form table td button{
+    width: 100px;
+    height: 40px;
+    color: #eb3434;
+    font-weight: bold;
+    font-size: 15px;
+}
+.footer{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.display .prcd-table table{
+    width: 75%;
+    margin-left: 250px;
+}
+
+/* table modify */
+.display-tbl{
+    margin-top: 200px;
+}
+button{
+    
+}

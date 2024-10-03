@@ -1,0 +1,11 @@
+.Icontainer form{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c8e5ff;    
+}
+
+.Icontainer h2{
+    text-align: center;
+    font-size: 35px;
+}
