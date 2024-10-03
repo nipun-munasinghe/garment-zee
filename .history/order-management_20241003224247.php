@@ -128,7 +128,6 @@
                             <td>' . $ReciptUrl . '</td>
                             <td>
                                 <a href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATE</a>
-                                <button href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATEE</button>
                                 <a href="order-manage-delete.php?deleteid='.$oid.'">DELETE</a>
                             </td>
                             </tr>';

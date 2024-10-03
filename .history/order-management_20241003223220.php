@@ -12,8 +12,8 @@
         $ReciptUrl = $_POST['recipt'];
         
 
-        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status, Order_email, Address, Receipt_url)
-        values('$oid', '$oName', '$oAmount', '$oStatus', '$oEmail', '$oAddress', '$ReciptUrl');";
+        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status, Order_email, Address, )
+        values('$oid', '$oName', '$oAmount', '$oStatus');";
         $result = mysqli_query($connection, $sqlQuery);
         if($result)
         {
@@ -126,11 +126,7 @@
                             <td>' . $oEmail . '</td>
                             <td>' . $oAddress . '</td>
                             <td>' . $ReciptUrl . '</td>
-                            <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATE</a>
-                                <button href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATEE</button>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'">DELETE</a>
-                            </td>
+                            
                             </tr>';
 
                         }

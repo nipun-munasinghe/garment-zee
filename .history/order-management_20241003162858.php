@@ -7,13 +7,9 @@
         $oName = $_POST['fName'];
         $oAmount = $_POST['amount'];
         $oStatus = $_POST['fStatus'];
-        $oEmail = $_POST['fEmail'];
-        $oAddress = $_POST['fAddress'];
-        $ReciptUrl = $_POST['recipt'];
-        
 
-        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status, Order_email, Address, Receipt_url)
-        values('$oid', '$oName', '$oAmount', '$oStatus', '$oEmail', '$oAddress', '$ReciptUrl');";
+        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status)
+        values('$oid', '$oName', '$oAmount', '$oStatus');";
         $result = mysqli_query($connection, $sqlQuery);
         if($result)
         {
@@ -72,10 +68,11 @@
                     <input type="email" id="Oemail" placeholder="Email" name="fEmail"><br>
 
                     <label for="address">Address :</label><br>
-                    <input type="text" id="Oaddress" placeholder="Address" name="fAddress"><br>
+                    <textarea id="0Address" rows="3" colum=""80></textarea>
+                    <br>
 
-                    <label for="reciptUrl">Payment Recipt :</label><br>
-                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br>
+                    <label for="reciptUrl">Pament Recipt :</label><br>
+                    <input type="file" id="reciptUrl" placeholder="Pament Recipt" name="fAddress"><br><br>
 
                     <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
                 </div>
@@ -94,9 +91,6 @@
                     <th>Customer Name</th>
                     <th>Amount Of The Order</th>
                     <th>Order Status</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>Recipt URL</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -113,9 +107,6 @@
                             $oName = $row['Customer_name'];
                             $oAmount = $row['Price'];
                             $oStatus = $row['Order_status'];
-                            $oEmail = $row['Order_email'];
-                            $oAddress = $row['Address'];
-                            $ReciptUrl = $row['Receipt_url'];
 
                             echo 
                             '<tr>
@@ -123,14 +114,7 @@
                             <td>' . $oName . '</td>
                             <td>' . $oAmount . '</td>
                             <td>' . $oStatus . '</td>
-                            <td>' . $oEmail . '</td>
-                            <td>' . $oAddress . '</td>
-                            <td>' . $ReciptUrl . '</td>
-                            <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATE</a>
-                                <button href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATEE</button>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'">DELETE</a>
-                            </td>
+                            
                             </tr>';
 
                         }

@@ -14,7 +14,7 @@ body
 .updateForm
 {
     width: 420px;
-    height: 660px;
+    height: 700px;
     color: rgb(0, 33, 91);
     margin: auto;
     background-color: white;
@@ -50,12 +50,6 @@ body
 #Oaddress
 {
     width: 100%;
-    
-}
-
-#reciptUrl
-{
-    width: 100%;
 }
 
 input
@@ -70,7 +64,7 @@ input
 
 .formContain
 {
-    padding: 30px;
+    padding: 45px;
 }
 
 .omH
@@ -106,10 +100,5 @@ fieldset
 
 .omH{
     text-align: center;
-}
-
-label
-{
-    color: #0069b4;
 }
 
