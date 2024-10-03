@@ -1,0 +1,13 @@
+.inven-container .form-section{
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+h1{
+    text-align: center;
+}
+
+.form-section {
+    align-items: center;
+}
