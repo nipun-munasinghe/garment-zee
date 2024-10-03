@@ -38,8 +38,8 @@
             }
             else {
                 echo "<div class='signupNsignin'>
-                      <button class='signup-btn' onclick='window.location.href='./register.php''>Sign Up</button>
-                      <button class='signin-btn' onclick='window.location.href='./login.php''>Sign In</button>
+                      <button class='signup-btn' onclick=\"window.location.href='./register.php'\">Sign Up</button>
+                      <button class='signin-btn' onclick=\"window.location.href='./login.php'\">Sign In</button>
                       </div>";
             }
         ?> 

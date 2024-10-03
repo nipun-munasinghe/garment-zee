@@ -112,6 +112,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+
 .form h2{
     color: rgb(0, 33, 91);
     margin-top: 0;
@@ -120,6 +121,7 @@ body {
     font-size: 40px;
     font-weight: bold;
 }
+
 input{
     text-align: left;
     border:2px solid black;
@@ -129,28 +131,37 @@ input{
     font-size: 20px;
     margin-top: -10px;
 }
-p{
+
+.form p{
     padding-top: 50px;
+    padding-bottom: 10px;
     font-size: 20px;
     text-align: left;
 }
+
 .salarycal{
     align-items: center;
     padding-left: 80px;
     padding-top: 50px;
 }
+
 .salarycal {
     text-align: center;
-    padding:10px 10px 10px 10px;
+    padding:50px 10px 50px 10px;
     margin-left:80px;
     margin-right: 80px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;   
 }
+
 .salarycal p{
+    font-size: 20px;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
+
 .salform{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -158,7 +169,7 @@ p{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .salarycal input{
@@ -170,13 +181,16 @@ p{
     font-size: 20px;
     margin-top: -10px;   
 }
+
 .salarycal h2{
     text-align: center;
     font-size: 40px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 40px;
     color: rgb(0, 33, 91);
 }
+
 .scalculate{
     background-color: rgb(37, 138, 221);
     color: rgb(255, 255, 255);
@@ -191,17 +205,18 @@ p{
 .separate-display {
     display: flex;
 }
+
 .sal-display{
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-top: 150px;
+    margin-top: 180px;
     margin-left: 300px;
     margin-bottom: 300px;
     padding-left: 100px;
     padding-right: 100px;
-
 }
+
 .addbase{
     background-color: rgb(37, 138, 221);
     color: rgb(255, 255, 255);
@@ -212,4 +227,12 @@ p{
     font-size: 16px;
     margin-top: 10px;
     margin-bottom:50px;
+}
+
+.form p {
+    margin-bottom: 15px;
+}
+
+.salarycal p {
+    margin-bottom: 15px;
 }

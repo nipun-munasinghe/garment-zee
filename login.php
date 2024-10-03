@@ -16,6 +16,7 @@
 
             $_SESSION['username'] = $row['username'];
             $_SESSION['first_name'] = $row['first_name'];
+            $_SESSION['last_name'] = $row['last_name'];
             $_SESSION['user_type'] = $row['user_type'];
 
             if($row['acc_status'] == 'active') {
@@ -60,7 +61,7 @@
 </head>
 <body>
     <div class="formOut">
-        <form action="#" method="post">
+        <form action="login.php" method="post">
         <fieldset>
             <div class="formContain">
                 <h1 id="log">Login</h1>

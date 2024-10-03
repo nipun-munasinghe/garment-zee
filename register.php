@@ -18,15 +18,17 @@
 
 <body>
     <div id="registe-container">
+        
         <fieldset>
             <form action="">
+            <center><h1>Create your account</h1></center>
                 <table>
                     <tr>
                         <td>
                             Fisrts Name
                         </td>
                         <td>
-                            <input type="text"><br>
+                            <input type="text" placeholder="Your first name"><br>
                         </td>
                     </tr>
                     <tr>
@@ -34,7 +36,7 @@
                             Last Name
                         </td>
                         <td>
-                            <input type="text"><br>
+                            <input type="text" placeholder="Your last name"><br>
                         </td>
                     </tr>
                     <tr>
@@ -47,10 +49,10 @@
                     </tr>
                     <tr>
                         <td>
-                            Phone
+                            Phone Number
                         </td>
                         <td>
-                            <input type="text" placeholder="+94........" id="phone">
+                            <input type="text" placeholder="+94xxxxxxxxx" id="phone">
                         </td>
 
                     </tr>
@@ -65,16 +67,24 @@
                     </tr>
                     <tr>
                         <td>
-                            Conferm Password
+                            Re-enter Password
                         </td>
                         <td>
-                            <input type="text" placeholder="Conferm">
+                            <input type="text" placeholder="Confirm Password">
                         </td>
                     </tr>
                 </table>
+                <center>
+                    <button id="registerBtn">Register Now</button>
+                </center>
+
+                <div class="clickLogin">
+                    <p>Do you have an account? <a id="clickLogin" href="login.php">Sign In</a></p>
+                </div>
             </form>
         </fieldset>
     </div>
+    <br><br>
 </body>
 
 </html>

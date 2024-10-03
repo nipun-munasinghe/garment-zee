@@ -32,29 +32,25 @@ body {
     width: 100%;
 }
 
-.containerContact{
+.container{
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255,.8);
     border-radius: 10px;
     justify-content: space-between;
     padding: 30px;
-    height: 370px;
-    margin: 30px;
-    margin-bottom: 80px;
 }
 
 .box{
     display: flex;
     justify-items: left;
-    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 50px;
  }
 
 .icon{
     display: flex;
-    margin-top: 5px;
+    margin-top: 10px;
     padding-right: 50px;
-    padding-top: 12px;
     color: #0069b4;
  }
 
@@ -68,33 +64,29 @@ body {
     font-size: large;
     display: flex;
     padding-top: 1px;
-    color: #00aaff;
+    color: #000000;
  }
 
  .contactform{
     display: flex;
     justify-content: flex-end;
     align-self: flex-start; 
-    margin-top:-430px;
-    padding-right: 70px;
-    padding-bottom: 70px;
+    margin-top:-320px;
+    padding-right: 70px
     }
 
 .form{
-    background-color: rgb(255, 255, 255,.5);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0.7;
     border-radius: 10px;
-    padding: 20px;
+    padding: 5px;
     }
 
 input{
     padding-bottom:20px;
     margin-top: 10px;
-    width: 500px;
+    width: 400px;
     padding:10px 10px 10px 10px;
     gap: 20px;
-    border: 1px solid rgb(0, 58, 92);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 20px;
     text-align: left;
@@ -103,10 +95,10 @@ input{
 textarea{
     padding-bottom:20px;
     margin-top: 10px;
-    width: 500px;
+    width: 400px;
     padding:10px 10px 10px 10px;
     gap: 20px;
-    border: 1px solid rgb(0, 58, 92);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 20px;
     text-align: left;
@@ -126,10 +118,14 @@ textarea{
     cursor: pointer; 
 }
 
-.content
-{
-    padding-top: 20px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+#name {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#email {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#message {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }

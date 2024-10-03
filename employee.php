@@ -1,3 +1,46 @@
+<?php
+    session_start();
+
+    require_once 'config.php';
+
+    if(isset($_POST['change'])) {
+        $sql = "SELECT password FROM user_info WHERE username = '".$_SESSION['username']."' ";
+        $result = mysqli_query($connection, $sql);
+
+        if($result) {
+            $row = mysqli_fetch_assoc($result);
+
+            $password = $row['password'];
+
+            if($password == $_POST['current-password']) {
+                $newPass = $_POST['new-password'];
+
+                $sql = "UPDATE user_info SET password='$newPass' WHERE username = '".$_SESSION['username']."' ";
+                $result = mysqli_query($connection, $sql);
+
+                if($result) {
+                    echo "<script>
+                          alert('Your password was successfully changed !');
+                          </script>";
+                }
+            }
+        }
+    }
+
+    if(isset($_POST['delete'])) {
+        $sql = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
+        $result = mysqli_query($connection, $sql);
+
+        if($result) {
+            header('Location: signout.php');
+        }
+        else
+        {
+            echo "Error: " . mysqli_error($connection);
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +61,12 @@
     <!-- include the header file -->
     <?php include('header.php'); ?>
 
+    <h1 id="greeting">Welcome to <?php echo $_SESSION['first_name']; ?>'s employee profile !</h1>
     <div class="container">
     <!-- Profile Section -->
         <div class="profile">
             <h2>Employee Profile</h2><br>
-            <p><b>Name <span class = "icon"> : </span></b> Renuka Watawala</p>
+            <p><b>Name <span class = "icon"> : </span></b> <?php echo $_SESSION['first_name'].' '.$_SESSION['last_name']; ?></p>
             <p><b>Working Days <span class = "icon"> : </span></b> 20 days/month</p>
             <p><b>Working Hours <span class = "icon"> : </span></b> 8 hours/day</p>
             <p><b>Hour Rate <span class = "icon"> : </span></b> 120 Rs./hour</p>
@@ -32,7 +76,7 @@
         <!-- Passowrd Settings Section -->
         <div class="settings">
             <h2>Password Settings</h2>
-            <form action="#">
+            <form action="employee.php" method="post">
                 <label for="current-password">Current Password:</label>
                 <input type="password" name="current-password" id="current-password" placeholder="Enter current password">
                 
@@ -43,8 +87,8 @@
                 <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm new password"><br>
                 
                 <center>
-                    <button type="submit" class="btn-change">Change Password</button><br><br>
-                    <button type="button" class="btn-delete">Delete Account</button>
+                    <button type="submit" name="change" class="btn-change">Change Password</button><br><br>
+                    <button type="submit" name="delete" class="btn-delete">Delete Account</button>
                 </center>
             </form>
         </div>

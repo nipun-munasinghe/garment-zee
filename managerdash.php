@@ -51,15 +51,15 @@
                 <div class="form">
                     <h2>Add Admin</h2>
                     <p>Name :</p>
-                    <input type="text"   placeholder="Your name" required>
+                    <input type="text"   placeholder="Admij name" required>
                     <p>Admin username :</p>
                     <input type="text"   placeholder="Admin Id" required>
                     <p>E mail :</p>
                     <input type="email"  placeholder="example@gmail.com" required>
                     <p>Phone Number 1 :</p>
-                    <input type="number" placeholder="0xxxxxxxx" required>
+                    <input type="tel" placeholder="0xxxxxxxx" required>
                     <p>Phone Number 2 :</p>
-                    <input type="number" placeholder="0xxxxxxxx">
+                    <input type="tel" placeholder="0xxxxxxxx">
                     <p>Address :</p>
                     <input type="text"  placeholder="Address of the admin" required>
                     <br>
@@ -71,15 +71,15 @@
                 <div class="form">
                     <h2>Add Employee</h2>
                     <p>Name :</p>
-                    <input type="text"   placeholder="Your name" required>
+                    <input type="text"   placeholder="Employee name" required>
                     <p>Employee username :</p>
-                    <input type="text"   placeholder="Admin Id" required>
+                    <input type="text"   placeholder="Employee Id" required>
                     <p>E mail :</p>
                     <input type="email"  placeholder="example@gmail.com" required>
-                    <p>Phone Number :</p>
-                    <input type="number" placeholder="0xxxxxxxx" required>
+                    <p>Phone Number 1 :</p>
+                    <input type="tel" placeholder="0xxxxxxxx" required>
                     <p>Phone Number 2 :</p>
-                    <input type="number" placeholder="0xxxxxxxx">
+                    <input type="tel" placeholder="0xxxxxxxx">
                     <p>Address :</p>
                     <input type="text"  placeholder="Address of the employee" required>
                     <br>
@@ -96,11 +96,11 @@
                             <p>Employee username :</p>
                             <input type="text"   placeholder="Employee username" required>
                             <p>Working Days :</p>
-                            <input type="number"   placeholder="Days" required>
+                            <input type="number"   min ="1" placeholder="Days" required>
                             <p>Working Hours :</p>
-                            <input type="number" class="hoursa"   placeholder="Hours" required>
+                            <input type="number" class="hoursa" min="1"  placeholder="Hours" required>
                             <p>Hour Rate :</p>
-                            <input type="number" class="hoursa"   placeholder="Hour Rate" required>
+                            <input type="number" class="hoursa"  min="1" placeholder="Hour Rate" required>
                             <br>
                             <br>
                             <button class="scalculate">Calculate</button>
@@ -108,7 +108,7 @@
                         <div class="sal-display">
                             <h3>Salary:</h3>
                             <h2>Rs.50 000</h2>
-                            <button class="addbase">Add Data Base</button>
+                            <button class="addbase">Add to Data Base</button>
                         </div>
                     </div>
             </div>

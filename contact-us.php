@@ -17,7 +17,7 @@
     <?php include('header.php'); ?>
 
     <div class="background-overlay"></div>
-    
+    <section class="contactus">
         
         <div class="content">
             <h2>Contact Us</h2>
@@ -27,7 +27,7 @@
                 Thank you for choosing Garment Zee. We look forward to connecting with you!
             </p>
         </div>
-    <div class="containerContact">
+    <div class="container">
         <div class="box">
             <div class="icon"><i class="fa-solid fa-phone fa-2x"></i></div>
             <div class="text">
@@ -50,19 +50,18 @@
             </div>
         </div>
     </div>
-    
         <div class="contactform">
             <div class="form">
                 <input type="text" id="name" placeholder="Your Name" required><br>
                 <input type="email" id="email" placeholder="Your E-mail" required><br>
                 <textarea type="text" id="message" placeholder="Your Message"></textarea><br>
-                <input type="submit" id="submit"placeholder="Submit">
+                <center>
+                    <input type="submit" id="submit"placeholder="Submit">
+                </center>
             </div>
         </div>
     
     </section>
-
-    
     <!-- Include the footer -->
     <?php include('footer.php'); ?>
 </body>
