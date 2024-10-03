@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,47 +37,49 @@
         </div>
     
         <!-- place order details input form -->
-        <div class="details">
-            <label for="name">Name</label>
-            <br>
-            <input type="text" id="customer-name" placeholder="Your name" required>
-            <br>
-            <div class="left-right">
-                <div class="form-left">
-                    <label for="tel">Phone number</label>
-                    <br>
-                    <input type="tel" id="tel" placeholder="Your phone number" required>
-                    <br>
-                    <label for="quantity">Quantity</label>
-                    <br>
-                    <input type="number" id="qty" name="quantity" min="1" required>
+        <from action="#" method="post">
+            <div class="details">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" id="customer-name" placeholder="Your name" required>
+                <br>
+                <div class="left-right">
+                    <div class="form-left">
+                        <label for="tel">Phone number</label>
+                        <br>
+                        <input type="tel" id="tel" placeholder="Your phone number" required>
+                        <br>
+                        <label for="quantity">Quantity</label>
+                        <br>
+                        <input type="number" id="qty" name="quantity" min="1" required>
+                    </div>
+
+                    <div class="form-right">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="mail" placeholder="Your email">
+                        <br>
+                        <label for="price">Price (Rs. )</label>
+                        <br>
+                        <input type="number" id="price" name="price" value='' disabled></input>
+                    </div>
                 </div>
 
-                <div class="form-right">
-                    <label for="email">Email</label>
-                    <br>
-                    <input type="email" id="mail" placeholder="Your email">
-                    <br>
-                    <label for="price">Price (Rs. )</label>
-                    <br>
-                    <output type="number" id="price" name="price"></output>
-                </div>
+                <label for="address">Address</label>
+                <br>
+                <textarea name="address" id="address" required></textarea>
+                <br>
+                <label for="myfile">Upload your payment recipt</label>
+                <br>
+                <input type="file" id="myfile" name="myfile">
+                <br> <br> <br>
+                
+                <!-- place order button -->
+                <center>
+                    <button type='submit' name="placeorder" id="place-btn" onclick="place()">Place order</button>
+                </center>
             </div>
-
-            <label for="address">Address</label>
-            <br>
-            <textarea name="address" id="address" required></textarea>
-            <br>
-            <label for="myfile">Upload your payment recipt</label>
-            <br>
-            <input type="file" id="myfile" name="myfile">
-            <br> <br> <br>
-            
-            <!-- place order button -->
-             <center>
-                <button id="place-btn" onclick="place()">Place order</button>
-            </center>
-        </div>
+        </form>
     </div>
     
 </body>
