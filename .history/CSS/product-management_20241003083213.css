@@ -54,9 +54,11 @@ input{
 }
 
 .display .prcd-table table{
+    
     width: 75%;
     margin-left: 250px;
 }
+
 
 /* table modify */
 .display-tbl{

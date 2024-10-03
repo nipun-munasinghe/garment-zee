@@ -4,21 +4,19 @@
 
     //Insert data to the database
     if (isset($_POST['add'])) {
-        $iId = $_POST['id'];
-        $iname = $_POST['invenName'];
-        $iCurntS = $_POST['currentStock'];
-        $iStkAlert = $_POST['stockAlert'];
+        $iname = $_POST('invenName');
+        
+        $iCurntS = $_POST('currentStock');
+        $iStkAlert = $_POST('stockAlert');
 
-        $sql = "INSERT into `inventory`(Inventor_Id, Inventory_Name, Current_stock, Stock_alert)
-                    VALUES ('$iId', '$iname', '$iCurntS', '$iStkAlert');";
+        $sql = "INSERT into `inventory`(Inventory_Name, Inventory_ID, Current_stock, Stock_alert)
+                    VALUES($iname, $iId, $iCurntS, $iStkAlert);";
         
         $result = mysqli_query($connection, $sql);
-
         if ($result) {
             header('Location:inventory-mng.php');
             exit;
-        } 
-        else {
+        } else {
             die("Error: " . mysqli_error($connection));
         }
     }
@@ -60,18 +58,18 @@
                 <table>
                     <tr>
                         <td>
-                            <label for="ID">Inventory ID</label>
-                        </td>
-                        <td>
-                            <input type="text" placeholder="Inventory Id" name="id"><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             <label for="ID">Inventory Name</label>
                         </td>
                         <td>
                             <input type="text" placeholder="Inventory Name" name="invenName"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ID">Inventory ID</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Inventory Id" name="id"><br>
                         </td>
                     </tr>
                     <tr>

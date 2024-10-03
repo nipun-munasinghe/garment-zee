@@ -10,7 +10,6 @@
     overflow: visible;
     background-image: url(../Images/inventory.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
 }
 .form table{
     background-color: #3fbffe;
@@ -54,9 +53,11 @@ input{
 }
 
 .display .prcd-table table{
+    border-collapse: collapse;
     width: 75%;
     margin-left: 250px;
 }
+
 
 /* table modify */
 .display-tbl{

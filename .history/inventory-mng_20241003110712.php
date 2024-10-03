@@ -9,7 +9,7 @@
         $iCurntS = $_POST['currentStock'];
         $iStkAlert = $_POST['stockAlert'];
 
-        $sql = "INSERT into `inventory`(Inventor_Id, Inventory_Name, Current_stock, Stock_alert)
+        $sql = "INSERT into `inventory`(Inventory_Id, Inventory_Name, Current_stock, Stock_alert)
                     VALUES ('$iId', '$iname', '$iCurntS', '$iStkAlert');";
         
         $result = mysqli_query($connection, $sql);

@@ -17,7 +17,4 @@
     text-align: left;
     border-bottom: 1px solid #989797;
 }
-#prdc-display #table tr th {
-    background-color: #00aaff;
-}
-#prdc-display #table tr:hover {background-color: #62cbff;}
+#prdc-display #table tr:hover {background-color: #00aaff;}

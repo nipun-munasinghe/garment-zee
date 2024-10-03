@@ -32,7 +32,7 @@ include 'config.php';
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $no = $row['Item_No'];
-                        $iname = $row['Inventory_Name'];
+                        $iname = $row['Inventor_Name'];
                         $iId = $row['Inventor_Id'];
                         $iCurntS = $row['Current_stock'];
                         $iStkAlert = $row['Stock_alert'];
