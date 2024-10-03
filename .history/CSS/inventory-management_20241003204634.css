@@ -1,0 +1,10 @@
+.Icontainer form{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+}
+
+.Icontainer h2{
+    text-align: center;
+}
