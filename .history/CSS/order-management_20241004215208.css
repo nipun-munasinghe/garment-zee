@@ -149,29 +149,4 @@ tr:hover
 
 a{
     text-decoration: none;
-    padding: 5px;
-    border-radius: 4px;
-}
-
-.updateA
-{
-    background-color: rgb(8, 165, 8);
-    color: white;
-}
-
-.deleteA
-{
-    background-color: rgb(255, 66, 66);
-    color: white;
-}
-
-.updateA:hover
-{
-    background-color: rgb(5, 122, 5);
-
-}
-
-.deleteA:hover
-{
-    background-color: rgb(212, 1, 1);
 }

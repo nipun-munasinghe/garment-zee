@@ -155,23 +155,15 @@ a{
 
 .updateA
 {
-    background-color: rgb(8, 165, 8);
-    color: white;
+    background-color: rgb(2, 156, 2);
 }
 
-.deleteA
+deleteA
 {
-    background-color: rgb(255, 66, 66);
-    color: white;
+    background-color: rgb(252, 18, 18);
 }
 
-.updateA:hover
+a:hover
 {
-    background-color: rgb(5, 122, 5);
-
-}
-
-.deleteA:hover
-{
-    background-color: rgb(212, 1, 1);
+    background-color: ;
 }

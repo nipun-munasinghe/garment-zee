@@ -36,14 +36,13 @@
                 Order_status = '$oStatus',
                 Order_email = '$oEmail',
                 Address = '$oAddress',
-                Receipt_url = '$ReciptUrl'
-                WHERE Order_ID = $oid;";
+                Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
 
         $result = mysqli_query($connection, $sql);
 
         if($result)
         {
-            header('Location: order-management.php');
+            header('Location : order-management.php');
         }
         else
         {
@@ -86,22 +85,22 @@
                     <input type="text" id="orderID" placeholder="Order ID" name="Id" value=" <?php echo $oid; ?>"><br>
 
                     <label for="cName">Customer Name :</label><br>
-                    <input type="text" id="cName" placeholder="Customer Name" name="fName" value=" <?php echo $oName; ?>"><br>
+                    <input type="text" id="cName" placeholder="Customer Name" name="fName" value= <?php echo $oName; ?>><br>
 
                     <label for="amountOfOrder">Amount Of The Order :</label><br>
-                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount" value= "<?php echo $oAmount; ?>"><br>
+                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount" value= <?php echo $oAmount; ?>><br>
 
                     <label for="status">Order Status :</label><br>
-                    <input type="text" id="status" placeholder="Order Status" name="fStatus" value= "<?php echo $oStatus; ?>"><br>
+                    <input type="text" id="status" placeholder="Order Status" name="fStatus" value= <?php echo $oStatus; ?>><br>
 
                     <label for="email">Email :</label><br>
-                    <input type="email" id="Oemail" placeholder="Email" name="fEmail" value= "<?php echo $oEmail; ?>"><br>
+                    <input type="email" id="Oemail" placeholder="Email" name="fEmail" value= <?php echo $oEmail; ?>><br>
 
                     <label for="address">Address :</label><br>
-                    <input type="text" id="Oaddress" placeholder="Address" name="fAddress" value= "<?php echo $oAddress; ?>"><br>
+                    <input type="text" id="Oaddress" placeholder="Address" name="fAddress" value= <?php echo $oAddress; ?>><br>
 
                     <label for="reciptUrl">Payment Recipt :</label><br>
-                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= "<?php echo $ReciptUrl; ?>"><br><br>
+                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= <?php echo $ReciptUrl; ?>><br><br>
 
                     <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
                 </div>

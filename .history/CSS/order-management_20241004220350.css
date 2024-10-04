@@ -155,7 +155,7 @@ a{
 
 .updateA
 {
-    background-color: rgb(8, 165, 8);
+    background-color: rgb(2, 156, 2);
     color: white;
 }
 
@@ -167,11 +167,12 @@ a{
 
 .updateA:hover
 {
-    background-color: rgb(5, 122, 5);
-
+    background-color: green;
+    transform: scale(1.5);
 }
 
 .deleteA:hover
 {
     background-color: rgb(212, 1, 1);
+    transform: scale(1.5);
 }

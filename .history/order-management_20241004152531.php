@@ -74,8 +74,8 @@
                     <label for="address">Address :</label><br>
                     <input type="text" id="Oaddress" placeholder="Address" name="fAddress"><br>
 
-                    <label for="reciptUrl">Payment Recipt :</label><br>
-                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br>
+                    <!-- <label for="reciptUrl">Payment Recipt :</label><br>
+                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br> -->
 
                     <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
                 </div>
@@ -127,8 +127,8 @@
                             <td>' . $oAddress . '</td>
                             <td>' . $ReciptUrl . '</td>
                             <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA">DELETE</a>
+                                <a href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATE</a>
+                                <a href="order-manage-delete.php?deleteid='.$oid.'" style="background-color: red; color: white; border: 1px solid black;">DELETE</a>
                             </td>
                             </tr>';
 
