@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Insert Poppins font family from google fonts -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
-
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/index.css">
 
@@ -30,19 +25,19 @@
         <div class="product-container">
             <div class="product">
                 <h3>T-shirt</h3>
-                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-1.jpg" alt="product t-shirt"></a>
                 <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-2.jpg" alt="product t-shirt"></a>
                 <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-3.jpg" alt="product t-shirt"></a>
                 <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
         </div>
@@ -50,19 +45,39 @@
         <div class="product-container">
             <div class="product">
                 <h3>T-shirt</h3>
-                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-4.jpg" alt="product t-shirt"></a>
                 <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-5.jpg" alt="product t-shirt"></a>
                 <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
 
             <div class="product">
                 <h3>T-shirt</h3>
-                <a href="./products-page.php"><img src="./Images/t-shirt.png" alt="product t-shirt"></a>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-6.jpg" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="product">
+                <h3>T-shirt</h3>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-7.jpg" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
+            </div>
+
+            <div class="product">
+                <h3>T-shirt</h3>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-8.jpg" alt="product t-shirt"></a>
+                <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
+            </div>
+
+            <div class="product">
+                <h3>T-shirt</h3>
+                <a href="./products-page.php"><img src="./Images/products/t-shirt-9.jpg" alt="product t-shirt"></a>
                 <a href="./products-page.php"><p>This t-shirt is the latest one designed by Garment Zee</p></a>
             </div>
         </div>

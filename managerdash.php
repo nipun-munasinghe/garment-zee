@@ -25,7 +25,7 @@
         $result = mysqli_query($connection, $sql);
         if($result)
         {
-            //js script ekk dpn
+        
         }
     }
 
@@ -66,6 +66,31 @@
 
     }
 
+    if(isset($_POST['Addemployee']))
+    {
+        echo "Clicked";
+        $name = $_POST['Name'];
+        $Lname = "";
+        $username = $_POST['UserName'];
+        $email = $_POST['mail'];
+        $mobileno1 = $_POST['mobileno1'];
+        $mobileno2 = $_POST['mobileno2'];
+        $address = $_POST['address'];
+        $usertype = $_POST['usertyp'];
+        $pwd = $_POST['Password'];
+        $acc_status = "active";
+
+        $sql = "INSERT INTO user_info (username, password, first_name,last_name, Email, Phone_number_1, Phone_number_2, Address, user_type, acc_status)
+                VALUES ('$username', '$pwd', '$name','$Lname', '$email', '$mobileno1', '$mobileno2', '$address', '$usertype', '$acc_status');";
+        
+        $result = mysqli_query($connection, $sql);
+        if($result)
+        {
+            echo "added";
+        }
+
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +102,7 @@
     
     <link rel="stylesheet" href="CSS/manager.css">
 
-    <script src="JS/manager.js"></script>
+    <script src="JS/manager.js"> </script>
 
     <title>Managerdashbord</title>
 </head>
@@ -94,12 +119,14 @@
             <div class="addremove">
                 <div class="removeborder">
                     <form method="POST" action="managerdash.php">
-                        <h2>Admin/Employee</h2>
+                        <h2>Admin-Employee</h2>
                         <input type="text" name="Searchbox" placeholder="Admin Id :" required>
                         <button type="submit" name="check" class="check">Check</button>
                         <p>Account status : <?php echo $accountStatus ?> </p>
+                       <center>
                         <button type="submit" name="activate" class="active">Activate</button>
                         <button type="submit" name="delete" class="remove">Remove</button>
+                       </center>
                     </form>
                 </div>
             </div>
@@ -111,7 +138,7 @@
                     <form method="POST" action="managerdash.php">
                         <h2>Add Admin</h2>
                         <p>Name :</p>
-                        <input type="text"   placeholder="Admij name" name="Name" >
+                        <input type="text"   placeholder="Admin name" name="Name" >
                         <p>Admin username :</p>
                         <input type="text"   placeholder="Admin Id" name="UserName">
                         <p>Password :</p>
@@ -127,53 +154,59 @@
                         <input type="hidden" value="admin" name="usertyp">
                         <br>
                         <br>
-                        <input type="submit" class="sbutton" name="Addadmin" placeholder="Add Admin">
+                        <input type="submit" class="sbutton" name="Addemployee" placeholder="Add Admin">
                         <input type="reset"  class="rbutton"placeholder="Reset">
                     </form>
                 </div>
 
-                <div class="form">
+            <div class="form">
+                <form method="POST" action="managerdash.php">
                     <h2>Add Employee</h2>
                     <p>Name :</p>
-                    <input type="text"   placeholder="Employee name" required>
+                    <input type="text"   placeholder="Employee name" name="Name">
                     <p>Employee username :</p>
-                    <input type="text"   placeholder="Employee Id" required>
+                    <input type="text"   placeholder="Employee Id" name="UserName">
                     <p>Password :</p>
-                    <input type="password"   placeholder="Admin Password" name="Password" required>
+                    <input type="password"   placeholder="Admin Password" name="Password">
                     <p>E mail :</p>
-                    <input type="email"  placeholder="example@gmail.com" required>
+                    <input type="email"  placeholder="example@gmail.com" name="mail">
                     <p>Phone Number 1 :</p>
-                    <input type="tel" placeholder="0xxxxxxxx" required>
+                    <input type="tel" placeholder="0xxxxxxxx" name="mobileno1">
                     <p>Phone Number 2 :</p>
-                    <input type="tel" placeholder="0xxxxxxxx">
+                    <input type="tel" placeholder="0xxxxxxxx" name ="mobileno2">
                     <p>Address :</p>
-                    <input type="text"  placeholder="Address of the employee" required>
+                    <input type="text"  placeholder="Address of the employee" name="address">
+                    <input type="hidden" value="admin" name="usertyp">
                     <br>
                     <br>
-                    <input type="submit" class="sbutton" placeholder="Add Admin">
+                    <input type="submit" class="sbutton" name="Addemployee" placeholder="Add Employee">
                     <input type="reset"  class="rbutton"placeholder="Reset">
+                </form>
                 </div>
             </div>
     <br>
             <div class="salarycal">
                     <h2>Employee Salary Calculation </h2>
                     <div class="separate-display">
+                <form onsubmit="return false;">
                         <div class="salform">
                             <p>Employee username :</p>
                             <input type="text"   placeholder="Employee username" required>
                             <p>Working Days :</p>
-                            <input type="number"   min ="1" placeholder="Days" required>
+                            <input type="number"  id="days" min ="1" placeholder="Days" required>
                             <p>Working Hours :</p>
-                            <input type="number" class="hoursa" min="1"  placeholder="Hours" required>
+                            <input type="number" id="hours" min="0"  placeholder="Hours" required>
                             <p>Hour Rate :</p>
-                            <input type="number" class="hoursa"  min="1" placeholder="Hour Rate" required>
+                            <input type="number" id="rate"  min="0" placeholder="Hour Rate" required>
                             <br>
                             <br>
-                            <button class="scalculate">Calculate</button>
+                            <button type="submit"  class="scalculate" onclick="calculateSalary()">Calculate</button>
                         </div>
+                </form>
+
                         <div class="sal-display">
                             <h3>Salary:</h3>
-                            <h2>Rs.50 000</h2>
+                            <h2 id="salary">Rs.0.00</h2>
                             <button class="addbase">Add to Data Base</button>
                         </div>
                     </div>
