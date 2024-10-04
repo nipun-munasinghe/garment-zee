@@ -21,6 +21,8 @@
 
     if (isset($_POST['add']))
     {
+        $result = mysqli_query($connection, $sqlQuery);
+        
         $oid = $_POST['Id'];
         $oName = $_POST['fName'];
         $oAmount = $_POST['amount'];
@@ -38,7 +40,7 @@
                 Address = '$oAddress',
                 Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
 
-        $result = mysqli_query($connection, $sqlQuery);
+        
 
         if($result)
         {
@@ -105,7 +107,7 @@
                     <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
                 </div>
                 
-            </fieldset>    
+            </fieldset>
         </form>
     </div>
 </body>

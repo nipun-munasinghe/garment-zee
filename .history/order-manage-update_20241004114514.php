@@ -1,10 +1,10 @@
 <?php
     include 'config.php';
 
-    if(isset($_GET['updateid']))
+    if(isset($_GET['updatteid']))
     {
-        $oid = $_GET['updateid'];
-        $sqlQuery = "SELECT * from `orders` WHERE Order_ID = $oid;";
+        $id = $_GET['updatteid'];
+        $sqlQuery = "SELECT * from 'orders' WHERE Order_ID = $id";
         
         $result = mysqli_query($connection, $sqlQuery);
 
@@ -30,15 +30,15 @@
         $ReciptUrl = $_POST['recipt'];
 
         $sqlQuery = "UPDATE `orders` SET
-                Order_ID = '$oid',
-                Customer_name = '$oName',
+                Order_ID = $oid,
+                Customer_name = $oName,
                 Price = $oAmount,
-                Order_status = '$oStatus',
-                Order_email = '$oEmail',
-                Address = '$oAddress',
-                Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
+                Order_status = $oStatus,
+                Order_email = $oEmail,
+                Address = $oAddress,
+                Receipt_url = $ReciptUrl WHERE Order_ID = $oid;";
 
-        $result = mysqli_query($connection, $sqlQuery);
+        $result = mysqli_query($connection, $$sqlQuery);
 
         if($result)
         {
@@ -102,7 +102,7 @@
                     <label for="reciptUrl">Payment Recipt :</label><br>
                     <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= <?php echo $ReciptUrl; ?>><br><br>
 
-                    <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
+                    <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
                 </div>
                 
             </fieldset>    

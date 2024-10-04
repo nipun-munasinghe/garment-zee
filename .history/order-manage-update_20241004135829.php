@@ -105,7 +105,7 @@
                     <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
                 </div>
                 
-            </fieldset>    
+            </fieldset>
         </form>
     </div>
 </body>

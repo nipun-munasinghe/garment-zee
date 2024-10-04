@@ -1,10 +1,10 @@
 <?php
     include 'config.php';
 
-    if(isset($_GET['updateid']))
+    if(isset($_GET['updatteid']))
     {
-        $oid = $_GET['updateid'];
-        $sqlQuery = "SELECT * from `orders` WHERE Order_ID = $oid;";
+        $id = $_GET['updatteid'];
+        $sqlQuery = "SELECT * from 'orders' WHERE Order_ID = $id";
         
         $result = mysqli_query($connection, $sqlQuery);
 
@@ -30,15 +30,15 @@
         $ReciptUrl = $_POST['recipt'];
 
         $sqlQuery = "UPDATE `orders` SET
-                Order_ID = '$oid',
-                Customer_name = '$oName',
+                Order_ID = $oid,
+                Customer_name = $oName,
                 Price = $oAmount,
-                Order_status = '$oStatus',
-                Order_email = '$oEmail',
-                Address = '$oAddress',
-                Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
+                Order_status = $oStatus,
+                Order_email = $oEmail,
+                Address = $oAddress,
+                Receipt_url = $ReciptUrl WHERE Order_ID = $oid;";
 
-        $result = mysqli_query($connection, $sqlQuery);
+        $result = mysqli_query($connection, $$sqlQuery);
 
         if($result)
         {
@@ -82,27 +82,27 @@
                     <h2 class="omH">Update Order Details</h2><br>
 
                     <label for="orderId">Order ID :</label><br>
-                    <input type="text" id="orderID" placeholder="Order ID" name="Id" value= <?php echo $oid; ?>><br>
+                    <input type="text" id="orderID" placeholder="Order ID" name="Id"><br>
 
                     <label for="cName">Customer Name :</label><br>
-                    <input type="text" id="cName" placeholder="Customer Name" name="fName" value= <?php echo $oName; ?>><br>
+                    <input type="text" id="cName" placeholder="Customer Name" name="fName"><br>
 
                     <label for="amountOfOrder">Amount Of The Order :</label><br>
-                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount" value= <?php echo $oAmount; ?>><br>
+                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount"><br>
 
                     <label for="status">Order Status :</label><br>
-                    <input type="text" id="status" placeholder="Order Status" name="fStatus" value= <?php echo $oStatus; ?>><br>
+                    <input type="text" id="status" placeholder="Order Status" name="fStatus"><br>
 
                     <label for="email">Email :</label><br>
-                    <input type="email" id="Oemail" placeholder="Email" name="fEmail" value= <?php echo $oEmail; ?>><br>
+                    <input type="email" id="Oemail" placeholder="Email" name="fEmail"><br>
 
                     <label for="address">Address :</label><br>
-                    <input type="text" id="Oaddress" placeholder="Address" name="fAddress" value= <?php echo $oAddress; ?>><br>
+                    <input type="text" id="Oaddress" placeholder="Address" name="fAddress"><br>
 
                     <label for="reciptUrl">Payment Recipt :</label><br>
-                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= <?php echo $ReciptUrl; ?>><br><br>
+                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br>
 
-                    <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
+                    <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
                 </div>
                 
             </fieldset>    

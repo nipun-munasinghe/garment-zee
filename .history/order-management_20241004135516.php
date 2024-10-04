@@ -21,7 +21,7 @@
             exit;
         }
         else{
-            die("Error : " . mysqli_error($connection));
+            header("Error : " . mysqli_error($connection));
         }
     }
 ?>
