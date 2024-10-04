@@ -32,7 +32,7 @@ if (isset($_POST['addinven'])) {
 
     $iresult = mysqli_query($connection, $sql);
 
-    if ($iresult) {
+    if ($result) {
         header('Location: inventory-mng.php');
     } else {
         die(mysqli_error($connection));

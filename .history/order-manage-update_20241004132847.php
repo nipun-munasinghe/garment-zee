@@ -35,7 +35,7 @@
                 Price = $oAmount,
                 Order_status = '$oStatus',
                 Order_email = '$oEmail',
-                Address = '$oAddress',
+                Address = '$oAddress'0,
                 Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
 
         $result = mysqli_query($connection, $sqlQuery);

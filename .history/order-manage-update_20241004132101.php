@@ -102,7 +102,7 @@
                     <label for="reciptUrl">Payment Recipt :</label><br>
                     <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= <?php echo $ReciptUrl; ?>><br><br>
 
-                    <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
+                    <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
                 </div>
                 
             </fieldset>    
