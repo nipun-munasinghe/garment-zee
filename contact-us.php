@@ -1,3 +1,28 @@
+<?php
+    session_start();
+    require_once 'config.php';
+
+    if(isset($_POST['ContactUs'])) {
+        echo "Clicked";
+        // Sanitize inputs
+        $name = mysqli_real_escape_string($connection, $_POST['YourName']);
+        $email = mysqli_real_escape_string($connection, $_POST['mail']);
+        $message = mysqli_real_escape_string($connection, $_POST['message']);
+        
+        // Insert data into the database
+        $sql = "INSERT INTO contact_us (Contact_name, Contact_email, Message)
+                VALUES ('$name', '$email', '$message')";
+        
+        $result = mysqli_query($connection, $sql);
+        if($result) {
+            echo "Message added";
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,14 +76,17 @@
         </div>
     </div>
         <div class="contactform">
+    <form method="POST" action="contact-us.php">
             <div class="form">
-                <input type="text" id="name" placeholder="Your Name" required><br>
-                <input type="email" id="email" placeholder="Your E-mail" required><br>
-                <textarea type="text" id="message" placeholder="Your Message"></textarea><br>
+                <input type="text" id="name" name="YourName" placeholder="Your Name" required><br>
+                <input type="email" id="email" name="mail" placeholder="Your E-mail" required><br>
+                <textarea type="text" id="message" name="message" placeholder="Your Message"></textarea><br>
                 <center>
-                    <input type="submit" id="submit"placeholder="Submit">
+                <input type="submit" id="submit" name="ContactUs" value="Submit">
+
                 </center>
             </div>
+    </form>
         </div>
     
     </section>

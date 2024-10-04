@@ -90,6 +90,22 @@
         }
 
     }
+    // Store Salary if POSTed
+    if (isset($_POST['salary']) && isset($_POST['employeeUsername'])) {
+        $salary = $_POST['salary'];
+        $employeeUsername = $_POST['employeeUsername'];
+
+        $stmt = $connection->prepare("UPDATE employee_salary SET salary = ? WHERE username = ?");
+        $stmt->bind_param("ds", $salary, $employeeUsername);
+
+        if ($stmt->execute()) {
+            echo "Salary successfully stored in the database.";
+        } else {
+            echo "Error storing salary.";
+        }
+    }
+
+    mysqli_close($connection);  // Close the connection
 
 ?>
 
@@ -191,15 +207,14 @@
                 <form onsubmit="return false;">
                         <div class="salform">
                             <p>Employee username :</p>
-                            <input type="text"   placeholder="Employee username" required>
+                            <input type="text" id="employeeUsername"  placeholder="Employee username" required>
                             <p>Working Days :</p>
                             <input type="number"  id="days" min ="1" placeholder="Days" required>
                             <p>Working Hours :</p>
                             <input type="number" id="hours" min="0"  placeholder="Hours" required>
                             <p>Hour Rate :</p>
                             <input type="number" id="rate"  min="0" placeholder="Hour Rate" required>
-                            <br>
-                            <br>
+                            <br><br>
                             <button type="submit"  class="scalculate" onclick="calculateSalary()">Calculate</button>
                         </div>
                 </form>
@@ -207,7 +222,7 @@
                         <div class="sal-display">
                             <h3>Salary:</h3>
                             <h2 id="salary">Rs.0.00</h2>
-                            <button class="addbase">Add to Data Base</button>
+                            <button class="addbase" onclick="storeSalary()">Add to Data Base</button>
                         </div>
                     </div>
             </div>
