@@ -60,7 +60,7 @@ input{
 }
 .pcontainer .form form table tr td input{
     border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.);
 }
 .footer{
     margin-top: 10px;

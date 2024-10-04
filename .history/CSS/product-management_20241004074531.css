@@ -55,12 +55,8 @@ input{
     font-weight: bold;
     font-size: 15px;
 }
-.pcontainer .form form table tr td label{
-    margin-left: 75px;
-}
-.pcontainer .form form table tr td input{
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+.pcontainer .form form table tr td l{
+    margin-left: 10px;
 }
 .footer{
     margin-top: 10px;
