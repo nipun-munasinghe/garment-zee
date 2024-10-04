@@ -28,16 +28,30 @@
     }
 
     if(isset($_POST['delete'])) {
-        $sql = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
-        $result = mysqli_query($connection, $sql);
 
-        if($result) {
-            header('Location: signout.php');
-        }
-        else
-        {
-            echo "Error: " . mysqli_error($connection);
-        }
+        mysqli_begin_transaction($connection);
+    
+        $sql1 = "DELETE FROM employee_salary WHERE username = '" . $_SESSION['username'] . "';";
+        $result1 = mysqli_query($connection, $sql1); 
+    
+        $sql2 = "DELETE FROM user_info WHERE username = '" . $_SESSION['username'] . "';";
+        $result2 = mysqli_query($connection, $sql2);
+    
+        mysqli_commit($connection);
+        header('Location: signout.php');
+        
+    }
+
+    $sql = "SELECT * FROM employee_salary WHERE username = '" . $_SESSION['username'] . "';";
+    $result = mysqli_query($connection, $sql);
+
+    if($result) {
+        $row = mysqli_fetch_assoc($result);
+
+        $Working_days = $row['Working_days'];
+        $Working_hours = $row['Working_hours'];
+        $Hour_rate = $row['Hour_rate'];
+        $total_salary = $row['total_salary'];
     }
 ?>
 
@@ -46,11 +60,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Insert font family from google fonts -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
 
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/employee.css">
@@ -67,10 +76,10 @@
         <div class="profile">
             <h2>Employee Profile</h2><br>
             <p><b>Name <span class = "icon"> : </span></b> <?php echo $_SESSION['first_name'].' '.$_SESSION['last_name']; ?></p>
-            <p><b>Working Days <span class = "icon"> : </span></b> 20 days/month</p>
-            <p><b>Working Hours <span class = "icon"> : </span></b> 8 hours/day</p>
-            <p><b>Hour Rate <span class = "icon"> : </span></b> 120 Rs./hour</p>
-            <p><b>salary <span class = "icon"> : </span></b> 45,000/=</p><br>
+            <p><b>Working Days <span class = "icon"> : </span></b> <?php echo $Working_days; ?> days/month</p>
+            <p><b>Working Hours <span class = "icon"> : </span></b> <?php echo $Working_hours; ?> hours/day</p>
+            <p><b>Hour Rate <span class = "icon"> : </span></b> <?php echo $Hour_rate; ?> Rs./hour</p>
+            <p><b>salary <span class = "icon"> : </span></b> <?php echo $total_salary; ?>/=</p><br>
         </div>
 
         <!-- Passowrd Settings Section -->
