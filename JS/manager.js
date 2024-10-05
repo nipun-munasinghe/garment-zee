@@ -1,36 +1,41 @@
 function calculateSalary() {
-    const days = document.getElementById('days').value;
-    const hours = document.getElementById('hours').value;
-    const rate = document.getElementById('rate').value;
+    let days = document.getElementById("days").value;
+    let hours = document.getElementById("hours").value;
+    let rate = document.getElementById("rate").value;
 
     if (days > 0 && hours >= 0 && rate >= 0) {
-        const salary = days * hours * rate;
-        document.getElementById('salary').innerText = 'Rs.' + salary.toLocaleString();
+        let salary = days * hours * rate;
+        document.getElementById("salary").innerHTML = "Rs." + salary.toFixed(2);
     } else {
         alert("Please enter valid values for days, hours, and rate.");
     }
 }
 
 function storeSalary() {
-    const salary = document.getElementById('salary').innerText.replace('Rs.', '').replace(',', '');
-    const employeeUsername = document.getElementById('employeeUsername').value;
+    let employeeUsername = document.getElementById("employeeUsername").value;
+    let salary = document.getElementById("salary").textContent.replace("Rs.", "").trim();
 
-    if (!employeeUsername || salary === "0.00") {
-        alert('Please ensure all fields are filled out and salary is calculated.');
-        return;
+    if (salary > 0) {
+        // Send the salary and employee username to the PHP script
+        let form = document.createElement("form");
+        form.method = "POST";
+        form.action = "managerdash.php"; // Replace with the correct PHP file name
+
+        let usernameField = document.createElement("input");
+        usernameField.type = "hidden";
+        usernameField.name = "employeeUsername";
+        usernameField.value = employeeUsername;
+        form.appendChild(usernameField);
+
+        let salaryField = document.createElement("input");
+        salaryField.type = "hidden";
+        salaryField.name = "salary";
+        salaryField.value = salary;
+        form.appendChild(salaryField);
+
+        document.body.appendChild(form);
+        form.submit();
+    } else {
+        alert("Please calculate the salary first.");
     }
-
-    let data = new FormData();
-    data.append('salary', salary);
-    data.append('employeeUsername', employeeUsername);
-
-    fetch('managerdash.php', {
-        method: 'POST',
-        body: data
-    })
-    .then(response => response.text())
-    .then(result => {
-        alert('Server response: ' + result);
-    })
-    .catch(error => console.error('Error:', error));
 }
