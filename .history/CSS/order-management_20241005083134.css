@@ -1,0 +1,184 @@
+body
+{
+    background-color: #f0f8ff;
+    font-family: poppins;
+}
+
+#h1Welcome
+{
+    color: rgb(0, 33, 91);
+    text-align: center;
+    font-size: 50px;
+}
+
+.updateForm
+{
+    width: 420px;
+    height: 660px;
+    color: rgb(0, 33, 91);
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+    margin-bottom: 20px;
+}
+
+#orderID
+{
+    width: 100%;
+}
+
+#cName
+{
+    width: 100%;
+}
+
+#amountOfOrder
+{
+    width: 100%;
+}
+
+#status
+{
+    width: 100%;
+}
+
+#Oemail
+{
+    width: 100%;
+}
+
+#Oaddress
+{
+    width: 100%;
+    
+}
+
+#reciptUrl
+{
+    width: 100%;
+}
+
+input
+{
+    padding: 5px 5px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.formContain
+{
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.omH
+{
+    text-align: center;
+    font-size: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+fieldset
+{
+    border: none;
+}
+
+.addBtn
+{
+    background-color: #00aaff;
+    border-color: #00aaff;
+    color: white;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.addBtn:hover
+{
+    background-color: #0069b4;
+    color: white;
+    border-color: #0069b4;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.omH{
+    text-align: center;
+}
+
+label
+{
+    color: #0069b4;
+}
+
+.orderDisplay
+{
+    margin: 20px;
+}
+
+.displayTable
+{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px;
+}
+
+th, td
+{
+    padding: 10px;
+    border: 1px solid blacks;
+}
+
+th{
+    background-color: #0069b4;
+    color: #f0f8ff;
+}
+
+tr{
+    background-color: #8a9ba7;
+}
+
+tr:hover
+{
+    background-color: #7c8d9a;
+}
+
+a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.updateA
+{
+    background-color: rgb(8, 165, 8);
+    color: white;
+}
+
+.deleteA
+{
+    background-color: rgb(255, 66, 66);
+    color: white;
+}
+
+.updateA:hover
+{
+    background-color: rgb(5, 122, 5);
+
+}
+
+.deleteA:hover
+{
+    background-color: rgb(212, 1, 1);
+}
+
+.backgroundUper
+{
+    background-image: url(../images/order_mng.jpg);
+    background-size: cover;
+}
