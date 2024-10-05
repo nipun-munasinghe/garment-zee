@@ -89,7 +89,7 @@ if(isset($_POST['Addemployee'])) {
     if($result) {
         echo "Employee added";
 
-     // After adding employee, insert into employee_salary table with initial salary
+        // After adding employee, insert into employee_salary table with initial salary
         $sqlSalary = "INSERT INTO employee_salary (username, total_salary) VALUES ('$username', 0)";
         $resultSalary = mysqli_query($connection, $sqlSalary);
 
@@ -112,7 +112,14 @@ if (isset($_POST['salary']) && isset($_POST['employeeUsername'])) {
     $stmt = $connection->prepare("UPDATE employee_salary SET total_salary = ? WHERE username = ?");
     $stmt->bind_param("ds", $salary, $employeeUsername);
 
+    if ($stmt->execute()) {
+        echo "Salary successfully stored in the database.";
+    } else {
+        echo "Error storing salary.";
+    }
 }
+
+mysqli_close($connection);  // Close the connection
 ?>
 
 <!DOCTYPE html>
