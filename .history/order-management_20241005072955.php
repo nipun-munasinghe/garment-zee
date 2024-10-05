@@ -86,7 +86,7 @@
         </div>
     </div>
     
-    
+    <br>
     <hr>
     <!-- Display added details and update and delete -->
     <div class="orderDisplay">

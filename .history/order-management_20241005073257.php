@@ -49,7 +49,7 @@
     <?php include_once'header.php'; ?>
     
     <hr>
-    <div class="backgroundUper">
+    <div class="backgroundUper"></div>
         <h1 id="h1Welcome">Welcome to Order Management Page</h1>
         <div class="updateForm">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
@@ -86,7 +86,7 @@
         </div>
     </div>
     
-    
+    <br>
     <hr>
     <!-- Display added details and update and delete -->
     <div class="orderDisplay">
