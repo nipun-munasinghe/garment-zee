@@ -36,14 +36,13 @@
                 Order_status = '$oStatus',
                 Order_email = '$oEmail',
                 Address = '$oAddress',
-                Receipt_url = '$ReciptUrl'
-                WHERE Order_ID = $oid;";
+                Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
 
         $result = mysqli_query($connection, $sql);
 
         if($result)
         {
-            header('Location: order-management.php');
+            header('Location : order-management.php');
         }
         else
         {
@@ -100,8 +99,8 @@
                     <label for="address">Address :</label><br>
                     <input type="text" id="Oaddress" placeholder="Address" name="fAddress" value= "<?php echo $oAddress; ?>"><br>
 
-                    <label for="reciptUrl">Payment Recipt :</label><br>
-                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= "<?php echo $ReciptUrl; ?>"><br><br>
+                    <!-- <label for="reciptUrl">Payment Recipt :</label><br>
+                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt" value= "<?php echo $ReciptUrl; ?>"><br><br> -->
 
                     <center><input type="submit" class="addBtn" value="UPDATE" name="add"></center>
                 </div>

@@ -36,14 +36,13 @@
                 Order_status = '$oStatus',
                 Order_email = '$oEmail',
                 Address = '$oAddress',
-                Receipt_url = '$ReciptUrl'
-                WHERE Order_ID = $oid;";
+                Receipt_url = '$ReciptUrl' WHERE Order_ID = $oid;";
 
         $result = mysqli_query($connection, $sql);
 
         if($result)
         {
-            header('Location: order-management.php');
+            header('Location : order-management.php');
         }
         else
         {

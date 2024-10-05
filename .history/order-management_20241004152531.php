@@ -49,44 +49,41 @@
     <?php include_once'header.php'; ?>
     
     <hr>
-    <div class="backgroundUper">
-        <h1 id="h1Welcome">Welcome to Order Management Page</h1>
-        <div class="updateForm">
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
-                <fieldset>
-                    <div class="formContain">
-                        <h2 class="omH">Order Details</h2><br>
+    <h1 id="h1Welcome">Welcome to Order Management Page</h1>
+    <div class="updateForm">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
+            <fieldset>
+                <div class="formContain">
+                    <h2 class="omH">Order Details</h2><br>
 
-                        <label for="orderId">Order ID :</label><br>
-                        <input type="text" id="orderID" placeholder="Order ID" name="Id"><br>
+                    <label for="orderId">Order ID :</label><br>
+                    <input type="text" id="orderID" placeholder="Order ID" name="Id"><br>
 
-                        <label for="cName">Customer Name :</label><br>
-                        <input type="text" id="cName" placeholder="Customer Name" name="fName"><br>
+                    <label for="cName">Customer Name :</label><br>
+                    <input type="text" id="cName" placeholder="Customer Name" name="fName"><br>
 
-                        <label for="amountOfOrder">Amount Of The Order :</label><br>
-                        <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount"><br>
+                    <label for="amountOfOrder">Amount Of The Order :</label><br>
+                    <input type="text" id="amountOfOrder" placeholder="Amount Of The Order" name="amount"><br>
 
-                        <label for="status">Order Status :</label><br>
-                        <input type="text" id="status" placeholder="Order Status" name="fStatus"><br>
+                    <label for="status">Order Status :</label><br>
+                    <input type="text" id="status" placeholder="Order Status" name="fStatus"><br>
 
-                        <label for="email">Email :</label><br>
-                        <input type="email" id="Oemail" placeholder="Email" name="fEmail"><br>
+                    <label for="email">Email :</label><br>
+                    <input type="email" id="Oemail" placeholder="Email" name="fEmail"><br>
 
-                        <label for="address">Address :</label><br>
-                        <input type="text" id="Oaddress" placeholder="Address" name="fAddress"><br>
+                    <label for="address">Address :</label><br>
+                    <input type="text" id="Oaddress" placeholder="Address" name="fAddress"><br>
 
-                        <label for="reciptUrl">Payment Recipt :</label><br>
-                        <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br>
+                    <!-- <label for="reciptUrl">Payment Recipt :</label><br>
+                    <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br> -->
 
-                        <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
-                    </div>
-                    
-                </fieldset>    
-            </form>
-        </div>
+                    <center><input type="submit" class="addBtn" value="ADD" name="add"></center>
+                </div>
+                
+            </fieldset>    
+        </form>
     </div>
-    
-    
+    <br>
     <hr>
     <!-- Display added details and update and delete -->
     <div class="orderDisplay">
@@ -130,8 +127,8 @@
                             <td>' . $oAddress . '</td>
                             <td>' . $ReciptUrl . '</td>
                             <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA">DELETE</a>
+                                <a href="order-manage-update.php?updateid='.$oid.'" style="background-color: green; color: white; border: 1px solid black;">UPDATE</a>
+                                <a href="order-manage-delete.php?deleteid='.$oid.'" style="background-color: red; color: white; border: 1px solid black;">DELETE</a>
                             </td>
                             </tr>';
 

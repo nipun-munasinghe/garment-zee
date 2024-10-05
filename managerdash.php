@@ -1,3 +1,4 @@
+<!--php part -->
 <?php
     session_start();
     require_once 'config.php';
@@ -65,31 +66,60 @@
         }
 
     }
+// Add Employee and insert initial salary
+if(isset($_POST['Addemployee'])) {
+    echo "Clicked";
+    $name = $_POST['Name'];
+    $Lname = "";
+    $username = $_POST['UserName'];
+    $email = $_POST['mail'];
+    $mobileno1 = $_POST['mobileno1'];
+    $mobileno2 = $_POST['mobileno2'];
+    $address = $_POST['address'];
+    $usertype = "employee"; // Changed to employee
+    $pwd = $_POST['Password'];
+    $acc_status = "active";
 
-    if(isset($_POST['Addemployee']))
-    {
-        echo "Clicked";
-        $name = $_POST['Name'];
-        $Lname = "";
-        $username = $_POST['UserName'];
-        $email = $_POST['mail'];
-        $mobileno1 = $_POST['mobileno1'];
-        $mobileno2 = $_POST['mobileno2'];
-        $address = $_POST['address'];
-        $usertype = $_POST['usertyp'];
-        $pwd = $_POST['Password'];
-        $acc_status = "active";
+    // Insert into user_info table
+    $sql = "INSERT INTO user_info (username, password, first_name, last_name, Email, Phone_number_1, Phone_number_2, Address, user_type, acc_status)
+            VALUES ('$username', '$pwd', '$name','$Lname', '$email', '$mobileno1', '$mobileno2', '$address', '$usertype', '$acc_status');";
+    
+    $result = mysqli_query($connection, $sql);
+    
+    if($result) {
+        echo "Employee added";
 
-        $sql = "INSERT INTO user_info (username, password, first_name,last_name, Email, Phone_number_1, Phone_number_2, Address, user_type, acc_status)
-                VALUES ('$username', '$pwd', '$name','$Lname', '$email', '$mobileno1', '$mobileno2', '$address', '$usertype', '$acc_status');";
-        
-        $result = mysqli_query($connection, $sql);
-        if($result)
-        {
-            echo "added";
+        // Step 1: After adding employee, insert into employee_salary table with initial salary
+        $sqlSalary = "INSERT INTO employee_salary (username, total_salary) VALUES ('$username', 0)";
+        $resultSalary = mysqli_query($connection, $sqlSalary);
+
+        if ($resultSalary) {
+            echo "Salary initialized for employee: $username";
+        } else {
+            echo "Error initializing salary for employee.";
         }
-
+    } else {
+        echo "Error adding employee.";
     }
+}
+
+// Store Salary when calculated
+if (isset($_POST['salary']) && isset($_POST['employeeUsername'])) {
+    $salary = $_POST['salary'];
+    $employeeUsername = $_POST['employeeUsername'];
+
+    // Update the employee's salary in the database
+    $stmt = $connection->prepare("UPDATE employee_salary SET total_salary = ? WHERE username = ?");
+    $stmt->bind_param("ds", $salary, $employeeUsername);
+
+    if ($stmt->execute()) {
+        echo "Salary successfully stored in the database.";
+    } else {
+        echo "Error storing salary.";
+    }
+}
+
+mysqli_close($connection);  // Close the connection
 
 ?>
 
@@ -115,7 +145,7 @@
         </div>
             </div>
     <br>
- <!-- Add Or Remove Part -->
+ <!-- Active Or Remove Part -->
             <div class="addremove">
                 <div class="removeborder">
                     <form method="POST" action="managerdash.php">
@@ -184,33 +214,33 @@
                 </form>
                 </div>
             </div>
-    <br>
-            <div class="salarycal">
-                    <h2>Employee Salary Calculation </h2>
-                    <div class="separate-display">
-                <form onsubmit="return false;">
-                        <div class="salform">
-                            <p>Employee username :</p>
-                            <input type="text"   placeholder="Employee username" required>
-                            <p>Working Days :</p>
-                            <input type="number"  id="days" min ="1" placeholder="Days" required>
-                            <p>Working Hours :</p>
-                            <input type="number" id="hours" min="0"  placeholder="Hours" required>
-                            <p>Hour Rate :</p>
-                            <input type="number" id="rate"  min="0" placeholder="Hour Rate" required>
-                            <br>
-                            <br>
-                            <button type="submit"  class="scalculate" onclick="calculateSalary()">Calculate</button>
-                        </div>
-                </form>
-
-                        <div class="sal-display">
-                            <h3>Salary:</h3>
-                            <h2 id="salary">Rs.0.00</h2>
-                            <button class="addbase">Add to Data Base</button>
-                        </div>
-                    </div>
+    <br>    
+    <!--Salary Calculation Part-->
+    <div class="salarycal">
+    <h2>Employee Salary Calculation </h2>
+    <div class="separate-display">
+        <form onsubmit="return false;">
+            <div class="salform">
+                <p>Employee username :</p>
+                <input type="text" id="employeeUsername" placeholder="Employee username" required>
+                <p>Working Days :</p>
+                <input type="number" id="days" min="1" placeholder="Days" required>
+                <p>Working Hours :</p>
+                <input type="number" id="hours" min="0" placeholder="Hours" required>
+                <p>Hour Rate :</p>
+                <input type="number" id="rate" min="0" placeholder="Hour Rate" required>
+                <br><br>
+                <button type="submit" class="scalculate" onclick="calculateSalary()">Calculate</button>
             </div>
+        </form>
+
+        <div class="sal-display">
+            <h3>Salary:</h3>
+            <h2 id="salary">Rs.0.00</h2>
+            <button class="addbase" onclick="storeSalary()">Add to Data Base</button>
+        </div>
+    </div>
+</div>
             
 
     <!-- include the footer file -->
