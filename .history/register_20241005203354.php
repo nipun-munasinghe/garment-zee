@@ -1,30 +1,14 @@
-<?php
-
-include 'config.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['Username'];
-    $firstname = $_POST['firstName'];
-    $lastname = $_POST['lastname'];
+    $username = $_POST['username'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confermPassword'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-    if ($password == $confirm_password) {
-        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
-    $sql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password) 
-            VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password');";
-
-    $regresult = mysqli_query($connection, $sql);
-    
-    if ($regresult) {
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    if ($conn->query($sql) === TRUE) {
         echo "Registration successful!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-}
 }
 ?>
 
@@ -52,23 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="registe-container">
         
         <fieldset>
-            <form action="" method="post">
+            <form action="">
             <center><h1>Create your account</h1></center>
                 <table>
-                    <tr>
-                        <td>
-                            Username
-                        </td>
-                        <td>
-                            <input type="text" placeholder="Username" name="Username"><br>
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             Fisrts Name
                         </td>
                         <td>
-                            <input type="text" placeholder="Your first name" name="firstName"><br>
+                            <input type="text" placeholder="Your first name"><br>
                         </td>
                     </tr>
                     <tr>
@@ -76,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Last Name
                         </td>
                         <td>
-                            <input type="text" placeholder="Your last name" name="lastname"><br>
+                            <input type="text" placeholder="Your last name"><br>
                         </td>
                     </tr>
                     <tr>
@@ -84,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Email
                         </td>
                         <td>
-                            <input type="email" placeholder="example@gmail.com" id="email" name="email">
+                            <input type="email" placeholder="example@gmail.com" id="email">
                         </td>
                     </tr>
                     <tr>
@@ -92,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Phone Number
                         </td>
                         <td>
-                            <input type="text" placeholder="+94xxxxxxxxx" id="phone" name="phone">
+                            <input type="text" placeholder="+94xxxxxxxxx" id="phone">
                         </td>
 
                     </tr>
@@ -101,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Password
                         </td>
                         <td>
-                            <input type="text" placeholder="Password" name="password">
+                            <input type="text" placeholder="Password">
                         </td>
 
                     </tr>
@@ -110,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Re-enter Password
                         </td>
                         <td>
-                            <input type="text" placeholder="Confirm Password" name="confermPassword">
+                            <input type="text" placeholder="Confirm Password">
                         </td>
                     </tr>
                 </table>
@@ -126,4 +102,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <br><br>
 </body>
+
 </html>

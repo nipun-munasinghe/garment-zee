@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password');";
 
     $regresult = mysqli_query($connection, $sql);
-    
     if ($regresult) {
         echo "Registration successful!";
     } else {

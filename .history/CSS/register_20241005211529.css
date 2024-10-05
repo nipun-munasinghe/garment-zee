@@ -1,18 +1,18 @@
 body{
     margin: 0;
     padding: 0;
-    color: rgb(0, 33, 91);
+    color: #00aaff;
     background-color: #f0f8ff;
     font-size: 20px;
     font-family: poppins;
 }
 
 #registe-container form{
-    width: 40%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
-    padding: 5px 0px;
+    padding: 5px 5px;
     border-radius: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -21,7 +21,7 @@ body{
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
 }
 
 form table{
@@ -35,13 +35,13 @@ form table tr td{
 
 form table tr td input{
     padding: 10px;
-    width: 250px;
+    width: 350px;
     font-size: 20px;
 }
 
 #registerBtn {
     color: white;
-    background-color: rgb(0, 33, 91);
+    background-color: #00aaff;
     font-size: 20px;
     border: none;
     border-radius: 5px;
@@ -50,7 +50,7 @@ form table tr td input{
     margin-top: 20px;
 }
 #registerBtn:hover{
-    background-color: #057cb8;
+    background-attachment: fixed;
 }
 
 ::placeholder {
