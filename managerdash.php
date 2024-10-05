@@ -41,7 +41,7 @@
             echo "Deleted";
         }
     }
-
+// Add admin
     if(isset($_POST['Addadmin']))
     {
         echo "Clicked";
@@ -89,7 +89,7 @@ if(isset($_POST['Addemployee'])) {
     if($result) {
         echo "Employee added";
 
-        // Step 1: After adding employee, insert into employee_salary table with initial salary
+     // After adding employee, insert into employee_salary table with initial salary
         $sqlSalary = "INSERT INTO employee_salary (username, total_salary) VALUES ('$username', 0)";
         $resultSalary = mysqli_query($connection, $sqlSalary);
 
