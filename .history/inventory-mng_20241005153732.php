@@ -77,7 +77,7 @@
     <div class="inven-container">
         <h1 id="topic">Welcome to Inventory Management Page</h1>
 
-        <button id="openFormbtn" style="margin-left: 50px;">Add Inventory</button>
+        <button id="openFormbtn" style="margi">Add Inventory</button>
 
         <div id="overlay"></div>
 

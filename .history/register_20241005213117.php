@@ -14,12 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($password == $confirm_password) {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password) 
-            VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password');";
+    $sql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password,) 
+            VALUES ('$username', '$lastname','$email','$phone', '$hashed_password');";
 
-    $regresult = mysqli_query($connection, $sql);
-    
-    if ($regresult) {
+    $result = mysqli_query($connection, $sql);
+    if ($result) {
         echo "Registration successful!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

@@ -3,23 +3,21 @@
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['Username'];
     $firstname = $_POST['firstName'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confermPassword'];
+    $confirm_password = $_POST['confirm_password'];
 
     if ($password == $confirm_password) {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password) 
-            VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password');";
+    $sql = "INSERT INTO `user_info`(first_name, last_name, Email, Phone, password,) 
+            VALUES ('$username', '$lastname','$email','$phone', '$hashed_password');";
 
-    $regresult = mysqli_query($connection, $sql);
-    
-    if ($regresult) {
+    $result = mysqli_query($connection, $sql);
+    if ($result) {
         echo "Registration successful!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -52,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="registe-container">
         
         <fieldset>
-            <form action="" method="post">
+            <form action="">
             <center><h1>Create your account</h1></center>
                 <table>
                     <tr>

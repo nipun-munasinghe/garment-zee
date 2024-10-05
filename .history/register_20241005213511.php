@@ -15,10 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
     $sql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password) 
-            VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password');";
+            VALUES ('$username','' '$lastname','$email','$phone', '$hashed_password');";
 
     $regresult = mysqli_query($connection, $sql);
-    
     if ($regresult) {
         echo "Registration successful!";
     } else {
