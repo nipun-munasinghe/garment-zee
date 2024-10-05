@@ -10,13 +10,17 @@ if (isset($_POST['add'])) {
 
     $sql = "INSERT into `product`(Product_Id, Product_name, Price, Product_description, stock_quantity)
         values('$id', '$name', '$price', '$discription','$qty');";
-        
     $result = mysqli_query($connection, $sql);
+    $quentity = $_POST['qty'];
+
+    $sql = "INSERT into `product`(Product_Id, Product_name, Price, Product_description, stock_quantity)
+        values('$id', '$name', '$price', '$discription','$quentity');";
+    $result = mysqli_query($con, $sql);
     if ($result) {
         header('Location:product-mng.php');
         exit;
     } else {
-        die("Error: " . mysqli_error($connection));
+        die("Error: " . mysqli_error($con));
     }
 }
 
@@ -91,9 +95,13 @@ if (isset($_POST['add'])) {
                     </tr> -->
                     <tr>
                         <td>
-                            <label for="ID">Product ID</label><br>
+                            <label for="ID">Product ID</label>
                         </td>
+
+                    <tr>
                         <td>
+                            <label for="ID">Product ID</label><br>
+
                             <input type="text" placeholder="Product Id" name="id"><br>
                         </td>
                     </tr>
@@ -105,12 +113,26 @@ if (isset($_POST['add'])) {
                             <input type="text" placeholder="Product Name" name="pname"><br>
                         </td>
                     </tr>
+
+
                     <tr>
                         <td>
                             <label for="price">Price</label>
                         </td>
                         <td>
                             <input type="text" placeholder="Price" name="price"><br>
+
+                    <tr>
+                        <td>
+                            <label for="price">Price</label><br>
+                            <input type="text" placeholder="Price" name="price"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dicription">Product Discription</label><br>
+                            <textarea name="discription" id="discription" rows="4" column="50" name="discription"></textarea>>
+
                         </td>
                     </tr>
                     <tr>
@@ -130,6 +152,13 @@ if (isset($_POST['add'])) {
                             <input type="text" placeholder="Quantity" name="qty"><br>
                         </td>
                     </tr>
+                        <td>
+                            <label for="quantity">Quentity</label><br>
+                            <input type="text" placeholder="Quantity" name="qty"><br>
+                        </td>
+                    </tr>
+                    
+
                     <tr>
                         <td>
                             <button type="submit" value="submit" class="btn" name="add">Add</button>

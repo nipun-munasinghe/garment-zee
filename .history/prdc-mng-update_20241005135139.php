@@ -1,18 +1,18 @@
 <?php include 'config.php';
 
 if (isset($_GET['updateid'])) {
-$pno = $_GET['updateid'];
-$sql = "SELECT * from `product` WHERE Item_No=$pno;";
+$no = $_GET['updateid'];
+$sql = "SELECT * from `product` WHERE Item_No=$no";
 
 $result = mysqli_query($connection, $sql);
 
 $row = mysqli_fetch_assoc($result);
 
-$pno = $row['Item_No'];
+$no = $row['Item_No'];
 $id = $row['Product_Id'];
 $pname = $row['Product_name'];
 $pprice = $row['Price'];
-$pdescription = $row['Product_description'];
+$pqty = $row['Product_description'];
 $pquentity = $row['Stock_quantity'];
 }
 
@@ -21,16 +21,17 @@ if (isset($_POST['add'])) {
     $id = $_POST['id'];
     $pname = $_POST['pname'];
     $pprice = $_POST['price'];
-    $pdescription = $_POST['discription'];
+    $pdescription = $_POST['Product_description'];
     $pqty = $_POST['qty'];
 
     $sql = "UPDATE `product` SET 
+                Item_No=$no,
                 Product_Id='$id',
                 Product_name='$pname',
                 Price=$pprice,
                 Product_description='$pdescription',
                 stock_quantity=$pqty
-            WHERE Item_No='$pno';";
+            WHERE Item_No=$no;";
 
     $result = mysqli_query($connection, $sql);
 
@@ -70,7 +71,7 @@ if (isset($_POST['add'])) {
         <h1>Welcome To Product Managemnet Page!</h1>
         <div class="form">
             <h2>Updade Product</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addproduct">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addinven">
                 <table>
                     <!-- <tr>
                         <td>
@@ -111,7 +112,8 @@ if (isset($_POST['add'])) {
                             <label for="dicription">Product Discription</label>
                         </td>
                         <td>
-                            <textarea name="discription" id="discription" rows="4" column="80"><?php echo htmlspecialchars($pdescription); ?></textarea>
+                            <textarea name="discription" id="discription" rows="4" column="80"
+                            value=<?php echo $pdescription; ?>></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -120,12 +122,12 @@ if (isset($_POST['add'])) {
                         </td>
                         <td>
                             <input type="text" placeholder="Quantity" name="qty"
-                            value=<?php echo $pquentity; ?>><br>
+                            value=<?php echo $pqty; ?>><br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button type="submit" value="submit" class="btn" name="add">Update</button>
+                            <button type="submit" value="submit" class="btn" name="add">Add</button>
                         </td>
                     </tr>
                 </table>

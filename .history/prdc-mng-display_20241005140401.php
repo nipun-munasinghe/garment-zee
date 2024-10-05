@@ -32,7 +32,7 @@ include 'config.php';
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $pno = $row['Item_No'];
+                        $ino = $row['Item_No'];
                         $pid = $row['Product_Id'];
                         $pname = $row['Product_name'];
                         $pprice = $row['Price'];

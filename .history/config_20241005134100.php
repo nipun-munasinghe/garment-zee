@@ -1,6 +1,6 @@
 <?php
 
-    $connection = new mysqli('localhost', 'root', '', 'textile_&_garment_management_system');
+    $con = new mysqli('localhost', 'root', '', 'textile_&_garment_management_system');
 
     $server = "localhost";
     $username = "root";

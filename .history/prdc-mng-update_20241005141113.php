@@ -70,7 +70,7 @@ if (isset($_POST['add'])) {
         <h1>Welcome To Product Managemnet Page!</h1>
         <div class="form">
             <h2>Updade Product</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addproduct">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addinven">
                 <table>
                     <!-- <tr>
                         <td>
@@ -111,7 +111,8 @@ if (isset($_POST['add'])) {
                             <label for="dicription">Product Discription</label>
                         </td>
                         <td>
-                            <textarea name="discription" id="discription" rows="4" column="80"><?php echo htmlspecialchars($pdescription); ?></textarea>
+                            <textarea name="discription" id="discription" rows="4" column="80"
+                            value=<?php echo $pdescription; ?>></textarea>
                         </td>
                     </tr>
                     <tr>

@@ -1,39 +1,70 @@
 <?php include 'config.php';
 
 if (isset($_GET['updateid'])) {
-$pno = $_GET['updateid'];
-$sql = "SELECT * from `product` WHERE Item_No=$pno;";
+$no = $_GET['updateid'];
+$sql = "SELECT * from `product` WHERE Item_No=$no";
 
 $result = mysqli_query($connection, $sql);
 
 $row = mysqli_fetch_assoc($result);
 
-$pno = $row['Item_No'];
+<?php
+include 'config.php';
+$no = $_GET['updateno'];
+$sql = "SELECT * from `product` WHERE Item_No=$no";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+$no = $row['Item_No'];
+$id = $row['Product_Id'];
+$pname = $row['Product_name'];
+$pprice = $row['Price'];
+$pqty = $row['Product_description'];
+$pquentity = $row['Stock_quantity'];
+
+
+$no = $row['Item_No'];
 $id = $row['Product_Id'];
 $pname = $row['Product_name'];
 $pprice = $row['Price'];
 $pdescription = $row['Product_description'];
 $pquentity = $row['Stock_quantity'];
-}
 
+<<<<<<< Updated upstream
+}
 if (isset($_POST['add'])) {
     //$no = $_POST['no'];
     $id = $_POST['id'];
     $pname = $_POST['pname'];
     $pprice = $_POST['price'];
-    $pdescription = $_POST['discription'];
+    $pdescription = $_POST['Product_description'];
     $pqty = $_POST['qty'];
 
     $sql = "UPDATE `product` SET 
+                Item_No=$no,
                 Product_Id='$id',
                 Product_name='$pname',
                 Price=$pprice,
                 Product_description='$pdescription',
                 stock_quantity=$pqty
-            WHERE Item_No='$pno';";
+            WHERE Item_No=$no;";
 
     $result = mysqli_query($connection, $sql);
 
+=======
+if (isset($_POST['update'])) {
+    $no = $_POST['no'];
+    $id = $_POST['id'];
+    $pname = $_POST['pname'];
+    $pprice = $_POST['price'];
+    $pdescription = $row['Product_description'];
+    $pqty = $_POST['qty'];
+    
+
+    $sql = "UPDATE `product-mamagment` set Item_No=$no,Product_Id=$id,Product_name='$pname',
+    Price=$pprice, Product_description='$pdescription', stock_quantity=$pqty
+    WHERE id=$id";
+    $result = mysqli_query($con, $sql);
+>>>>>>> Stashed changes
     if ($result) {
         header('Location: product-mng.php');
     } else {
@@ -70,21 +101,33 @@ if (isset($_POST['add'])) {
         <h1>Welcome To Product Managemnet Page!</h1>
         <div class="form">
             <h2>Updade Product</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addproduct">
+            <form action="" method="post">
                 <table>
                     <!-- <tr>
                         <td>
                             <label for="ItemNo">Item No</label><br>
-                            <input type="text" placeholder="Item number" name="No" readonly><br>
                         </td>
-                    </tr> -->
+                        <td>
+                            <input type="text" placeholder="Item number" name="no" readonly><br>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <td>
+<<<<<<< Updated upstream
+                            <label for="ID">Product ID</label>
+                        </td>
+                        <td>
+=======
+                            <label for="ID">Item No</label><br>
+                            <input type="text" placeholder="Item number" name="no"><br>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <label for="ID">Product ID</label><br>
-                        </td>
-                        <td>
+>>>>>>> Stashed changes
                             <input type="text" placeholder="Product Id" name="id"
-                            value=<?php echo $id; ?>><br>
+                                value=<?php echo $id; ?>><br>
                         </td>
                     </tr>
                     <tr>
@@ -93,25 +136,35 @@ if (isset($_POST['add'])) {
                         </td>
                         <td>
                             <input type="text" placeholder="Product Name" name="pname"
-                            value=<?php echo $pname; ?>><br>
+                                value=<?php echo $pname; ?>><br>
                         </td>
                     </tr>
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
                     <tr>
                         <td>
                             <label for="price">Price</label>
                         </td>
                         <td>
                             <input type="text" placeholder="Price" name="price"
-                            value=<?php echo $pprice; ?>><br>
+                                value=<?php echo $pprice; ?>><br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-
+<<<<<<< Updated upstream
                             <label for="dicription">Product Discription</label>
                         </td>
                         <td>
-                            <textarea name="discription" id="discription" rows="4" column="80"><?php echo htmlspecialchars($pdescription); ?></textarea>
+                            <textarea name="Product_description" id="discription" rows="4" column="60">
+                            <?php echo $pdescription; ?>
+                            </textarea>
+=======
+                            <label for="dicription">Product Discription</label><br>
+                            <textarea name="discription" id="discription" rows="4" column="50" name="discription"></textarea>
+>>>>>>> Stashed changes
                         </td>
                     </tr>
                     <tr>
@@ -120,13 +173,20 @@ if (isset($_POST['add'])) {
                         </td>
                         <td>
                             <input type="text" placeholder="Quantity" name="qty"
-                            value=<?php echo $pquentity; ?>><br>
+                                value=<?php echo $pquentity; ?>><br>
                         </td>
                     </tr>
+<<<<<<< Updated upstream
                     <tr>
                         <td>
                             <button type="submit" value="submit" class="btn" name="add">Update</button>
                         </td>
+=======
+                    </tr>
+                    <td>
+                        <button type="submit" class="btn" name="update">Update</button>
+                    </td>
+>>>>>>> Stashed changes
                     </tr>
                 </table>
             </form>

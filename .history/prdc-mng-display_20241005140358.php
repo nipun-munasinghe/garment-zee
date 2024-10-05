@@ -32,7 +32,7 @@ include 'config.php';
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $pno = $row['Item_No'];
+                        $ino = $row['Item_No'];
                         $pid = $row['Product_Id'];
                         $pname = $row['Product_name'];
                         $pprice = $row['Price'];
@@ -54,7 +54,7 @@ include 'config.php';
                                             white; border: 1px solid black; 
                                             border-radious: 5px; text-decoration: none;
                                             ">Update</a>
-                                <a href="prdc-mng-delete.php?deleteid=' . $pno . 
+                                <a href="prdc-mng-delete.php?deleteid=' . $no . 
                                 '" style="background-color: rgb(0, 33, 91);
                                             padding:5px; 
                                             color: white; 

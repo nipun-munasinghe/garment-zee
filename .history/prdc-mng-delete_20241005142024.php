@@ -5,7 +5,7 @@
     if(isset($_GET['deleteid'])){
         $no = mysqli_real_escape_string($connection, $_GET['deleteid']);
 
-        $sql="delete from `product` where Item_No=$no";
+        $sql="delete from `product` where id=$no";
         $result=mysqli_query($connection,$sql);
     
         if($result){
@@ -15,3 +15,4 @@
         }
     
     }
+}

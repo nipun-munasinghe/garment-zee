@@ -111,7 +111,9 @@ if (isset($_POST['add'])) {
                             <label for="dicription">Product Discription</label>
                         </td>
                         <td>
-                            <textarea name="discription" id="discription" rows="4" column="80"><?php echo htmlspecialchars($pdescription); ?></textarea>
+                            <textarea name="discription" id="discription" rows="4" column="80">
+                                
+                            </textarea>
                         </td>
                     </tr>
                     <tr>
