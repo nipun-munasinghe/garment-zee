@@ -112,15 +112,7 @@ if (isset($_POST['salary']) && isset($_POST['employeeUsername'])) {
     $stmt = $connection->prepare("UPDATE employee_salary SET total_salary = ? WHERE username = ?");
     $stmt->bind_param("ds", $salary, $employeeUsername);
 
-    if ($stmt->execute()) {
-        echo "Salary successfully stored in the database.";
-    } else {
-        echo "Error storing salary.";
-    }
 }
-
-mysqli_close($connection);  // Close the connection
-
 ?>
 
 <!DOCTYPE html>
