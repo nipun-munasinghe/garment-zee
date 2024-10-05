@@ -1,3 +1,4 @@
+<!--php part -->
 <?php
     session_start();
     require_once 'config.php';
@@ -95,13 +96,13 @@
         $salary = $_POST['salary'];
         $employeeUsername = $_POST['employeeUsername'];
 
-        $stmt = $connection->prepare("UPDATE employee_salary SET salary = ? WHERE username = ?");
+        $stmt = $connection->prepare("UPDATE employee_salary SET total_salary = ? WHERE username = ?");
         $stmt->bind_param("ds", $salary, $employeeUsername);
 
         if ($stmt->execute()) {
-            echo "Salary successfully stored in the database.";
+           // echo "Salary successfully stored in the database.";
         } else {
-            echo "Error storing salary.";
+          //  echo "Error storing salary.";
         }
     }
 
@@ -131,7 +132,7 @@
         </div>
             </div>
     <br>
- <!-- Add Or Remove Part -->
+ <!-- Active Or Remove Part -->
             <div class="addremove">
                 <div class="removeborder">
                     <form method="POST" action="managerdash.php">
@@ -200,7 +201,8 @@
                 </form>
                 </div>
             </div>
-    <br>
+    <br>    
+    <!--Salary Calculation Part-->
             <div class="salarycal">
                     <h2>Employee Salary Calculation </h2>
                     <div class="separate-display">
