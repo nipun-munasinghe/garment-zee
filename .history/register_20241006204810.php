@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confermPassword'];  // Correct spelling
-    $user_type = 'admin'; // Default user type
+    $user_type = 'user'; // Default user type
     $acc_status = 'active'; // Account status
 
     // Validate the input
@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 
             // Insert user into the database
             $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone, password, user_type, acc_status)
-                      VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$plain_password', '$user_type', '$acc_status')";
+                      VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$hashed_password', '$user_type', '$acc_status')";
 
             if (mysqli_query($connection, $query)) {
                 header("Location: login.php");
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="CSS/register.css">
 
     <title>Sign Up</title>
-</head>word
+</head>
 
 <body>
     <div id="registe-container">

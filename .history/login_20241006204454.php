@@ -13,9 +13,9 @@
 
         if(mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
-            $stored_password = $row['password'];
+            $ha = $row['password'];
 
-            if ($password == $stored_password) {
+            if () {
             $_SESSION['username'] = $row['username'];
             $_SESSION['first_name'] = $row['first_name'];
             $_SESSION['last_name'] = $row['last_name'];

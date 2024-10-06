@@ -13,7 +13,7 @@
 
         if(mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
-            $stored_password = $row['password'];
+            $ = $row['password'];
 
             if ($password == $stored_password) {
             $_SESSION['username'] = $row['username'];
