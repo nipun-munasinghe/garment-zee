@@ -2,34 +2,32 @@
 session_start();
 require_once 'config.php';
 
-if (isset($_POST['submit'])) {
-    $username = $_POST['Username'];
-    $first_name = $_POST['firstName'];
-    $last_name = $_POST['lastname'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+if(isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confermPassword'];  // Correct spelling
+    $confirm_password = $_POST['confirm_password'];
     $user_type = 'user'; // Default user type
     $acc_status = 'active'; // Account status
 
     // Validate the input
-    if (!empty($username) && !empty($password) && $password === $confirm_password) {
+    if(!empty($username) && !empty($password) && $password === $confirm_password) {
         // Check if the username already exists
         $query = "SELECT * FROM `user_info` WHERE username = '$username' LIMIT 1";
         $result = mysqli_query($connection, $query);
 
-        if (mysqli_num_rows($result) == 0) {
+        if(mysqli_num_rows($result) == 0) {
             // Hash the password before storing it
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Insert user into the database
-            $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone, password, user_type, acc_status)
-                      VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$hashed_password', '$user_type', '$acc_status')";
+            $query = "INSERT INTO user_info (username, first_name, last_name, password, user_type, acc_status) 
+                      VALUES ('$username', '$first_name', '$last_name', '$hashed_password', '$user_type', '$acc_status')";
 
-            if (mysqli_query($connection, $query)) {
+            if(mysqli_query($connection, $query)) {
+                echo "Registration successful. Please log in.";
                 header("Location: login.php");
-                exit();  // Make sure to stop further execution
             } else {
                 echo "Error: " . mysqli_error($connection);
             }

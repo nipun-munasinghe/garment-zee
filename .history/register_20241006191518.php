@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Insert user into the database
-            $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone, password, user_type, acc_status)
+            $query = "INSERT INTO user_info (username, first_name, last_name, email, phone, password, user_type, acc_status)
                       VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$hashed_password', '$user_type', '$acc_status')";
 
             if (mysqli_query($connection, $query)) {

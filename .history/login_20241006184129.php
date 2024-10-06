@@ -1,14 +1,19 @@
 <?php
 
-    session_start();
+session_start();
+include("config.php");
+include("function.php");
 
-    require_once 'config.php';
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    //something was posted
+    $user_name = $_POST['user_name'];
+    $password = $_POST['password'];
 
     if(isset($_POST['submit'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM `user_info` WHERE username = '$username' AND password = '$password' Limit 1";
+        $sql = "SELECT * FROM user_info WHERE username = '$username' AND password = '$password' Limit 1";
         $result = mysqli_query($connection, $sql);
 
         if(mysqli_num_rows($result) == 1) {
@@ -37,6 +42,9 @@
                 else {
                     header('Location: employee.php');
                 }
+                exit();
+            }else{
+                echo "Account inactive";
             }
         } else {
             echo "Invalid password.";

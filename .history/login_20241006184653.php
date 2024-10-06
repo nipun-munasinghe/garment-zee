@@ -2,13 +2,39 @@
 
     session_start();
 
-    require_once 'config.php';
+    include("config.php");
+    include("functions.php");
 
-    if(isset($_POST['submit'])) {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        //something was posted
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM `user_info` WHERE username = '$username' AND password = '$password' Limit 1";
+        if (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
+
+    $query = "SELECT * From `user_info` where username = '$username' limit 1";
+
+    $result = mysqli_query($connection, $query);
+        if ($result) {
+            if ($result && mysqli_num_rows($result) > 0) 
+            {
+                $user_data = mysqli_fetch_assoc($result);
+                
+                if($user_data['password'] === $password)
+                {
+                    $_SESSION['user_id'] = $user_data['user_id'];
+                    header("Location: index.php");
+                    die;
+                }
+            }
+        }
+        echo "Please enter some valid information!";
+    } else {
+        echo "Please enter some valid information!";
+    }
+
+}
+        $sql = "SELECT * FROM user_info WHERE username = '$username' AND password = '$password' Limit 1";
         $result = mysqli_query($connection, $sql);
 
         if(mysqli_num_rows($result) == 1) {
@@ -37,6 +63,9 @@
                 else {
                     header('Location: employee.php');
                 }
+                exit();
+            }else{
+                echo "Account"
             }
         } else {
             echo "Invalid password.";

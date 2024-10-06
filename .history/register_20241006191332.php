@@ -3,13 +3,13 @@ session_start();
 require_once 'config.php';
 
 if (isset($_POST['submit'])) {
-    $username = $_POST['Username'];
+    $username = $_POST['username'];
     $first_name = $_POST['firstName'];
     $last_name = $_POST['lastname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confermPassword'];  // Correct spelling
+    $confirm_password = $_POST['confirmPassword'];  // Correct spelling
     $user_type = 'user'; // Default user type
     $acc_status = 'active'; // Account status
 
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Insert user into the database
-            $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone, password, user_type, acc_status)
+            $query = "INSERT INTO user_info (username, first_name, last_name, email, phone, password, user_type, acc_status)
                       VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$hashed_password', '$user_type', '$acc_status')";
 
             if (mysqli_query($connection, $query)) {
@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
                             Username
                         </td>
                         <td>
-                            <input type="text" placeholder="Username" name="Username"><br>
+                            <input type="text" placeholder="Username" name="username"><br>
                         </td>
                     </tr>
                     <tr>

@@ -2,13 +2,13 @@
 
     session_start();
 
-    require_once 'config.php';
+    include("connction.php");
 
     if(isset($_POST['submit'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM `user_info` WHERE username = '$username' AND password = '$password' Limit 1";
+        $sql = "SELECT * FROM user_info WHERE username = '$username' AND password = '$password' Limit 1";
         $result = mysqli_query($connection, $sql);
 
         if(mysqli_num_rows($result) == 1) {
@@ -37,6 +37,9 @@
                 else {
                     header('Location: employee.php');
                 }
+                exit();
+            }else{
+                echo "Account"
             }
         } else {
             echo "Invalid password.";
