@@ -15,20 +15,20 @@ if (isset($_POST['submit'])) {
     if ($password == $confirm_password) {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-        $regsql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password, acc_status) 
+    $regsql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password, acc_status) 
             VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password', '$acc_status');";
 
-        $regresult = mysqli_query($connection, $regsql);
+    $regresult = mysqli_query($connection, $regsql);
 
-        if ($regresult) {
-            header('Location:login.php');
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($connection);
-        }
+    if ($regresult) {
+        header('Location:login.php');
     } else {
-        echo "Password do not match!";
+        echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+
     }
-}
+}else{
+    echo "Password do not match!";
+}}
 ?>
 
 
@@ -53,12 +53,10 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div id="registe-container">
-
+        
         <fieldset>
             <form action="" method="post">
-                <center>
-                    <h1>Create your account</h1>
-                </center>
+            <center><h1>Create your account</h1></center>
                 <table>
                     <tr>
                         <td>
@@ -131,5 +129,4 @@ if (isset($_POST['submit'])) {
     </div>
     <br><br>
 </body>
-
 </html>
