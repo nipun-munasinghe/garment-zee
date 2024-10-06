@@ -78,7 +78,7 @@
                         <label for="reciptUrl">Payment Recipt :</label><br>
                         <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br>
 
-                        <center><input type="submit" id="addBtn" value="ADD" name="add" onclick="displayAdding()"></center>
+                        <center><input type="submit" id="addBtn" value="ADD" name="add"></center>
                     </div>
                     
                 </fieldset>    
@@ -131,7 +131,7 @@
                             <td>' . $ReciptUrl . '</td>
                             <td>
                                 <a href="order-manage-update.php?updateid='.$oid.'" class="updateA">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA" onclick="displayDelete()">DELETE</a>
+                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA">DELETE</a>
                             </td>
                             </tr>';
 

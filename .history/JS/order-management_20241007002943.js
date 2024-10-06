@@ -38,10 +38,10 @@ function formCheck() {
         alert("Payment Recipt Must be uploaded.");
         return false;
     }
-    return alert("Order Successfully Adding!");
+    return true;
 }
 
-function displayDelete()
+function displayAdding()
 {
-    alert("Order Deleted!")
+    alert("Order Adding ")
 }

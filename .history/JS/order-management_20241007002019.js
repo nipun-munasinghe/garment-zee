@@ -38,10 +38,15 @@ function formCheck() {
         alert("Payment Recipt Must be uploaded.");
         return false;
     }
-    return alert("Order Successfully Adding!");
+    return true;
 }
 
-function displayDelete()
-{
-    alert("Order Deleted!")
-}
+document.getElementById('addBtn').addEventListener('click', function() {
+    // Validate if the form inputs are filled (HTML5 will handle required fields)
+    const form = document.getElementById('orderForm');
+    if (form.checkValidity()) {
+        alert("Successfully added");
+    } else {
+        alert("Please fill all the required fields.");
+    }
+});

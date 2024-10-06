@@ -38,10 +38,17 @@ function formCheck() {
         alert("Payment Recipt Must be uploaded.");
         return false;
     }
-    return alert("Order Successfully Adding!");
+    return true;
 }
 
-function displayDelete()
-{
-    alert("Order Deleted!")
-}
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission to test the alert
+
+    // Your form submission logic goes here (e.g., AJAX or just form.submit())
+
+    // Display alert after successful action
+    alert("Successfully added");
+
+    // Optionally, submit the form after the alert
+    this.submit(); // Remove this line if testing without backend
+});
