@@ -60,8 +60,7 @@ include 'config.php';
                                             padding:5px; 
                                             color: white; 
                                             border: 1px solid black; 
-                                            border-radious: 5px; 
-                                            text-decoration: none;
+                                            border-radious: 5px; text-decoration: none;
                                             ">Delete</a>
                             </td>
                             </tr>';
