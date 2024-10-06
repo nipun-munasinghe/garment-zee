@@ -130,7 +130,7 @@ if (isset($_POST['submit'])) {
                             <input type="password" placeholder="Confirm Password" name="confermPassword">
                         </td>
                     </tr>
-                
+                    
                 </table>
                 <center>
                     <button id="registerBtn" name="submit">Register Now</button>
