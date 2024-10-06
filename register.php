@@ -9,8 +9,8 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confermPassword'];  // Correct spelling
-    $user_type = $_POST['user_type']; // Default user type
+    $confirm_password = $_POST['confermPassword'];
+    $user_type = "user"; // Default user type
     $acc_status = 'active'; // Account status
 
     // Validate the input
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 
 
             // Insert user into the database
-            $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone, password, user_type, acc_status)
+            $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone_number_1, password, user_type, acc_status)
                       VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$plain_password', '$user_type', '$acc_status')";
 
             if (mysqli_query($connection, $query)) {
