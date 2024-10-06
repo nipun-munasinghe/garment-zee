@@ -69,13 +69,13 @@ include 'config.php';
                                                                                         padding:5px; 
                                                                                         color: white; 
                                                                                         border: 1px solid black; 
-                                                                                        border-radius: 8px; 
+                                                                                        border-radious: 8px; 
                                                                                         text-decoration: none;">Update</a>
                                 <a href="inven-mng-delete.php?deleteid=' . $ino . '"style="background-color: rgb(0, 33, 91);
                                                                                     padding:5px; 
                                                                                     color: white; 
                                                                                     border: 1px solid black; 
-                                                                                    border-radius: 8px; 
+                                                                                    border-radious: 8px; 
                                                                                     text-decoration: none;">Delete</a>
                             </td>
                             </tr>';
