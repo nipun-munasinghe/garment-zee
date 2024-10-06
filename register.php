@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $regresult = mysqli_query($connection, $sql);
     
-    if ($regresult) {
-        echo "Registration successful!";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        if ($regresult) {
+            echo "Registration successful!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
-}
 }
 ?>
 
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Password
                         </td>
                         <td>
-                            <input type="text" placeholder="Password" name="password">
+                            <input type="password" placeholder="Password" name="password">
                         </td>
 
                     </tr>
@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Re-enter Password
                         </td>
                         <td>
-                            <input type="text" placeholder="Confirm Password" name="confermPassword">
+                            <input type="password" placeholder="Confirm Password" name="confermPassword">
                         </td>
                     </tr>
                 </table>
