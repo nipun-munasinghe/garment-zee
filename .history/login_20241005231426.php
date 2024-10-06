@@ -15,7 +15,6 @@
             $row = mysqli_fetch_assoc($result);
             $hashed_password = $row['password'];
 
-            if (password_verify($password, $hashed_password)) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['first_name'] = $row['first_name'];
             $_SESSION['last_name'] = $row['last_name'];
@@ -37,17 +36,9 @@
                 else {
                     header('Location: employee.php');
                 }
-                exit();
-            }else{
-                echo "Account inactive";
             }
-        } else {
-            echo "Invalid password.";
         }
-    } else {
-        echo "Username not found.";
     }
-}
 ?>
 
 <!DOCTYPE html>

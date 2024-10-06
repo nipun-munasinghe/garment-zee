@@ -37,17 +37,14 @@
                 else {
                     header('Location: employee.php');
                 }
-                exit();
-            }else{
-                echo "Account inactive";
             }
-        } else {
+        }else {
             echo "Invalid password.";
         }
-    } else {
-        echo "Username not found.";
+        else {
+            echo "Username not found.";
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>

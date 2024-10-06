@@ -39,7 +39,7 @@
                 }
                 exit();
             }else{
-                echo "Account inactive";
+                echo "Account inactive"
             }
         } else {
             echo "Invalid password.";

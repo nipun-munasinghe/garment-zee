@@ -15,18 +15,16 @@ if (isset($_POST['submit'])) {
     if ($password == $confirm_password) {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    $regsql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password, acc_status) 
+    $sql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password) 
             VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password', '$acc_status');";
 
-    $regresult = mysqli_query($connection, $regsql);
+    $regresult = mysqli_query($connection, $sql);
 
     if ($regresult) {
         header('Location:login.php');
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-}else{
-    echo "Password do not match!";
 }
 }
 ?>

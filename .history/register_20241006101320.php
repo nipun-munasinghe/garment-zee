@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     $regsql = "INSERT INTO `user_info`(username, first_name, last_name, Email, Phone, password, acc_status) 
             VALUES ('$username','$firstname', '$lastname','$email','$phone','$hashed_password', '$acc_status');";
 
-    $regresult = mysqli_query($connection, $regsql);
+    $regresult = mysqli_query($connection, $sql);
 
     if ($regresult) {
         header('Location:login.php');

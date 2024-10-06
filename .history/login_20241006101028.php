@@ -37,9 +37,7 @@
                 else {
                     header('Location: employee.php');
                 }
-                exit();
-            }else{
-                echo "Account inactive";
+                exit()
             }
         } else {
             echo "Invalid password.";
