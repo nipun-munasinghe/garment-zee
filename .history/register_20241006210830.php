@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confermPassword'];  // Correct spelling
-    $user_type = $_POST['user_type']; // Default user type
+    $user_type = 'admin']; // Default user type
     $acc_status = 'active'; // Account status
 
     // Validate the input

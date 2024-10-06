@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confermPassword'];  // Correct spelling
-    $user_type = $_POST['user_type']; // Default user type
+    $user_type = 'admin'; // Default user type
     $acc_status = 'active'; // Account status
 
     // Validate the input
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
         if (mysqli_num_rows($result) == 0) {
             $plain_password = $password;
-
+            
 
             // Insert user into the database
             $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone, password, user_type, acc_status)
@@ -132,15 +132,10 @@ if (isset($_POST['submit'])) {
                     </tr>
                     <tr>
                         <td>
-                            User Type
+                            Re-enter Password
                         </td>
                         <td>
-                            <select name="user_type" id="user_type">
-                                <option value="user">User</option>
-                                <option value="admin">Admin</option>
-                                <option value="manager">Manager</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <input type="password" placeholder="Confirm Password" name="confermPassword">
                         </td>
                     </tr>
                 </table>
