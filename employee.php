@@ -1,31 +1,44 @@
 <?php
-    session_start();
+session_start();
 
-    require_once 'config.php';
+require_once 'config.php';
 
-    if(isset($_POST['change'])) {
-        $sql = "SELECT password FROM user_info WHERE username = '".$_SESSION['username']."' ";
-        $result = mysqli_query($connection, $sql);
+if(isset($_POST['change'])) {
+    $sql = "SELECT password FROM user_info WHERE username = '".$_SESSION['username']."' ";
+    $result = mysqli_query($connection, $sql);
 
-        if($result) {
-            $row = mysqli_fetch_assoc($result);
+    if($result) {
+        $row = mysqli_fetch_assoc($result);
 
-            $password = $row['password'];
+        $password = $row['password'];
 
-            if($password == $_POST['current-password']) {
-                $newPass = $_POST['new-password'];
+        // Check if current password matches the one in the database
+        if($password == $_POST['current-password']) {
+            $newPass = $_POST['new-password'];
+            $confirmPass = $_POST['confirm-password'];
 
+            // Check if new password and confirm password match
+            if($newPass == $confirmPass) {
                 $sql = "UPDATE user_info SET password='$newPass' WHERE username = '".$_SESSION['username']."' ";
                 $result = mysqli_query($connection, $sql);
 
                 if($result) {
                     echo "<script>
-                          alert('Your password was successfully changed !');
+                          alert('Your password was successfully changed!');
                           </script>";
                 }
+            } else {
+                echo "<script>
+                      alert('New password and confirm password do not match. Please try again.');
+                      </script>";
             }
+        } else {
+            echo "<script>
+                  alert('Current password is incorrect. Please try again.');
+                  </script>";
         }
     }
+}
 
     if(isset($_POST['delete'])) {
 
