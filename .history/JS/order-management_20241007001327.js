@@ -38,15 +38,17 @@ function formCheck() {
         alert("Payment Recipt Must be uploaded.");
         return false;
     }
-    return alert("Are you need Adding this Order!");
+    return true;
 }
 
-function displayUpdate()
-{
-    alert("Are you need update this!");
-}
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission to test the alert
 
-function displayDelete()
-{
-    alert("Are you need delete this!")
-}
+    // Your form submission logic goes here (e.g., AJAX or just form.submit())
+
+    // Display alert after successful action
+    alert("Successfully added");
+
+    // Optionally, submit the form after the alert
+    this.submit(); // Remove this line if testing without backend
+});

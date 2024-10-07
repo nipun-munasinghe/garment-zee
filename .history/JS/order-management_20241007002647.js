@@ -38,15 +38,5 @@ function formCheck() {
         alert("Payment Recipt Must be uploaded.");
         return false;
     }
-    return alert("Are you need Adding this Order!");
-}
-
-function displayUpdate()
-{
-    alert("Are you need update this!");
-}
-
-function displayDelete()
-{
-    alert("Are you need delete this!")
+    return true;
 }

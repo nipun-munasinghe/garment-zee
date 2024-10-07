@@ -52,7 +52,7 @@
     <div class="backgroundUper">
         <h1 id="h1Welcome">Welcome to Order Management Page</h1>
         <div class="updateForm">
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
+            <form id="fillForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
                 <fieldset>
                     <div class="formContain">
                         <h2 class="omH">Order Details</h2><br>
@@ -78,7 +78,7 @@
                         <label for="reciptUrl">Payment Recipt :</label><br>
                         <input type="file" id="reciptUrl" placeholder="Payment Recipt" name="recipt"><br><br>
 
-                        <center><input type="submit" id="addBtn" value="ADD" name="add" onclick="displayAdding()"></center>
+                        <center><input type="submit" id="addBtn" value="ADD" name="add"></center>
                     </div>
                     
                 </fieldset>    
@@ -130,8 +130,8 @@
                             <td>' . $oAddress . '</td>
                             <td>' . $ReciptUrl . '</td>
                             <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA" onclick="displayUpdate()">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA" onclick="displayDelete()">DELETE</a>
+                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA">UPDATE</a>
+                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA">DELETE</a>
                             </td>
                             </tr>';
 

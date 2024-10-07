@@ -130,8 +130,8 @@
                             <td>' . $oAddress . '</td>
                             <td>' . $ReciptUrl . '</td>
                             <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA" onclick="displayUpdate()">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA" onclick="displayDelete()">DELETE</a>
+                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA">UPDATE</a>
+                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA">DELETE</a>
                             </td>
                             </tr>';
 
