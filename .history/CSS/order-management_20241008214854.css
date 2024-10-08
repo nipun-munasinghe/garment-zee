@@ -23,18 +23,6 @@ body
     margin-bottom: 20px;
 }
 
-.updateFormUpdate
-{
-    width: 420px;
-    height: 660px;
-    color: rgb(0, 33, 91);
-    margin: auto;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px;
-    margin-bottom: 20px;
-}
-
 #orderID
 {
     width: 100%;

@@ -83,7 +83,7 @@
                     <h2 class="omH">Update Order Details</h2><br>
 
                     <label for="orderId">Order ID :</label><br>
-                    <input type="text" id="orderID" placeholder="Order ID" name="Id" readonly value=" <?php echo $oid; ?>"><br>
+                    <input type="text" id="orderID" placeholder="Order ID" name="Id" value=" <?php echo $oid; ? readonly>"><br>
 
                     <label for="cName">Customer Name :</label><br>
                     <input type="text" id="cName" placeholder="Customer Name" name="fName" value=" <?php echo $oName; ?>"><br>
