@@ -2,6 +2,7 @@
 include 'config.php';
 ?>
 
+<!-- Delete data -->
 <?php
 if (isset($_GET['deleteid'])) {
     $ino = mysqli_real_escape_string($connection, $_GET['deleteid']);

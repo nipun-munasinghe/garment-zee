@@ -114,7 +114,7 @@
                             <label for="ID">Cost Price</label>
                         </td>
                         <td>
-                            <input type="number" placeholder="Cost Price" name="costprice" required min=1><br>
+                            <input type="number" placeholder="Cost Price" name="costprice" required><br>
                         </td>
                     </tr>
                     <tr>

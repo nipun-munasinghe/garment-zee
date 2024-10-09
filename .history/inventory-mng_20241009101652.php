@@ -98,7 +98,7 @@
                             <label for="ID">Inventory Name</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Inventory Name" name="invenName" required><br>
+                            <input type="text" placeholder="Inventory Name" name="invenName"><br>
                         </td>
                     </tr>
                     <tr>
@@ -106,7 +106,7 @@
                             <label for="ID">Current Quentity</label>
                         </td>
                         <td>
-                            <input type="number" placeholder="Current Quantity" name="CurrntQty" required min=1><br>
+                            <input type="text" placeholder="Current Quantity" name="CurrntQty"><br>
                         </td>
                     </tr>
                     <tr>
@@ -114,7 +114,7 @@
                             <label for="ID">Cost Price</label>
                         </td>
                         <td>
-                            <input type="number" placeholder="Cost Price" name="costprice" required min=1><br>
+                            <input type="text" placeholder="Cost Price" name="costprice"><br>
                         </td>
                     </tr>
                     <tr>

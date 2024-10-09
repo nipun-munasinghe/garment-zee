@@ -2,19 +2,25 @@
 include 'config.php';
 ?>
 
+
+<!-- Delete data -->
 <?php
-if (isset($_GET['deleteid'])) {
-    $ino = mysqli_real_escape_string($connection, $_GET['deleteid']);
+    include 'config.php';
 
-    $sql = "DELETE FROM product WHERE Item_No = $ino";
-    $result = mysqli_query($connection, $sql);
+    if(isset($_GET['deleteid'])) {
+        $ino = mysqli_real_escape_string($connection, $_GET['deleteid']);
 
-    if ($result) {
-        header('Location: product-mng.php');
-    } else {
-        die(mysqli_error($connection));
+        $sql="delete from `product` where Item_No=$ino";
+        $result=mysqli_query($connection,$sql);
+    
+        if($result){
+            header('Location:product-mng.php');
+        }else{
+            die(mysqli_error($connection));
+        }
+    
     }
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -42,10 +48,9 @@ if (isset($_GET['deleteid'])) {
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM inventory;";
+                $sql = "SELECT * From `inventory`;";
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
-                    $index = 1; 
                     while ($row = mysqli_fetch_assoc($result)) {
                         $ino = $row['Item_No'];
                         $iId = $row['Inventor_Id'];
@@ -54,23 +59,24 @@ if (isset($_GET['deleteid'])) {
                         $iCostPrice = $row['costPrice'];
                         echo '
                             <tr>
-                            <td>' . $index++ . '</td> <!-- Display index -->
+                            <td scope="row">' . $index . '</td> <!-- Display the index -->
+                            <th scope="row">' . $ino . '</th>
                             <td>' . $iId . '</td>
                             <td>' . $iname . '</td>
                             <td>' . $iCurntS . '</td>
                             <td>' . $iCostPrice . '</td>
                             <td>
-                                <a href="inven-mng-update.php?invenupdateid=' . $ino . '" style="background-color: rgb(0, 33, 91);
-                                                                                        padding: 5px; 
+                                <a href="inven-mng-update.php?invenupdateid=' . $ino . '"style="background-color: rgb(0, 33, 91);
+                                                                                        padding:5px; 
                                                                                         color: white; 
                                                                                         border: 1px solid black; 
-                                                                                        border-radius: 8px; 
+                                                                                        border-radious: 8px; 
                                                                                         text-decoration: none;">Update</a>
-                                <a href="inven-mng-delete.php?deleteid=' . $ino . '" style="background-color: rgb(0, 33, 91);
-                                                                                    padding: 5px; 
+                                <a href="inven-mng-delete.php?deleteid=' . $ino . '"style="background-color: rgb(0, 33, 91);
+                                                                                    padding:5px; 
                                                                                     color: white; 
                                                                                     border: 1px solid black; 
-                                                                                    border-radius: 8px; 
+                                                                                    border-radious: 8px; 
                                                                                     text-decoration: none;">Delete</a>
                             </td>
                             </tr>';

@@ -2,6 +2,7 @@
 include 'config.php';
 ?>
 
+<!-- Delete data -->
 <?php
 if (isset($_GET['deleteid'])) {
     $ino = mysqli_real_escape_string($connection, $_GET['deleteid']);
@@ -45,7 +46,7 @@ if (isset($_GET['deleteid'])) {
                 $sql = "SELECT * FROM inventory;";
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
-                    $index = 1; 
+                    $index = 1; // Initialize index
                     while ($row = mysqli_fetch_assoc($result)) {
                         $ino = $row['Item_No'];
                         $iId = $row['Inventor_Id'];

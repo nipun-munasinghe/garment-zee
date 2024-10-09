@@ -106,7 +106,7 @@
                             <label for="ID">Current Quentity</label>
                         </td>
                         <td>
-                            <input type="number" placeholder="Current Quantity" name="CurrntQty" required min=1><br>
+                            <input type="text" placeholder="Current Quantity" name="CurrntQty" required><br>
                         </td>
                     </tr>
                     <tr>
@@ -114,7 +114,7 @@
                             <label for="ID">Cost Price</label>
                         </td>
                         <td>
-                            <input type="number" placeholder="Cost Price" name="costprice" required min=1><br>
+                            <input type="n" placeholder="Cost Price" name="costprice" required><br>
                         </td>
                     </tr>
                     <tr>
