@@ -39,8 +39,8 @@ include 'config.php';
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Inventory ID</th>
                     <th>Inventory Name</th>
+                    <th>Inventory ID</th>
                     <th>Current Stocks</th>
                     <th>Stock Alert</th>
                     <th>Action</th>
@@ -53,7 +53,7 @@ include 'config.php';
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $ino = $row['Item_No'];
-                        $iId = $row['Inventor_Id'];
+                        $iId = $row['Inventory_ID'];
                         $iname = $row['Inventory_Name'];
                         $iCurntS = $row['CurrentQty'];
                         $iCostPrice = $row['costPrice'];
