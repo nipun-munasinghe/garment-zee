@@ -5,7 +5,7 @@
     $server = "localhost";
     $username = "root";
     $password = "";
-    $database = "iwt";
+    $database = "textile_&_garment_management_system";
 
     //connection with database
     $connection = mysqli_connect($server, $username, $password, $database);

@@ -30,7 +30,7 @@
         <div class="row">
 
             <?php 
-                $sql = "SELECT * FROM products_project;";
+                $sql = "SELECT * FROM products;";
                 $result = mysqli_query($connection, $sql);
 
                 while($row = $result -> fetch_assoc()){
