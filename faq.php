@@ -62,13 +62,7 @@
     </div>
 	
     <!-- java script part for drop down -->
-	<script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.parentElement;
-            faqItem.classList.toggle('active');
-        });
-    });
+	<script src = "JS/faq.js">
     </script>
 	
 	<hr>

@@ -36,6 +36,9 @@
     <title>Single Product Page</title>
 </head>
 <body>
+    <?php
+    include ('header.php');
+    ?>
     <center>
         <div class="product-details">
             <img class = "i1" src="Images/products/<?php echo $img_url ?>" alt="Product Image" width = "500px" height = "500px">
@@ -51,5 +54,8 @@
             <br><br>
         </div>
     </center>
+    <?php 
+    include ('footer.php');
+    ?>
 </body>
 </html>
