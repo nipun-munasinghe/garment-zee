@@ -8,23 +8,20 @@ if (isset($_POST['add'])) {
     $discription = $_POST['discription'];
     $qty = $_POST['qty'];
 
-    $sql = "INSERT into `product`(Product_Id, Product_name, Price, Product_description, stock_quantity)
-        values('$id', '$name', '$price', '$discription','$qty');";
+    $sql = "INSERT INTO products (Product_Id, Product_name, Price, Product_description, Stock_quantity)
+            VALUES('$id', '$name', '$price', '$discription','$qty');";
         
     $result = mysqli_query($connection, $sql);
+
     if ($result) {
         header('Location:product-mng.php');
         exit;
-    } else {
+    }
+    else {
         die("Error: " . mysqli_error($connection));
     }
 }
-
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,12 +80,6 @@ if (isset($_POST['add'])) {
             <h2>Add Product</h2>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addinven" onsubmit="return validForm()">
                 <table>
-                    <!-- <tr>
-                        <td>
-                            <label for="ItemNo">Item No</label><br>
-                            <input type="text" placeholder="Item number" name="No" readonly><br>
-                        </td>
-                    </tr> -->
                     <tr>
                         <td>
                             <label for="ID">Product ID</label><br>
@@ -97,6 +88,7 @@ if (isset($_POST['add'])) {
                             <input type="text" placeholder="Product Id" name="id"><br>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="Name">Product Name</label>
@@ -105,6 +97,7 @@ if (isset($_POST['add'])) {
                             <input type="text" placeholder="Product Name" name="pname"><br>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="price">Price</label>
@@ -113,6 +106,7 @@ if (isset($_POST['add'])) {
                             <input type="text" placeholder="Price" name="price"><br>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
 
@@ -122,6 +116,7 @@ if (isset($_POST['add'])) {
                             <textarea name="discription" id="discription" rows="4" column="80"></textarea>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="quantity">Quentity</label>
@@ -130,6 +125,7 @@ if (isset($_POST['add'])) {
                             <input type="text" placeholder="Quantity" name="qty"><br>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <button type="submit" value="submit" class="btn" name="add">Add</button>
@@ -138,9 +134,9 @@ if (isset($_POST['add'])) {
                 </table>
             </form>
         </div>
+
         <?php
         include 'prdc-mng-display.php';
-
         ?>
     </div>
 

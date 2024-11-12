@@ -17,7 +17,6 @@ include 'config.php';
         <table id="table">
             <thead>
                 <tr>
-                    <th>No</th>
                     <th>Product ID</th>
                     <th>Product Name</th>
                     <th>Price</th>
@@ -28,43 +27,38 @@ include 'config.php';
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * From `product`;";
+                $sql = "SELECT * FROM products;";
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $pno = $row['Item_No'];
-                        $pid = $row['Product_Id'];
+                        $pid = $row['Product_ID'];
                         $pname = $row['Product_name'];
                         $pprice = $row['Price'];
                         $pdescription = $row['Product_description'];
                         $stock = $row['Stock_quantity'];
 
-                        echo '
-                            <tr>
-                            <td scope="row">' . $pno . '</td>
-                            <td>' . $pid . '</td>
-                            <td>' . $pname . '</td>
-                            <td>' . $pprice . '</td>
-                            <td>' . $pdescription . '</td>
-                            <td>' . $stock . '</td>
-                            <td>
-                                <a href="prdc-mng-update.php?updateid=' . $pno . 
-                                '" style="background-color: rgb(0, 33, 91);
-                                            padding:5px; color: 
-                                            white; border: 1px solid black; 
-                                            border-radious: 5px; 
-                                            text-decoration: none;
-                                            ">Update</a>
-                                <a href="prdc-mng-delete.php?deleteid=' . $pno . 
-                                '" style="background-color: rgb(0, 33, 91);
-                                            padding:5px; 
-                                            color: white; 
-                                            border: 1px solid black; 
-                                            border-radious: 5px; 
-                                            text-decoration: none;
-                                            ">Delete</a>
-                            </td>
-                            </tr>';
+                        echo '<tr>
+                                <td scope="row">' . $pid . '</td>
+                                <td>' . $pname . '</td>
+                                <td>' . $pprice . '</td>
+                                <td>' . $pdescription . '</td>
+                                <td>' . $stock . '</td>
+                                <td>
+                                    <a href="prdc-mng-update.php?updateid=' . $pid . '" style="background-color: #0069b4;
+                                                                                        padding:5px;
+                                                                                        color: white; 
+                                                                                        border: none; 
+                                                                                        border-radious: 5px; 
+                                                                                        text-decoration: none; ">Update</a>
+
+                                    <a href="prdc-mng-delete.php?deleteid=' . $pid . '" style="background-color: red;
+                                                                                        padding:5px; 
+                                                                                        color: white; 
+                                                                                        border: none; 
+                                                                                        border-radious: 5px; 
+                                                                                        text-decoration: none; ">Delete</a>
+                                </td>
+                              </tr>';
                     }
                 }
                 ?>
@@ -72,5 +66,4 @@ include 'config.php';
         </table>
     </div>
 </body>
-
 </html>
