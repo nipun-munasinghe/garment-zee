@@ -1,40 +1,35 @@
 <?php include 'config.php';
 
-if (isset($_GET['invenupdateid'])){
-$ino = $_GET['invenupdateid'];
-$sql = "SELECT * from `inventory` WHERE Item_No=$ino;";
+if (isset($_GET['invenupdateid'])) {
+    $ino = $_GET['invenupdateid'];
 
-$iresult = mysqli_query($connection, $sql);
+    $sql = "SELECT * FROM inventory WHERE Inventory_ID=$ino;";
 
-$row = mysqli_fetch_assoc($iresult);
+    $result = mysqli_query($connection, $sql);
 
-$ino = $row['Item_No'];
-$id = $row['Inventor_Id'];
-$iname = $row['Inventory_Name'];
-$iCurrentQty = $row['CurrentQty'];
-$iCostPrice = $row['costPrice'];
+    $row = mysqli_fetch_assoc($result);
+
+    $id = $row['Inventory_ID'];
+    $iname = $row['Inventory_name'];
+    $iCurrentQty = $row['Available_stock'];
+    $iCostPrice = $row['costPrice'];
 }
 
 if (isset($_POST['addinven'])) {
-    //$no = $_POST['no'];
     $id = $_POST['id'];
     $iname = $_POST['invenName'];
     $iCurrentQty = $_POST['CurrntQty'];
     $iCostPrice = $_POST['costprice'];
 
 
-    $sql = "UPDATE `inventory` SET 
-                Inventor_Id='$id',
-                Inventory_Name='$iname',
-                CurrentQty='$iCurrentQty',
-                costPrice='$iCostPrice'
-            WHERE Item_No='$ino';";
+    $sql = "UPDATE inventory SET Inventory_name='$iname', Available_stock='$iCurrentQty', costPrice='$iCostPrice' WHERE Inventory_ID='$id';";
 
     $iresult = mysqli_query($connection, $sql);
 
     if ($iresult) {
         header('Location: inventory-mng.php');
-    } else {
+    }
+    else {
         die(mysqli_error($connection));
     }
 }
