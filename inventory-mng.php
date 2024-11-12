@@ -22,11 +22,7 @@
             die("Error: " . mysqli_error($connection));
         }
     }
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
