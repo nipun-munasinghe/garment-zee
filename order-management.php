@@ -1,8 +1,7 @@
 <?php
     include 'config.php';
 
-    if(isset($_POST['add']))
-    {
+    if(isset($_POST['add'])) {
         $oid = $_POST['Id'];
         $oName = $_POST['fName'];
         $oAmount = $_POST['amount'];
@@ -11,16 +10,15 @@
         $oAddress = $_POST['fAddress'];
         $ReciptUrl = $_POST['recipt'];
         
-
-        $sqlQuery = "INSERT into `orders`(Order_ID, Customer_name, Price, Order_status, Order_email, Address, Receipt_url)
-        values('$oid', '$oName', '$oAmount', '$oStatus', '$oEmail', '$oAddress', '$ReciptUrl');";
+        $sqlQuery = "INSERT INTO orders (Order_ID, Customer_name, Price, Order_status, Order_email, Address, Receipt_url)
+                     VALUES('$oid', '$oName', '$oAmount', '$oStatus', '$oEmail', '$oAddress', '$ReciptUrl');";
+        
         $result = mysqli_query($connection, $sqlQuery);
-        if($result)
-        {
+        if($result) {
             header('Location:order-management.php');
             exit;
         }
-        else{
+        else {
             die("Error : " . mysqli_error($connection));
         }
     }
@@ -80,14 +78,13 @@
 
                         <center><input type="submit" id="addBtn" value="ADD" name="add" onclick="displayAdding()"></center>
                     </div>
-                    
                 </fieldset>    
             </form>
         </div>
     </div>
     
-    
     <hr>
+
     <!-- Display added details and update and delete -->
     <div class="orderDisplay">
         <table class="displayTable">
@@ -103,15 +100,14 @@
                     <th>Action</th>
                 </tr>
             </thead>
+
             <tbody>
                 <?php
-                    $sqlQuery="SELECT * FROM `orders`;";
+                    $sqlQuery = "SELECT * FROM orders;";
                     $result=mysqli_query($connection, $sqlQuery);
 
-                    if($result)
-                    {
-                        while($row = mysqli_fetch_assoc($result))
-                        {
+                    if($result) {
+                        while($row = mysqli_fetch_assoc($result)) {
                             $oid = $row['Order_ID'];
                             $oName = $row['Customer_name'];
                             $oAmount = $row['Price'];
@@ -120,34 +116,28 @@
                             $oAddress = $row['Address'];
                             $ReciptUrl = $row['Receipt_url'];
 
-                            echo 
-                            '<tr>
-                            <td scope = "row">' . $oid . '</td>
-                            <td>' . $oName . '</td>
-                            <td>' . $oAmount . '</td>
-                            <td>' . $oStatus . '</td>
-                            <td>' . $oEmail . '</td>
-                            <td>' . $oAddress . '</td>
-                            <td>' . $ReciptUrl . '</td>
-                            <td>
-                                <a href="order-manage-update.php?updateid='.$oid.'" class="updateA" onclick="displayUpdate()">UPDATE</a>
-                                <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA" onclick="displayDelete()">DELETE</a>
-                            </td>
-                            </tr>';
-
+                            echo '<tr>
+                                <td scope = "row">' . $oid . '</td>
+                                <td>' . $oName . '</td>
+                                <td>' . $oAmount . '</td>
+                                <td>' . $oStatus . '</td>
+                                <td>' . $oEmail . '</td>
+                                <td>' . $oAddress . '</td>
+                                <td>' . $ReciptUrl . '</td>
+                                <td>
+                                    <a href="order-manage-update.php?updateid='.$oid.'" class="updateA" onclick="displayUpdate()">Update</a>
+                                    <a href="order-manage-delete.php?deleteid='.$oid.'" class="deleteA" onclick="displayDelete()">Delete</a>
+                                </td>
+                                </tr>';
                         }
                     }
                 ?>
             </tbody>
-
         <table>
     </div>
-    <br><br><br>
-    
 
+    <br><br><br>
     <hr>
-    <!-- link the footer -->
-    <?php include_once'footer.php'; ?>
     
 </body>
 </html>
