@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +18,10 @@
     
     <!-- Header -->
     <header class="header-container">
-        <a href="#"><img class="logo" src="./Images/logo.png" alt="logo"></a>
+        <a href="./index.php"><img class="logo" src="./Images/logo.png" alt="logo"></a>
         
         <!-- navigation bar -->
-         <nav class="navbar">
+        <nav class="navbar">
             <ul>
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./products-page.php">Products</a></li>
@@ -44,7 +42,6 @@
             }
         ?> 
 
-        
     </header>
     
 </body>

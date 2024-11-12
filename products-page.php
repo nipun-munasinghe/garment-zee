@@ -23,7 +23,7 @@
 
     <div class="container">
         <div class="background"></div>
-        <h1 class="topicP">OUR PRODUCTS</h1>
+        <h1 class="topicP">Our Products</h1>
 
         <div class="row">
 

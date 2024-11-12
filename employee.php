@@ -92,7 +92,7 @@ if(isset($_POST['change'])) {
             <p><b>Working Days <span class = "icon"> : </span></b> <?php echo $Working_days; ?> days/month</p>
             <p><b>Working Hours <span class = "icon"> : </span></b> <?php echo $Working_hours; ?> hours/day</p>
             <p><b>Hour Rate <span class = "icon"> : </span></b> <?php echo $Hour_rate; ?> Rs./hour</p>
-            <p><b>salary <span class = "icon"> : </span></b> <?php echo $total_salary; ?>/=</p><br>
+            <p><b>Salary <span class = "icon"> : </span></b> <?php echo $total_salary; ?>/=</p><br>
         </div>
 
         <!-- Passowrd Settings Section -->

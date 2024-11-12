@@ -41,7 +41,8 @@
             echo "Deleted";
         }
     }
-// Add admin
+
+    // Add admin
     if(isset($_POST['Addadmin']))
     {
         echo "Clicked";
@@ -95,10 +96,12 @@ if(isset($_POST['Addemployee'])) {
 
         if ($resultSalary) {
             echo "Salary initialized for employee: $username";
-        } else {
+        } 
+        else {
             echo "Error initializing salary for employee.";
         }
-    } else {
+    } 
+    else {
         echo "Error adding employee.";
     }
 }
@@ -114,12 +117,14 @@ if (isset($_POST['salary']) && isset($_POST['employeeUsername'])) {
 
     if ($stmt->execute()) {
         echo "Salary successfully stored in the database.";
-    } else {
+    }
+    else {
         echo "Error storing salary.";
     }
 }
 
-mysqli_close($connection);  // Close the connection
+// Close the connection
+mysqli_close($connection);
 ?>
 
 <!DOCTYPE html>
@@ -135,6 +140,7 @@ mysqli_close($connection);  // Close the connection
 
     <title>Managerdashbord</title>
 </head>
+
 <body>
     <!-- include the header file -->
     <?php include('header.php'); ?>
@@ -152,15 +158,16 @@ mysqli_close($connection);  // Close the connection
                         <input type="text" name="Searchbox" placeholder="Admin Id :" required>
                         <button type="submit" name="check" class="check">Check</button>
                         <p>Account status : <?php echo $accountStatus ?> </p>
-                       <center>
-                        <button type="submit" name="activate" class="active">Activate</button>
-                        <button type="submit" name="delete" class="remove">Remove</button>
-                       </center>
+                        <center>
+                            <button type="submit" name="activate" class="active">Activate</button>
+                            <button type="submit" name="delete" class="remove">Remove</button>
+                        </center>
                     </form>
                 </div>
             </div>
     <br>
     <br>
+
  <!-- New Add Part -->
             <div class="addpart">
                 <div class="form">
@@ -213,7 +220,8 @@ mysqli_close($connection);  // Close the connection
                 </form>
                 </div>
             </div>
-    <br>    
+    <br>  
+
     <!--Salary Calculation Part-->
     <div class="salarycal">
     <h2>Employee Salary Calculation </h2>
@@ -241,8 +249,5 @@ mysqli_close($connection);  // Close the connection
     </div>
 </div>
             
-
-    <!-- include the footer file -->
-    <?php include('footer.php'); ?>
 </body>
 </html>

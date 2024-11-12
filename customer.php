@@ -1,3 +1,4 @@
+<!-- php part -->
 <?php 
     session_start();
 
@@ -20,7 +21,7 @@
 
                 if($result) {
                     echo "<script>
-                          alert('Your password is changed successfully!');
+                            alert('Your password is changed successfully!');
                           </script>";
                 }
             }
@@ -37,6 +38,7 @@
     }
 ?>
 
+<!-- html part -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

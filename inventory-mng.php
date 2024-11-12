@@ -2,6 +2,8 @@
 //Connet Database
     include 'config.php';
 
+    session_start();
+
     //Insert data to the database
     if (isset($_POST['addinven'])) {
         $iId = $_POST['id'];

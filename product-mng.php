@@ -1,6 +1,8 @@
 <?php
 include 'config.php';
 
+session_start();
+
 if (isset($_POST['add'])) {
     $id = $_POST['id'];
     $name = $_POST['pname'];
