@@ -75,9 +75,11 @@ if (isset($_POST['add'])) {
     ?>
     <hr>
     <div class="pcontainer">
-        <h1>Welcome To Product Managemnet Page!</h1>
+        <h1>Welcome to Products Managemnet Page !</h1>
         <div class="form">
+            <br>
             <h2>Add Product</h2>
+            <br>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addinven" onsubmit="return validForm()">
                 <table>
                     <tr>
@@ -110,7 +112,7 @@ if (isset($_POST['add'])) {
                     <tr>
                         <td>
 
-                            <label for="dicription">Product Discription</label>
+                            <label for="discription">Product Discription</label>
                         </td>
                         <td>
                             <textarea name="discription" id="discription" rows="4" column="80"></textarea>
@@ -128,12 +130,17 @@ if (isset($_POST['add'])) {
 
                     <tr>
                         <td>
-                            <button type="submit" value="submit" class="btn" name="add">Add</button>
+                            <center>
+                                <button type="submit" class="btn" name="add">Add</button>
+                            </center>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
+
+        <br>
+        <hr>
 
         <?php
         include 'prdc-mng-display.php';

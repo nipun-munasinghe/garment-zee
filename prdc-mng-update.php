@@ -1,46 +1,39 @@
 <?php include 'config.php';
 
 if (isset($_GET['updateid'])) {
-$pno = $_GET['updateid'];
-$sql = "SELECT * from `product` WHERE Item_No=$pno;";
+    $pno = $_GET['updateid'];
+    $sql = "SELECT * FROM products WHERE Product_Id=$pno;";
 
-$result = mysqli_query($connection, $sql);
+    $result = mysqli_query($connection, $sql);
 
-$row = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
 
-$pno = $row['Item_No'];
-$id = $row['Product_Id'];
-$pname = $row['Product_name'];
-$pprice = $row['Price'];
-$pdescription = $row['Product_description'];
-$pquentity = $row['Stock_quantity'];
+    $id = $row['Product_Id'];
+    $pname = $row['Product_name'];
+    $pprice = $row['Price'];
+    $pdescription = $row['Product_description'];
+    $pquentity = $row['Stock_quantity'];
 }
 
 if (isset($_POST['add'])) {
-    //$no = $_POST['no'];
     $id = $_POST['id'];
     $pname = $_POST['pname'];
     $pprice = $_POST['price'];
     $pdescription = $_POST['discription'];
     $pqty = $_POST['qty'];
 
-    $sql = "UPDATE `product` SET 
-                Product_Id='$id',
-                Product_name='$pname',
-                Price=$pprice,
-                Product_description='$pdescription',
-                stock_quantity=$pqty
-            WHERE Item_No='$pno';";
+    $sql = "UPDATE products SET Product_Id='$id', Product_name='$pname', Price=$pprice, Product_description='$pdescription', stock_quantity=$pqty
+            WHERE Product_Id='$pno';";
 
     $result = mysqli_query($connection, $sql);
 
     if ($result) {
         header('Location: product-mng.php');
-    } else {
+    }
+    else {
         die(mysqli_error($connection));
     }
 }
-
 ?>
 
 <!DOCTYPE html>

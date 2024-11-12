@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .form table{
     background-color: #f0f8ff;
     border-radius: 10px;
@@ -21,26 +22,30 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
 }
+
 .form{
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .pcontainer .form table tr td label{
     font-size: 20px;
     font-weight: 800;
     color:rgb(0, 33, 91);
 }
+
 h1{
-    text-align: center;
-    font-size: 45px;
-    color:rgb(0, 33, 91);
-    margin: -10px;
-}
-h2{
     text-align: center;
     font-size: 40px;
     color:rgb(0, 33, 91);
+    margin: -10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 35px;
+    color:#0069b4;
     margin: -5px;
 }
 input{
