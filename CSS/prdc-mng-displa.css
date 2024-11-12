@@ -5,16 +5,16 @@
 }
 #prdc-display #table {
     border-collapse: collapse;
-    width: 100%;
+    width: 98%;
 }
 #prdc-display #table th{
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid rgb(104, 105, 105);
 }
 #prdc-display #table td{
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #989797;
 }
 #prdc-display #table tr th {

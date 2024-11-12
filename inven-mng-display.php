@@ -2,7 +2,6 @@
 include 'config.php';
 ?>
 
-
 <!-- Delete data -->
 <?php
     include 'config.php';
@@ -15,12 +14,11 @@ include 'config.php';
     
         if($result){
             header('Location:product-mng.php');
-        }else{
+        }
+        else{
             die(mysqli_error($connection));
         }
-    
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +28,7 @@ include 'config.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/prdc-mng-displa.css">
-    <title>Document</title>
+    <title>Inventory management display</title>
 </head>
 
 <body>
@@ -38,47 +36,48 @@ include 'config.php';
         <table id="table">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Inventory Name</th>
                     <th>Inventory ID</th>
+                    <th>Inventory Name</th>
                     <th>Current Stocks</th>
-                    <th>Stock Alert</th>
+                    <th>Unit Price</th>
                     <th>Action</th>
                 </tr>
             </thead>
+
             <tbody>
                 <?php
-                $sql = "SELECT * From `inventory`;";
+                $sql = "SELECT * From inventory;";
+
                 $result = mysqli_query($connection, $sql);
+
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $ino = $row['Item_No'];
-                        $iname = $row['Inventory_Name'];
-                        $iId = $row['Inventor_Id'];
-                        $iCurntS = $row['CurrentQty'];
+                        $iId = $row['Inventory_ID'];
+                        $iname = $row['Inventory_name'];
+                        $iCurntS = $row['Available_stock'];
                         $iCostPrice = $row['costPrice'];
-                        echo '
-                            <tr>
-                            <th scope="row">' . $ino . '</th>
-                            <td>' . $iname . '</td>
-                            <td>' . $iId . '</td>
-                            <td>' . $iCurntS . '</td>
-                            <td>' . $iCostPrice . '</td>
-                            <td>
-                                <a href="inven-mng-update.php?invenupdateid=' . $ino . '"style="background-color: rgb(0, 33, 91);
-                                                                                        padding:5px; 
-                                                                                        color: white; 
-                                                                                        border: 1px solid black; 
-                                                                                        border-radious: 8px; 
-                                                                                        text-decoration: none;">Update</a>
-                                <a href="inven-mng-delete.php?deleteid=' . $ino . '"style="background-color: rgb(0, 33, 91);
-                                                                                    padding:5px; 
-                                                                                    color: white; 
-                                                                                    border: 1px solid black; 
-                                                                                    border-radious: 8px; 
-                                                                                    text-decoration: none;">Delete</a>
-                            </td>
-                            </tr>';
+                        
+                        echo '  <tr>
+                                    <td scope="row">' . $iId . '</td>
+                                    <td>' . $iname . '</td>
+                                    <td>' . $iCurntS . '</td>
+                                    <td>' . $iCostPrice . '</td>
+                                    <td>
+                                        <a href="inven-mng-update.php?invenupdateid=' . $iId . '"style="background-color: #0069b4;
+                                                                                                 padding:5px; 
+                                                                                                 color: white; 
+                                                                                                 border: none; 
+                                                                                                 border-radious: 10px; 
+                                                                                                 text-decoration: none;">Update</a>
+                                                                                                
+                                        <a href="inven-mng-delete.php?deleteid=' . $iId . '"style="background-color: red;
+                                                                                            padding:5px; 
+                                                                                            color: white; 
+                                                                                            border: none; 
+                                                                                            border-radious: 10px; 
+                                                                                            text-decoration: none;">Delete</a>
+                                    </td>
+                                </tr>';
                     }
                 }
                 ?>

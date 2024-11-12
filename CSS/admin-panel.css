@@ -1,12 +1,12 @@
-*{
-    margin: 5px;
-    padding: 0;
-}
+body {
+    background-color: #f0f8ff;
+} 
 
 #Welcome{
     font-size: 50px;
-    color: rgb(0, 33, 91);
+    color: #0069b4;
 }
+
 .container{
     width: 70%;
     display: flex;
@@ -27,42 +27,51 @@
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 .inven_manage, .prod_manage, .order_manage, a i{
     text-align: center;
     font-size: 15px;
     color: #00215b;
 }
+
 .inven_manage, .prod_manage, .order_manage, a{
     text-decoration: none;
     color: rgb(0, 33, 91);
 }
+
 .inven_manage:hover{
     background-image: url(../Images/inventory.jpeg);
     background-position: center;
 }
+
 .inven_manage h1:hover{
-    color: #0069b4e;
+    color: #0069b4;
 }
+
 .prod_manage:hover{
     background-image: url(../Images/product.jpeg);
     background-position: center;
 }
+
 .order_manage:hover{
     background-image: url(../Images/order.jpeg);
     background-position: center;
 }
+
 .inven_manage h1:hover{
     color: #fefefe;
     background-color: #00aaff;
     border-radius: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 .prod_manage h1:hover{
     color: #fefefe;
     background-color: #00aaff;
     border-radius: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 .order_manage h1:hover{
     color: #fefefe;
     background-color: #00aaff;

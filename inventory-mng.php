@@ -9,8 +9,8 @@
         $iCurntQty = $_POST['CurrntQty'];
         $iCostPrice = $_POST['costprice'];
 
-        $sql = "INSERT into `inventory`(Inventor_Id, Inventory_Name, CurrentQty, costprice)
-                    VALUES ('$iId', '$iname', '$iCurntQty', '$iCostPrice');";
+        $sql = "INSERT into inventory (Inventor_ID, Inventory_name, Available_stock, costPrice)
+                VALUES ('$iId', '$iname', '$iCurntQty', '$iCostPrice');";
         
         $result = mysqli_query($connection, $sql);
 
@@ -19,7 +19,7 @@
             exit;
         } 
         else {
-            die("Error: " . mysqli_error($connection));
+            die("Error: ". mysqli_error($connection));
         }
     }
 ?>
@@ -152,6 +152,7 @@
 </html>
 <hr>
 <br>
+
 <?php
     include 'inven-mng-display.php';
 ?>
