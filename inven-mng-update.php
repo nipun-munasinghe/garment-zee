@@ -69,7 +69,7 @@ if (isset($_POST['addinven'])) {
                             <label for="ID">Inventory ID</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Inventory Id" name="id"
+                            <input type="text" placeholder="Inventory Id" name="id" required
                             value=<?php echo $id; ?>><br>
                         </td>
                     </tr>
@@ -99,13 +99,11 @@ if (isset($_POST['addinven'])) {
                             <input type="text" placeholder="Cost Price" name="costprice"
                             value=<?php echo $iCostPrice; ?>><br>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="submit" value="add" class="btn" name="addinven">Update</button>
-                        </td>
-                    </tr>
+                    </tr> 
                 </table>
+                <center>
+                    <button type="submit" value="add" class="btn" name="addinven" style="border: none; border-radius: 8px">Update</button>
+                </center>
             </form>
         </div>
     </div>

@@ -5,7 +5,7 @@
     {
         $oid = mysqli_real_escape_string($connection, $_GET['deleteid']);
 
-        $sqlQuery = "delete FROM `orders` WHERE Order_ID = $oid";
+        $sqlQuery = "DELETE FROM orders WHERE Order_ID = $oid";
         $result = mysqli_query($connection, $sqlQuery);
 
         if($result)

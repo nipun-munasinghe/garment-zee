@@ -11,7 +11,7 @@
         $iCurntQty = $_POST['CurrntQty'];
         $iCostPrice = $_POST['costprice'];
 
-        $sql = "INSERT into inventory (Inventor_ID, Inventory_name, Available_stock, costPrice)
+        $sql = "INSERT INTO inventory (Inventory_ID, Inventory_name, Available_stock, costPrice)
                 VALUES ('$iId', '$iname', '$iCurntQty', '$iCostPrice');";
         
         $result = mysqli_query($connection, $sql);
@@ -76,13 +76,16 @@
 
     <div class="inven-container">
         <h1 id="topic">Welcome to Inventory Management Page !</h1>
-
-        <button id="openFormbtn" style="margin-left: 50px;">Add Inventory</button>
-
+        <center>
+            <button id="openFormbtn" style="margin-left: 50px; font-family: poppins; color: white; background-color: #00aaff; border: none; border-radius: 8px; width: 200px">Add Inventory</button>
+        </center>
+        <br>
         <div id="overlay"></div>
 
         <div class="form-section" id="formPopup">
-            <h2>Add Inventory</h2>
+            <center>
+                <h2 style="color: #0069b4;">Add Inventory</h2>
+            </center>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="addinven">
                 <table>
                     <tr>
@@ -90,7 +93,7 @@
                             <label for="ID">Inventory ID</label>
                         </td>
                         <td>
-                            <input type="text" placeholder="Inventory Id" name="id"><br>
+                            <input type="text" placeholder="Inventory Id" name="id" required><br>
                         </td>
                     </tr>
                     <tr>
@@ -117,15 +120,11 @@
                             <input type="text" placeholder="Cost Price" name="costprice"><br>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <button type="submit" value="add" class="btn" name="addinven">Add</button>
-                        </td>
-                        <td>
-                            <button id="closePopupBtn">Close</button>
-                        </td>
-                    </tr>
                 </table>
+                <center>
+                    <button type="submit"  class="btn" name="addinven" style="margin-right: 15px; width: 40%; border-radius: 8px; border: 0.5px solid #00aaff;">Add</button>
+                    <button id="closePopupBtn"  style="margin-left: 15px; width: 40%; width: 40%; border-radius: 8px; border: 0.5px solid #00aaff;">Close</button>
+                </center>
             </form>
         </div>
     </div>

@@ -89,13 +89,13 @@ if (isset($_POST['add'])) {
                             <label for="ID">Product ID</label><br>
                         </td>
                         <td>
-                            <input type="text" placeholder="Product Id" name="id"><br>
+                            <input type="text" placeholder="Product Id" name="id" required><br>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <label for="Name">Product Name</label>
+                            <label for="Name">Product name</label>
                         </td>
                         <td>
                             <input type="text" placeholder="Product Name" name="pname"><br>
@@ -114,35 +114,33 @@ if (isset($_POST['add'])) {
                     <tr>
                         <td>
 
-                            <label for="discription">Product Discription</label>
+                            <label for="discription">Product description</label>
                         </td>
                         <td>
-                            <textarea name="discription" id="discription" rows="4" column="80"></textarea>
+                            <textarea name="discription" id="discription" rows="4" column="80"  style="border: none; border-radius: 5px; width: 87%; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);"></textarea>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <label for="quantity">Quentity</label>
+                            <label for="quantity">Quantity</label>
                         </td>
                         <td>
                             <input type="text" placeholder="Quantity" name="qty"><br>
                         </td>
                     </tr>
-
-                    <tr>
-                        <td>
-                            <center>
-                                <button type="submit" class="btn" name="add">Add</button>
-                            </center>
-                        </td>
-                    </tr>
                 </table>
+                <center>
+                    <button type="submit" class="btn" name="add" style="border: 0.5px solid #00aaff; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); font-size: 24px; color: #00aaff; padding: 10px;">Add Product</button>
+                </center>
             </form>
         </div>
 
         <br>
         <hr>
+
+        <h2 style="color: #0069b4; text-align: center;">Product Details</h2>
+        <br>
 
         <?php
         include 'prdc-mng-display.php';

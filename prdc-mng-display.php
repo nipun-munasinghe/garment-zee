@@ -48,14 +48,14 @@ include 'config.php';
                                                                                         padding:5px;
                                                                                         color: white; 
                                                                                         border: none; 
-                                                                                        border-radious: 5px; 
+                                                                                        border-radious: 8px; 
                                                                                         text-decoration: none; ">Update</a>
 
                                     <a href="prdc-mng-delete.php?deleteid=' . $pid . '" style="background-color: red;
                                                                                         padding:5px; 
                                                                                         color: white; 
                                                                                         border: none; 
-                                                                                        border-radious: 5px; 
+                                                                                        border-radious: 8px; 
                                                                                         text-decoration: none; ">Delete</a>
                                 </td>
                               </tr>';

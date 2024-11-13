@@ -55,7 +55,7 @@
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
                 <fieldset>
                     <div class="formContain">
-                        <h2 class="omH">Order Details</h2><br>
+                        <h2 class="omH">Order Details</h2>
 
                         <label for="orderId">Order ID :</label><br>
                         <input type="text" id="orderID" placeholder="Order ID" name="Id"><br>

@@ -1,10 +1,9 @@
 <?php
     include 'config.php';
 
-    if(isset($_GET['updateid']))
-    {
+    if(isset($_GET['updateid'])) {
         $oid = $_GET['updateid'];
-        $sql = "SELECT * from `orders` WHERE Order_ID = $oid;";
+        $sql = "SELECT * from orders WHERE Order_ID = $oid;";
         
         $result = mysqli_query($connection, $sql);
 
@@ -19,8 +18,7 @@
         $ReciptUrl = $row['Receipt_url'];
     }
 
-    if (isset($_POST['add']))
-    {
+    if (isset($_POST['add'])) {
         $oid = $_POST['Id'];
         $oName = $_POST['fName'];
         $oAmount = $_POST['amount'];
@@ -41,12 +39,10 @@
 
         $result = mysqli_query($connection, $sql);
 
-        if($result)
-        {
+        if($result) {
             header('Location: order-management.php');
         }
-        else
-        {
+        else {
             die(mysqli_error($connection));
         }
     }
@@ -74,8 +70,10 @@
     <?php
     include "header.php";
     ?>
+
     <hr>
-    <h1 id="h1Welcome">Welcome to Order Management Page</h1>
+    <h1 id="h1Welcome">Welcome to Order Management Page !</h1>
+
     <div class="updateForm">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="formDetails" onsubmit="return formCheck()">
             <fieldset>
@@ -83,7 +81,7 @@
                     <h2 class="omH">Update Order Details</h2><br>
 
                     <label for="orderId">Order ID :</label><br>
-                    <input type="text" id="orderID" placeholder="Order ID" name="Id" value=" <?php echo $oid; ?>"><br>
+                    <input type="text" id="orderID" placeholder="Order ID" name="Id" value=" <?php echo $oid; ?>" required><br>
 
                     <label for="cName">Customer Name :</label><br>
                     <input type="text" id="cName" placeholder="Customer Name" name="fName" value=" <?php echo $oName; ?>"><br>
@@ -105,7 +103,6 @@
 
                     <center><input type="submit" id="addBtn" value="UPDATE" name="add"></center>
                 </div>
-                
             </fieldset>    
         </form>
     </div>

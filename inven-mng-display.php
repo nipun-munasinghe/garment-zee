@@ -1,7 +1,3 @@
-<?php
-include 'config.php';
-?>
-
 <!-- Delete data -->
 <?php
     include 'config.php';
@@ -9,7 +5,7 @@ include 'config.php';
     if(isset($_GET['deleteid'])) {
         $ino = mysqli_real_escape_string($connection, $_GET['deleteid']);
 
-        $sql="delete from `product` where Item_No=$ino";
+        $sql="DELETE FROM products WHERE Product_ID=$ino";
         $result=mysqli_query($connection,$sql);
     
         if($result){
