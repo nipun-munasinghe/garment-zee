@@ -58,6 +58,7 @@
             <br><br>
         </div>
     </center>
+    <br> <br>
 
     <!-- Include the footer -->
     <?php include('footer.php'); ?>

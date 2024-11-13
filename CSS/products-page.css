@@ -1,55 +1,99 @@
+/* Import Poppins font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
     background-color: #f0f8ff;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+.container {
+    padding: 20px;
+    margin-top: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .topicP {
-    margin: 5px;
-    font-size: 60px;
+    font-size: 3.5rem;
     color: #008bd0;
     text-align: center;
+    margin: 20px 0;
+    margin-top: 0;
+    font-weight: 600;
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .product {
-    align-items: center;
+    background-color: #ffffff;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: calc(33% - 20px);
+    margin-bottom: 20px;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 12px 12px 0 0;
+}
+
+.product img:hover {
+    transform: scale(1.05);
 }
 
 .product button {
     width: 100%;
-    height: 30px;
-    padding: 0;
+    padding: 12px;
     margin: 0;
     text-align: center;
     color: white;
     background-color: #00aaff;
-    border-radius: 0 0 7px 7px;
     border: none;
-    font-size: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .product button:hover {
-    color: black;
-    cursor:pointer;
+    background-color: #0069b4;
+    color: #ffffff;
 }
 
-.product img{
-    height: 21vw;
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    .topicP {
+        font-size: 2.5rem;
+    }
 }
 
-.product img:hover {
-    height: 20vw;
-    transition: 0.3s;
-}
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
 
-#pName {
-    color: #0069b4;
+    .topicP {
+        font-size: 2rem;
+    }
 }
