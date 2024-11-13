@@ -19,8 +19,8 @@
     <div class="background"></div>
 
     <div class="container">
-        <h1>The Future of Textile & Garment Management System<br>is here...</h1>
-        <p class="p1">Effortlessly manage your textile and garment operations<br>with cutting-edge solutions.<br>From inventory to orders,<br>streamline every step of your business<br>for increased efficiency and growth.</p>
+        <h1>The Future of Textile & Garment Management System is here...</h1>
+        <p class="p1">Effortlessly manage your textile and garment operations with cutting-edge solutions.<br>From inventory to orders, streamline every step of your business<br>for increased efficiency and growth.</p>
         <br>
         <button class="getStart" onclick='window.location.href="./register.php"'>Get Started</button>
     </div>

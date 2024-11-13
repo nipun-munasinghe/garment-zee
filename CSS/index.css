@@ -1,109 +1,152 @@
-/* Import Poppins font family from google fonts  */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Import Poppins font family from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 body {
     background-color: #f0f8ff;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.background{
+/* Background Image styling */
+.background {
     background-image: url('../Images/home-bck.jpg');
-    background-size:contain;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    position:absolute;
+    position: absolute;
     width: 100%;
-    height: 68%;
-    opacity: 0.13;
+    height: 75%;
+    opacity: 0.2;
     z-index: -1;
 }
-    
+
+/* Container for Main Heading and Description */
 .container {
     text-align: center;
-    font-size:18px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 50px;
+    font-size: 18px;
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+        url('../Images/fabric-pattern.jpg') no-repeat center/cover;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    height: 400px;
+    backdrop-filter: blur(4px);
 }
 
 .container h1 {
     color: #00aaff;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .container p {
     color: #0069b4;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 800px;
 }
 
+/* Button Styling */
 .getStart {
-    color: white;
+    color: #fff;
     border: 2px solid #00aaff;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: #00aaff;
     cursor: pointer;
     font-weight: bold;
     font-size: 15px;
-    padding: 10px;
-
+    padding: 12px 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .getStart:hover {
-    border-color: #0069b4;
     background-color: #0069b4;
+    border-color: #0069b4;
+    transform: scale(1.05);
 }
 
+/* New Arrivals Section Styling */
 .newArrivals {
-    padding: 40px;
     text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .newArrivals h1 {
     color: #00aaff;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
+/* Product Container */
 .product-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
+/* Individual Product Card */
 .product {
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    align-items:self-start;
-    margin: 5px;
+    background-color: #ffffff;
+    width: 250px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .product img {
-    width: 30%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-.product img:hover{
-    width: 40%;
-    transition: 0.5s;
-    cursor: pointer;
+.product img:hover {
+    transform: scale(1.05);
 }
 
 .product h3 {
     color: #0069b4;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .product a {
     text-decoration: none;
     color: #00aaff;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.product p:hover{
+.product p {
+    font-size: 14px;
+    color: #0069b4;
+    margin-top: 8px;
+}
+
+.product p:hover {
     font-weight: bold;
-    cursor: pointer;
 }
