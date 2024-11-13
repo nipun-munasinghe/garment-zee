@@ -42,9 +42,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,10 +63,9 @@ if (isset($_POST['submit'])) {
 <body>
     <div id="registe-container">
 
-        <fieldset>
             <form action="" method="post">
                 <center>
-                    <h1>Create your account</h1>
+                    <h1>Create Your Account</h1>
                 </center>
                 <table>
                     <tr>
@@ -139,7 +135,7 @@ if (isset($_POST['submit'])) {
                     <p>Do you have an account? <a id="clickLogin" href="login.php">Sign In</a></p>
                 </div>
             </form>
-        </fieldset>
+        
     </div>
     <br><br>
 </body>

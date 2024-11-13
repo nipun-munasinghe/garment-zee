@@ -1,62 +1,107 @@
-body{
+/* Import the Poppins font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
     margin: 0;
     padding: 0;
     color: #00aaff;
     background-color: #f0f8ff;
-    font-size: 20px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
 
-#registe-container form{
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    padding: 5px 0px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+#registe-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
 }
 
-#registe-container input {
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+#registe-container form {
+    width: 90%;
+    max-width: 500px; /* Limit max-width for better responsiveness */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-form table{
-    margin-left: auto;
-    margin-right: auto;
+h1 {
+    color: #008bd0;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-form table tr td{
-    padding: 5px;
+table {
+    width: 100%;
 }
 
-form table tr td input{
-    padding: 10px;
-    width: 250px;
-    font-size: 20px;
+table tr td {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #0069b4;
+    width: 50%; /* Ensure alignment */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%; /* Adjust width for more room */
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0px 0px 8px rgba(0, 170, 255, 0.3);
 }
 
 #registerBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 500;
     color: white;
     background-color: #00aaff;
-    font-size: 20px;
     border: none;
-    border-radius: 5px;
-    width: 150px;
-    height: 40px;
-    margin-top: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-#registerBtn:hover{
-    background-color: rgb(0, 33, 91);
+
+#registerBtn:hover {
+    background-color: #0069b4;
+    box-shadow: 0px 5px 15px rgba(0, 105, 180, 0.3);
+    cursor: pointer;
 }
 
 ::placeholder {
-    opacity: 90%;
+    color: #aaa;
 }
 
 .clickLogin {
     text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.clickLogin a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.clickLogin a:hover {
+    color: #0069b4;
 }
