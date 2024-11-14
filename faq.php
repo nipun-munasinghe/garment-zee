@@ -27,7 +27,7 @@
         Here we are mentioned some common questions asked by customers frequently.
         Also, we provide answers with them. So, you can reffer them and slove your questions.
         <br>
-        Have any additional questions? <a href="#">Click here to contact us.</a>
+        Have any additional questions? <a href="./contact-us.php">Click here to contact us.</a>
         </p> <br>
 	</center>
 	

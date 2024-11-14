@@ -82,8 +82,7 @@
                 <input type="email" id="email" name="mail" placeholder="Your E-mail" required><br>
                 <textarea type="text" id="message" name="message" placeholder="Your Message"></textarea><br>
                 <center>
-                <input type="submit" id="submit" name="ContactUs" value="Submit">
-
+                    <input type="submit" id="submit" name="ContactUs" value="Submit">
                 </center>
             </div>
     </form>

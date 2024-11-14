@@ -8,7 +8,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM `user_info` WHERE username = '$username' Limit 1";
+        $sql = "SELECT * FROM user_info WHERE username = '$username' Limit 1";
         $result = mysqli_query($connection, $sql);
 
         if(mysqli_num_rows($result) == 1) {
