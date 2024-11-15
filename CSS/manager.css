@@ -100,6 +100,14 @@ body {
     margin-top: 10px;
 }
 
+.check:hover, .remove:hover, .active:hover, .sbutton:hover, .rbutton:hover, .scalculate:hover, .addbase:hover {
+    background-color: #006bb3;
+}
+
+.check { background-color: #4CAF50; }
+.remove { background-color: #E74C3C; }
+.active { background-color: #258ADD; }
+
 .form {
     padding: 70px;
     background-color: rgb(255, 255, 255,.9);
@@ -110,7 +118,7 @@ body {
 .form h2{
     color: rgb(0, 33, 91);
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
     font-size: 40px;
     font-weight: bold;
@@ -163,7 +171,7 @@ input{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .salarycal input{
@@ -199,9 +207,11 @@ input{
 .separate-display {
     display: flex;
 }
+
 .sal-display h3{
     font-size: 40px;
 }
+
 .sal-display{
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);

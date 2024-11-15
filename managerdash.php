@@ -24,9 +24,7 @@
                 SET acc_status = 'active'
                 WHERE username = '$Input';";
         $result = mysqli_query($connection, $sql);
-        if($result)
-        {
-        }
+        if($result){}
     }
 
     if(isset($_POST['delete']))
@@ -154,7 +152,7 @@ mysqli_close($connection);
                 <div class="removeborder">
                     <form method="POST" action="managerdash.php">
                         <h2>Admin-Employee</h2>
-                        <input type="text" name="Searchbox" placeholder="Admin Id :" required>
+                        <input type="text" name="Searchbox" placeholder="Admin Id" required>
                         <button type="submit" name="check" class="check">Check</button>
                         <p>Account status : <?php echo $accountStatus ?> </p>
                         <center>
@@ -194,29 +192,29 @@ mysqli_close($connection);
                     </form>
                 </div>
 
-            <div class="form">
-                <form method="POST" action="managerdash.php">
-                    <h2>Add Employee</h2>
-                    <p>Name :</p>
-                    <input type="text"   placeholder="Employee name" name="Name">
-                    <p>Employee username :</p>
-                    <input type="text"   placeholder="Employee Id" name="UserName">
-                    <p>Password :</p>
-                    <input type="password"   placeholder="Admin Password" name="Password">
-                    <p>E mail :</p>
-                    <input type="email"  placeholder="example@gmail.com" name="mail">
-                    <p>Phone Number 1 :</p>
-                    <input type="tel" placeholder="0xxxxxxxx" name="mobileno1">
-                    <p>Phone Number 2 :</p>
-                    <input type="tel" placeholder="0xxxxxxxx" name ="mobileno2">
-                    <p>Address :</p>
-                    <input type="text"  placeholder="Address of the employee" name="address">
-                    <input type="hidden" value="admin" name="usertyp">
-                    <br>
-                    <br>
-                    <input type="submit" class="sbutton" name="Addemployee" placeholder="Add Employee">
-                    <input type="reset"  class="rbutton"placeholder="Reset">
-                </form>
+                <div class="form">
+                    <form method="POST" action="managerdash.php">
+                        <h2>Add Employee</h2>
+                        <p>Name :</p>
+                        <input type="text"   placeholder="Employee name" name="Name">
+                        <p>Employee username :</p>
+                        <input type="text"   placeholder="Employee Id" name="UserName">
+                        <p>Password :</p>
+                        <input type="password"   placeholder="Admin Password" name="Password">
+                        <p>E mail :</p>
+                        <input type="email"  placeholder="example@gmail.com" name="mail">
+                        <p>Phone Number 1 :</p>
+                        <input type="tel" placeholder="0xxxxxxxx" name="mobileno1">
+                        <p>Phone Number 2 :</p>
+                        <input type="tel" placeholder="0xxxxxxxx" name ="mobileno2">
+                        <p>Address :</p>
+                        <input type="text"  placeholder="Address of the employee" name="address">
+                        <input type="hidden" value="admin" name="usertyp">
+                        <br>
+                        <br>
+                        <input type="submit" class="sbutton" name="Addemployee" placeholder="Add Employee">
+                        <input type="reset"  class="rbutton"placeholder="Reset">
+                    </form>
                 </div>
             </div>
     <br>  
