@@ -11,7 +11,7 @@
 
     <!-- link the style sheet -->
     <link rel="stylesheet" href="CSS/header.css">
-    <title>Header - Garment Zee</title>
+    <title>Header</title>
      
 </head>
 <body>
