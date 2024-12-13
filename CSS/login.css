@@ -1,92 +1,99 @@
-body
-{
-    margin-top: 6%;
-    margin-left: 20px;
-    margin-bottom: 0;
-    margin-right: 20px;
-    font-family: poppins;
+body {
+    margin-top: 8%;
+    font-family: 'Poppins', sans-serif;
     background-image: url(../images/login_back.jpg);
     background-size: cover;
     display: flex;
 }
 
-.formContain
-{ 
+.formContain {
     padding: 30px;
     border: none;
 }
 
-.loginBtn
-{
-    padding: 8px;
+.loginBtn {
+    margin-top: 20px;
+    padding: 10px;
     border-radius: 10px;
-    width: 100px;
-    background-color:#00aaff;
+    width: 120px;
+    background-color: #008cdd;
     color: white;
-    border: transparent;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.loginBtn:hover
-{
-    background-color: #0069b4;
+.loginBtn:hover {
+    background-color: #005f99;
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.clickReg
-{
+.clickReg {
     text-align: center;
+    margin-top: 10px;
 }
 
-#log
-{
-    font-family: poppins;
+#log {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 40px;
     color: rgb(0, 33, 91);
 }
 
-.formOut
-{
-    border-radius: 6px;
+.formOut {
+    border-radius: 10px;
     width: 400px;
-    height: 500px;
+    height: fit-content;
     padding: 20px;
     margin: auto;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-#username
-{
+#username, #password {
     width: 100%;
-}
-
-#password
-{
-    width: 100%;
-}
-
-fieldset
-{
-    border: none;
-}
-
-input
-{
-    padding: 10px 5px;
-    border: 1px solid;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-input:focus
-{
-    outline-color: #000a0f;
+#username:focus, #password:focus {
+    outline-color: #005f99;
 }
 
-#regLink:hover
-{
+#regLink {
+    color: #008cdd;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#regLink:hover {
+    text-decoration: underline;
+    color: #005f99;
     cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+}
+
+fieldset {
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
