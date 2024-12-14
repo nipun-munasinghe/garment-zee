@@ -55,7 +55,14 @@
     <!-- include the header file -->
     <?php include('header.php'); ?>
     
-    <h1>Hello <?php echo $_SESSION['first_name']; ?> !</h1>
+    <h1>Hello <?php if(isset($_SESSION['first_name'])) {
+        echo htmlspecialchars($_SESSION['first_name']);
+    }
+    else {
+        //redirect to login page when user is not logged in
+        header('Location: login.php');
+        exit();
+    } ?> !</h1>
 
     <div class="banner">
         <a href="./products-page.php"><img src="./Images/customer-banner.png" alt="products banner"></a>
