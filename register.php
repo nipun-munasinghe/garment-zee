@@ -22,7 +22,6 @@ if (isset($_POST['submit'])) {
         if (mysqli_num_rows($result) == 0) {
             $plain_password = $password;
 
-
             // Insert user into the database
             $query = "INSERT INTO `user_info` (username, first_name, last_name, email, phone_number_1, password, user_type, acc_status)
                       VALUES ('$username', '$first_name', '$last_name','$email', '$phone', '$plain_password', '$user_type', '$acc_status')";
@@ -69,64 +68,35 @@ if (isset($_POST['submit'])) {
                 </center>
                 <table>
                     <tr>
-                        <td>
-                            Username
-                        </td>
-                        <td>
-                            <input type="text" placeholder="Username" name="username"><br>
-                        </td>
+                        <td>Username</td>
+                        <td><input type="text" placeholder="Username" name="username"><br></td>
                     </tr>
                     <tr>
-                        <td>
-                            Fisrts Name
-                        </td>
-                        <td>
-                            <input type="text" placeholder="Your first name" name="firstName"><br>
-                        </td>
+                        <td>First Name</td>
+                        <td><input type="text" placeholder="Your first name" name="firstName"><br></td>
                     </tr>
                     <tr>
-                        <td>
-                            Last Name
-                        </td>
-                        <td>
-                            <input type="text" placeholder="Your last name" name="lastname"><br>
-                        </td>
+                        <td>Last Name</td>
+                        <td><input type="text" placeholder="Your last name" name="lastname"><br></td>
                     </tr>
                     <tr>
-                        <td>
-                            Email
-                        </td>
-                        <td>
-                            <input type="email" placeholder="example@gmail.com" id="email" name="email">
-                        </td>
+                        <td>Email</td>
+                        <td><input type="email" placeholder="example@gmail.com" id="email" name="email"></td>
                     </tr>
                     <tr>
-                        <td>
-                            Phone Number
-                        </td>
-                        <td>
-                            <input type="text" placeholder="+94xxxxxxxxx" id="phone" name="phone">
-                        </td>
-
+                        <td>Phone Number</td>
+                        <td><input type="text" placeholder="+94xxxxxxxxx" id="phone" name="phone"></td>
                     </tr>
                     <tr>
-                        <td>
-                            Password
-                        </td>
-                        <td>
-                            <input type="password" placeholder="Password" name="password">
-                        </td>
-
+                        <td>Password</td>
+                        <td><input type="password" placeholder="Password" name="password"></td>
                     </tr>
                     <tr>
-                        <td>
-                            Re-enter Password
-                        </td>
-                        <td>
-                            <input type="password" placeholder="Confirm Password" name="confermPassword">
-                        </td>
+                        <td>Re-enter Password</td>
+                        <td><input type="password" placeholder="Confirm Password" name="confermPassword"></td>
                     </tr>
                 </table>
+
                 <center>
                     <button id="registerBtn" name="submit">Register Now</button>
                 </center>
