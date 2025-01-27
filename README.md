@@ -107,7 +107,7 @@ Feel free to fork this repository, make improvements, and submit a pull request!
 
 ## Contact
 
-For any inquiries, please reach out at nipunlakmal884@gmail.com
+For any inquiries, please reach out at [nipunlakmal884@gmail.com](mailto:nipunlakmal884@gmail.com)
  
  - 🔗 Links
  [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nipun-lakmal-b5b3652bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
