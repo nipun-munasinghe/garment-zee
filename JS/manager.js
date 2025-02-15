@@ -1,8 +1,9 @@
+//Salary calculation and Display part
 function calculateSalary() {
     let days = document.getElementById("days").value;
     let hours = document.getElementById("hours").value;
     let rate = document.getElementById("rate").value;
-
+//Calculation part
     if (days > 0 && hours >= 0 && rate >= 0) {
         let salary = days * hours * rate;
         document.getElementById("salary").innerHTML = "Rs." + salary.toFixed(2);
@@ -11,6 +12,11 @@ function calculateSalary() {
     }
 }
 
+
+
+
+
+//salary details store in data base part
 function storeSalary() {
     let employeeUsername = document.getElementById("employeeUsername").value;
     let salary = document.getElementById("salary").textContent.replace("Rs.", "").trim();
@@ -19,7 +25,7 @@ function storeSalary() {
         // Send the salary and employee username to the PHP script
         let form = document.createElement("form");
         form.method = "POST";
-        form.action = "managerdash.php"; // Replace with the correct PHP file name
+        form.action = "managerdash.php"; 
 
         let usernameField = document.createElement("input");
         usernameField.type = "hidden";

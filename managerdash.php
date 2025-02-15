@@ -2,7 +2,7 @@
 <?php
     session_start();
     require_once 'config.php';
-
+//Admin OR Employee Check
     $accountStatus = "None";
     if(isset($_POST['check']))
     {
@@ -16,7 +16,7 @@
             $accountStatus = $row['acc_status'];
         }
     }
-
+//Admin Or Employee Active 
     if(isset($_POST['activate']))
     {
         $Input = $_POST['Searchbox'];
@@ -24,9 +24,16 @@
                 SET acc_status = 'active'
                 WHERE username = '$Input';";
         $result = mysqli_query($connection, $sql);
+<<<<<<< Updated upstream
         if($result){}
+=======
+        if($result)
+        {
+            
+        }
+>>>>>>> Stashed changes
     }
-
+//Admin Or Employee Delete
     if(isset($_POST['delete']))
     {
         $Input = $_POST['Searchbox'];
@@ -152,7 +159,11 @@ mysqli_close($connection);
                 <div class="removeborder">
                     <form method="POST" action="managerdash.php">
                         <h2>Admin-Employee</h2>
+<<<<<<< Updated upstream
                         <input type="text" name="Searchbox" placeholder="Admin Id" required>
+=======
+                        <input type="text" name="Searchbox" placeholder="Username :" required>
+>>>>>>> Stashed changes
                         <button type="submit" name="check" class="check">Check</button>
                         <p>Account status : <?php echo $accountStatus ?> </p>
                         <center>
